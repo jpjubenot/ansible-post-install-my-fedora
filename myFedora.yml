@@ -2,6 +2,6 @@
   remote_user : root
   roles:
       - default
-      #- softwares
+      - softwares
       - bumblebee
       - basiccodecs
