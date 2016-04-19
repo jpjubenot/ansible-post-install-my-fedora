@@ -1,0 +1,42 @@
+---
+# Role Default
+
+# Add Repository RPM Fusion FREE
+    - name: Verify if RPM Fusion FREE Repository exist
+      stat: path=/etc/yum.repos.d/rpmfusion-free.repo
+      register: fusionfrepo
+
+    - name: Downloading and enable RPM Fusion FREE Repository...
+      command: dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+      when: not fusionfrepo.stat.exists
+      
+# Add Repository RPM Fusion Non-FREE
+    - name: Verify if RPM Fusion Non-FREE Repository exist
+      stat: path=/etc/yum.repos.d/rpmfusion-nonfree.repo
+      register: fusionnfrepo
+
+    - name: Downloading and enable RPM Fusion Non-FREE Repository...
+      command: dnf install -y --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+      when: not fusionnfrepo.stat.exists
+
+# Add Repository Adobe
+    - name: Verify if Adobe Repository exist
+      stat: path=/etc/yum.repos.d/adobe-linux-x86_64.repo
+      register: adoberepo
+
+    - name: Downloading and enable Adobe Repository...
+      command: dnf install -y --nogpgcheck http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+      when: not adoberepo.stat.exists
+
+# Add Repository Oracle VirtualBox
+    - name: Verify if Oracle VirtualBox Repository exist
+      stat: path=/etc/yum.repos.d/virtualbox.repo
+      register: oraclerepo
+
+    - name: Oracle VirtualBox enable Repository...
+      template: src=templates/virtualbox.repo.tpl dest=/etc/yum.repos.d/virtualbox.repo mode=0644 owner=root group=root
+      when: not oraclerepo.stat.exists
+      
+# Add Update
+    - name: Update Fedora
+      raw: dnf update -y --refresh

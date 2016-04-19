@@ -1,0 +1,50 @@
+---
+# Role Softwares 
+
+# Install Defaults Softwares
+    - name: Install Differents Packages
+      dnf: name={{ item }} state=installed
+      with_items:
+         - htop
+         - python-dnf
+         - flash-plugin
+         - xine-lib-extras-freeworld
+         - vlc
+         - mozilla-vlc
+         - gnome-mplayer
+         - gstreamer-ffmpeg
+         - gstreamer-plugins-ugly
+         - gstreamer1-libav
+         - gstreamer1-plugins-ugly
+         - compat-libstdc++-33
+         - p7zip
+         - liveusb-creator
+         - VirtualBox-5.0
+         - gparted
+         - 0ad
+         - xsane
+         - filezilla
+         - gparted
+         - geany
+         - gcstar
+         - libreoffice-langpack-fr
+         - corebird
+         - libbsd-devel
+         - libselinux-python
+         - libbsd
+         - glibc-devel
+         - libX11-devel
+         - help2man
+         - autoconf
+         - git
+         - gitg
+         - tar
+         - glib2
+         - glib2-devel
+         - kernel-devel
+         - kernel-headers
+         - automake
+         - gcc
+         - gtk2-devel
+      tags:
+        minimum

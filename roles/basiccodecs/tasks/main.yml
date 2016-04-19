@@ -1,0 +1,12 @@
+---
+# Role Basiccodec
+
+# Add Mplayer Codecs
+    - name: Verify if Mplayer Codecs exist
+      stat: path=/usr/share/doc/mplayer-codecs-20061022
+      register: mplayercodecs
+
+    - name: Downloading and Install Mplayer Codecs...
+      shell: wget http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-20061022-1.x86_64.rpm http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-extra-20061022-1.x86_64.rpm -P /tmp/. ; rpm -ihv /tmp/mplayer-codecs*.rpm
+      when: not mplayercodecs.stat.exists
+     
