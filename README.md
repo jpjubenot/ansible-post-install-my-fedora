@@ -1,4 +1,4 @@
-# finish-deploy-MyFedora
+# Ansible post install my Fedora
 Jacques-Philippe JUBENOT, France
 
 Je débute à l'utilisation de Git et Ansible.
