@@ -3,7 +3,7 @@ Jacques-Philippe JUBENOT, France
 
 Je débute à l'utilisation de Git et Ansible.
 
-Ce projet "Finish-Deploy-MyFedora" à pour but de finaliser l'installation de ma Fedora.
+Ce projet "ansible-post-install-my-fedora" à pour but de finaliser l'installation de ma Fedora.
 Pour chaque nouvel version de Fedora, je préfère repartir d'une installation de zéro, plutôt que d'une mise à jour.
 Alors si il est facile de sauvegarder ses données puis de les restaurer.
 Concernant les applications il y en a toujours une ou deux que l'on oublie de réintégrer, et on la réinstalle d'urgence au dernier moment.
