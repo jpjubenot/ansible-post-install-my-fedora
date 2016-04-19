@@ -8,7 +8,7 @@ Pour chaque nouvel version de Fedora, je préfère repartir d'une installation d
 Alors si il est facile de sauvegarder ses données puis de les restaurer.
 Concernant les applications il y en a toujours une ou deux que l'on oublie de réintégrer, et on la réinstalle d'urgence au dernier moment.
 
-J'ai découvert récemment Ansible au travail et je trouve le concept géniale.
+J'ai découvert récemment Ansible au travail et je trouve le concept génial.
 Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appliquer à la maison.
 Ce projet permet de réinstaller une bonne partie des applications présentent sur ma Fedora.
 GitHub est dès lors toute désignée pour partager ce mini projet.
@@ -32,17 +32,14 @@ basiccodecs		: Correspond à des codecs pour mplayer permettant de visualiser de
 bumblebee		: Installe les repository et les paquets qui me permettent d'utiliser mon portable équipé de la technologie Optimus de Nvidia (intel/Nvidia graphic cards)
 
 Pré-requis:
-Vous devez avoir une Fedora 23 d'installer (c'est celle que j'utilise, et je n'ai pas testé sur d'autres versions).
-Il faut avoir installé Ansible (Vers 1.9.4)
-Et comme Fedora 23 utilise désormais dnf à la place de yum, il faut installer les paquets python2-dnf, python3-dnf et libselinux-python.
+Vous devez avoir une Fedora 23 installée (c'est celle que j'utilise, et je n'ai pas testé sur d'autres versions).
+Il faut installer Ansible (Vers 1.9.4)
+Et comme Fedora 23 utilise désormais dnf à la place de yum, il faut également les paquets python2-dnf, python3-dnf et libselinux-python.
 
-Il est évidement possible d'utiliser ces scripts avec une autre distribution GNU Linux.
-Il faudra juste adapter les scripts au gestionnaire de paquet de cette distribution.
-
-Ce projet est à son début, donc il est fort possible que certains éléments ne soit pas correct.
+Ce projet est à son commencement, donc il est fort possible que certains éléments ne soientt pas correct.
 
 Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil.
-Comme il s'agit d'installation, vous devez être root sur votre poste pour lancer le script de départ.
+Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ.
 
 Exemple pour tester : # ansible-playbook myFedora.yml --check
 
