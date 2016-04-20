@@ -36,6 +36,15 @@
     - name: Oracle VirtualBox enable Repository...
       template: src=templates/virtualbox.repo.tpl dest=/etc/yum.repos.d/virtualbox.repo mode=0644 owner=root group=root
       when: not oraclerepo.stat.exists
+
+# Add Repository Google Chrome
+    - name: Verify if Google Chrome Repository exist
+      stat: path=/etc/yum.repos.d/google-chrome.repo
+      register: googlechromerepo
+
+    - name: Google Chrome enable Repository...
+      template: src=templates/google-chrome.repo.tpl dest=/etc/yum.repos.d/google-chrome.repo mode=0644 owner=root group=root
+      when: not googlechromerepo.stat.exists
       
 # Add Update
     - name: Update Fedora
