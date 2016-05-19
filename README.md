@@ -36,7 +36,7 @@ Vous devez avoir une Fedora 23 installée (c'est celle que j'utilise, et je n'ai
 Il faut installer Ansible (Vers 1.9.4)
 Et comme Fedora 23 utilise désormais dnf à la place de yum, il faut également les paquets python2-dnf, python3-dnf et libselinux-python.
 
-Ce projet est à son commencement, donc il est fort possible que certains éléments ne soientt pas correct.
+Ce projet est à son commencement, donc il est fort possible que certains éléments ne soient pas corrects.
 
 Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil.
 Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ.

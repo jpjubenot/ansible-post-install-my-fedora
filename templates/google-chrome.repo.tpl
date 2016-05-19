@@ -1,5 +1,5 @@
-[google-chrome]
-name=google-chrome
+[Google-Chrome]
+name=Google-Chrome
 baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
 enabled=1
 gpgcheck=1
