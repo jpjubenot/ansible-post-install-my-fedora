@@ -29,7 +29,8 @@ softwares		: Correspond à toute une liste de paquets que j'aime utiliser sur ma
 
 basiccodecs		: Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats
 
-bumblebee		: Installe les repositories et les paquets qui me permettent d'utiliser mon portable équipé de la technologie Optimus de Nvidia (intel/Nvidia graphic cards)
+bumblebee		: Installe les repositories et les paquets qui me permettent d'utiliser mon portable équipé de la 
+                  technologie Optimus de Nvidia (intel/Nvidia graphic cards)
 
 Pré-requis:
 Vous devez avoir une Fedora 23 installée (c'est celle que j'utilise, et je n'ai pas testé sur d'autres versions du système Fedora).
@@ -45,6 +46,7 @@ Exemple pour tester : # ansible-playbook myFedora.yml --check
 
 Exemple pour effectuer les installations : # ansible-playbook myFedora.yml
 
-Ce script peut tout à fait être utiliser sur des machines distantes utilisant Fedora en vous référant à la documentation de Ansible ou sur les différents tuto présents sur le web.
+Ce script peut tout à fait être utiliser sur des machines distantes utilisant Fedora en vous référant à la documentation de Ansible 
+ou sur les différents tuto présents sur le web.
 
 Par ce biais vous êtes assuré que toutes la machines de votre réseau sont finalisées de la même manière.
