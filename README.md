@@ -13,7 +13,8 @@ Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appl
 Ce projet permet de réinstaller une bonne partie des applications présentent sur ma Fedora.
 GitHub est dès lors tout désigné pour partager ce mini projet.
 
-D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes les applications qu'on aime utiliser.
+D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de 
+retrouver toutes les applications qu'on aime utiliser.
 
 Mon projet s'articule comme suit.
 
