@@ -10,6 +10,7 @@
          - flash-plugin
          - xine-lib-extras-freeworld
          - vlc
+         - wget
          - mozilla-vlc
          - gnome-mplayer
          - gstreamer-ffmpeg
