@@ -5,50 +5,52 @@
     - name: Install Differents Packages
       dnf: name={{ item }} state=present
       with_items:
-         - htop
-         - python-dnf
+         #- 0ad
+         - autoconf
+         - automake
+         - blueman
+         - compat-libstdc++-33
+         - corebird
+         - filezilla
          - flash-plugin
-         - xine-lib-extras-freeworld
-         - vlc
-         - wget
-         - mozilla-vlc
+         - gcc
+         - gcstar
+         - geany
+         #- geany-plugins-*
+         - gimp
+         - git
+         - gitg
+         - glib2
+         - glib2-devel
+         - glibc-devel
          - gnome-mplayer
+         - gnome-tweak-tool
+         - gparted
          - gstreamer-ffmpeg
          - gstreamer-plugins-ugly
          - gstreamer1-libav
          - gstreamer1-plugins-ugly
-         - compat-libstdc++-33
-         - p7zip
-         - shutter
-         - liveusb-creator
-         - VirtualBox-5.0
-         - gparted
-         - 0ad
-         - gimp
-         - xsane
-         - filezilla
-         - gparted
-         - geany
-         - gcstar
-         - libreoffice-langpack-fr
-         - corebird
-         - libbsd-devel
-         - libselinux-python
-         - libbsd
-         - glibc-devel
-         - libX11-devel
+         - gtk2-devel
          - help2man
-         - autoconf
-         - git
-         - gitg
-         - gnome-tweak-tool
-         - tar
-         - glib2
-         - glib2-devel
+         - htop
          - kernel-devel
          - kernel-headers
-         - automake
-         - gcc
-         - gtk2-devel
+         - libbsd
+         - libbsd-devel
+         - libreoffice-langpack-fr
+         - libselinux-python
+         - libX11-devel
+         - liveusb-creator
+         - mozilla-vlc
+         - p7zip
+         - python-dnf
+         - shutter
+         - tar
+         - VirtualBox-5.1
+         - vlc
+         - wget
+         - xine-lib-extras-freeworld
+         - xsane
+
       tags:
         minimum
