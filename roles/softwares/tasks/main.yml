@@ -42,7 +42,7 @@
          - libreoffice-langpack-fr
          - libselinux-python
          - libX11-devel
-         #- liveusb-creator
+         - mediawriter
          - mozilla-vlc
          - p7zip
          - python-dnf
@@ -53,6 +53,5 @@
          - wget
          - xine-lib-extras-freeworld
          - xsane
-
       tags:
         minimum
