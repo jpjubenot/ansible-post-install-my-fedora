@@ -13,24 +13,24 @@ Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appl
 Ce projet permet de réinstaller une bonne partie des applications présentent sur ma Fedora.
 GitHub est dès lors tout désigné pour partager ce mini projet.
 
-D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de 
+D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de
 retrouver toutes les applications qu'on aime utiliser.
 
 Mon projet s'articule comme suit.
 
 Un script principal myFedora.yml, qui induit 4 rôles.
-- default
+- bootstrap
 - softwares
 - basiccodecs
 - bumblebee
 
-default			: Installe différents repositories : RPMFusion, RPMFusion NON-Free, Adobe.
+bootstrap			: Installe différents repositories : RPMFusion, RPMFusion NON-Free, Adobe.
 
 softwares		: Correspond à toute une liste de paquets que j'aime utiliser sur ma machine.
 
 basiccodecs		: Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats
 
-bumblebee		: Installe les repositories et les paquets qui me permettent d'utiliser mon portable équipé de la 
+bumblebee		: Installe les repositories et les paquets qui me permettent d'utiliser mon portable équipé de la
                   technologie Optimus de Nvidia (intel/Nvidia graphic cards)
 
 Pré-requis:
@@ -47,7 +47,7 @@ Exemple pour tester : # ansible-playbook myFedora.yml --check
 
 Exemple pour effectuer les installations : # ansible-playbook myFedora.yml
 
-Ce script peut tout à fait être utiliser sur des machines distantes utilisant Fedora en vous référant à la documentation de Ansible 
+Ce script peut tout à fait être utiliser sur des machines distantes utilisant Fedora en vous référant à la documentation de Ansible
 ou sur les différents tuto présents sur le web.
 
 Par ce biais vous êtes assuré que toutes la machines de votre réseau sont finalisées de la même manière.

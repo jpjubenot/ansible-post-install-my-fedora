@@ -45,7 +45,14 @@
     - name: Google Chrome enable Repository...
       template: src=templates/google-chrome.repo.tpl dest=/etc/yum.repos.d/google-chrome.repo mode=0644 owner=root group=root
       when: not googlechromerepo.stat.exists
-      
+# Fast Mirror Option for DNF
+    - name: Fast Mirror Option for DNF
+      lineinfile: dest=/etc/dnf/dnf.conf line="fastestmirror=true"
+      #copy:
+      #    content: fastestmirror=true 
+      #    dest: "/etc/dnf/dnf.conf"
+      tags:
+        - fastmirror
 # Add Update
     - name: Update Fedora
       raw: dnf update -y --refresh

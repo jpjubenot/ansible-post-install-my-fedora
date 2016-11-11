@@ -1,14 +1,14 @@
 ---
-# Role Softwares 
+# Role Softwares
 
 # Install Defaults Softwares
     - name: Install Differents Packages
-      dnf: name={{ item }} state=present
+      package: name={{ item }} state=present
       with_items:
          #- 0ad
          - autoconf
          - automake
-         - blueman
+         #- blueman
          - compat-libstdc++-33
          - corebird
          - filezilla
@@ -26,6 +26,7 @@
          - gnome-mplayer
          - gnome-tweak-tool
          - gparted
+         - grip
          - gstreamer-ffmpeg
          - gstreamer-plugins-ugly
          - gstreamer1-libav
@@ -35,12 +36,13 @@
          - htop
          - kernel-devel
          - kernel-headers
+         - lame
          - libbsd
          - libbsd-devel
          - libreoffice-langpack-fr
          - libselinux-python
          - libX11-devel
-         - liveusb-creator
+         #- liveusb-creator
          - mozilla-vlc
          - p7zip
          - python-dnf
