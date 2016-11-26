@@ -7,16 +7,16 @@
       register: fusionfrepo
 
     - name: Downloading and enable RPM Fusion FREE Repository...
-      command: dnf install -y --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+      command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
       when: not fusionfrepo.stat.exists
-      
+
 # Add Repository RPM Fusion Non-FREE
     - name: Verify if RPM Fusion Non-FREE Repository exist
       stat: path=/etc/yum.repos.d/rpmfusion-nonfree.repo
       register: fusionnfrepo
 
     - name: Downloading and enable RPM Fusion Non-FREE Repository...
-      command: dnf install -y --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+      command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
       when: not fusionnfrepo.stat.exists
 
 # Add Repository Adobe
@@ -49,7 +49,7 @@
     - name: Fast Mirror Option for DNF
       lineinfile: dest=/etc/dnf/dnf.conf line="fastestmirror=true"
       #copy:
-      #    content: fastestmirror=true 
+      #    content: fastestmirror=true
       #    dest: "/etc/dnf/dnf.conf"
       tags:
         - fastmirror

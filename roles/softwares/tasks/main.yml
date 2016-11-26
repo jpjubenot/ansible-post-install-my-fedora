@@ -15,15 +15,12 @@
          - flash-plugin
          - gcc
          - gcstar
-         - geany
-         #- geany-plugins-*
          - gimp
          - git
          - gitg
          - glib2
          - glib2-devel
          - glibc-devel
-         - gnome-mplayer
          - gnome-tweak-tool
          - gparted
          - grip
@@ -34,6 +31,7 @@
          - gtk2-devel
          - help2man
          - htop
+         - keepass
          - kernel-devel
          - kernel-headers
          - lame
