@@ -74,6 +74,6 @@
 # Disable ::1 ipv6 localhost on /etc/hosts
 - replace:
      path: /etc/hosts
-     regexp: '::1'
+     regexp: '^::1'
      replace: '#::1'
      backup: yes
