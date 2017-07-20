@@ -3,5 +3,11 @@
   roles:
       - bootstrap
       - softwares
-      - bumblebee
+      #- bumblebee # NOK witk Wayland but worked with X11
       - basiccodecs
+      - hb-and-mkmkv-needed-softwares
+      - handbrake
+      - makemkv
+
+  vars_files:
+    - myvars.yml

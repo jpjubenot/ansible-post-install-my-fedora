@@ -1,55 +1,73 @@
 ---
 # Role Softwares
 
+# Remove Defaults Softwares
+- name: Remove Differents Packages
+  dnf: name=gnome-boxes state=absent
+  tags:
+    minimum
+
+
 # Install Defaults Softwares
-    - name: Install Differents Packages
-      package: name={{ item }} state=present
-      with_items:
-         #- 0ad
-         - autoconf
-         - automake
-         #- blueman
-         - compat-libstdc++-33
-         - corebird
-         - filezilla
-         - flash-plugin
-         - gcc
-         - gcstar
-         - gimp
-         - git
-         - gitg
-         - glib2
-         - glib2-devel
-         - glibc-devel
-         - gnome-tweak-tool
-         - gparted
-         - grip
-         - gstreamer-ffmpeg
-         - gstreamer-plugins-ugly
-         - gstreamer1-libav
-         - gstreamer1-plugins-ugly
-         - gtk2-devel
-         - help2man
-         - htop
-         - keepass
-         - kernel-devel
-         - kernel-headers
-         - lame
-         - libbsd
-         - libbsd-devel
-         - libreoffice-langpack-fr
-         - libselinux-python
-         - libX11-devel
-         - mediawriter
-         - mozilla-vlc
-         - p7zip
-         - python-dnf
-         - shutter
-         - tar
-         - VirtualBox-5.1
-         - vlc
-         - wget
-         - xine-lib-extras-freeworld
-         - xsane
-      tags:
-        minimum
+- name: Install Differents Packages
+  dnf: name={{ item }} state=present
+  with_items:
+     #- 0ad
+     - autoconf
+     - automake
+     #- blueman
+     - compat-libstdc++-33
+     - corebird
+     - dmidecode
+     - dropbox
+     - easytag
+     - filezilla
+     - flash-plugin
+     - gcc
+     - gcstar
+     - gimp
+     - git
+     - gitg
+     - glib2
+     - glib2-devel
+     - glibc-devel
+     - gnome-tweak-tool
+     - google-chrome-stable
+     - gparted
+     - grip
+     - gstreamer-ffmpeg
+     - gstreamer-plugins-ugly
+     - gstreamer1-libav
+     - gstreamer1-plugins-ugly
+     - gtk2-devel
+     - help2man
+     - htop
+     - iftop
+     - keepass
+     - kernel-devel
+     - kernel-headers
+     - lame
+     - libbsd
+     - libbsd-devel
+     - libreoffice-langpack-fr
+     - libselinux-python
+     - libX11-devel
+     - lynis
+     - lzop
+     - mediawriter
+     - nethogs
+     - mozilla-vlc
+     - p7zip
+     - pacmanager
+     - python-dnf
+     #- shutter
+     - system-config-users
+     - tar
+     - tcptrack
+     #- VirtualBox-5.1
+     - vlc
+     - wget
+     - xine-lib-extras-freeworld
+     - xsane
+  tags:
+    minimum

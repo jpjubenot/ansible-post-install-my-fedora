@@ -1,0 +1,45 @@
+---
+# tasks file for hb-and-mkmkv-needed-softwares
+
+# Install Softwares Needed to Compile Handbrake and MakeMKV
+- name: Install Differents Group Packages
+  shell: dnf -y groupinstall "Development Tools" "Development Libraries" "X Software Development" "GNOME Software Development"
+
+- name: Install Differents Packages
+  dnf: name={{ item }} state=present
+  with_items:
+     - bzip2-devel
+     - cmake
+     - dbus-glib-devel
+     - expat-devel
+     - ffmpeg
+     - ffmpeg-devel
+     - fontconfig-devel
+     - freetype-devel
+     - fribidi-devel
+     - gcc-c++
+     - git
+     - gstreamer-devel
+     - gstreamer-plugins-base-devel
+     - harfbuzz-devel
+     - intltool
+     - jansson-devel
+     - lame-devel
+     - libass-devel
+     - libgudev1-devel
+     - libnotify-devel
+     - libsamplerate-devel
+     - libtheora-devel
+     - libtool
+     - libvorbis-devel
+     - libxml2-devel
+     - m4
+     - make
+     - openssl-devel
+     - opus-devel
+     - patch
+     - qt5-qtbase-devel
+     - x264-devel
+     - webkitgtk-devel
+     - yasm
+     - zlib-devel

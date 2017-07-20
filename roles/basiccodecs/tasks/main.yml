@@ -2,10 +2,25 @@
 # Role Basiccodec
 
 # Add Mplayer Codecs
-    - name: Verify if Mplayer Codecs exist
-      stat: path=/usr/share/doc/mplayer-codecs-20061022
-      register: mplayercodecs
+- name: Verify if Mplayer Codecs exist
+  stat: path=/usr/share/doc/mplayer-codecs-20061022
+  register: mplayercodecs
 
-    - name: Downloading and Install Mplayer Codecs...
-      shell: wget http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-20061022-1.x86_64.rpm http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-extra-20061022-1.x86_64.rpm -P /tmp/. ; rpm -ihv /tmp/mplayer-codecs*.rpm
-      when: not mplayercodecs.stat.exists
+# Download lastest version on www.makemkv.com
+- name: Downloading MPlayer Codecs
+  get_url:
+      url: http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-20061022-1.x86_64.rpm
+      dest: /tmp
+      mode: 0644
+  when: not mplayercodecs.stat.exists
+
+- name: Downloading MPlayer Extra Codecs
+  get_url:
+      url: http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-extra-20061022-1.x86_64.rpm
+      dest: /tmp
+      mode: 0644
+  when: not mplayercodecs.stat.exists
+
+- name: Install Mplayer Codecs...
+  shell: rpm -ihv /tmp/mplayer-codecs*.rpm
+  when: not mplayercodecs.stat.exists

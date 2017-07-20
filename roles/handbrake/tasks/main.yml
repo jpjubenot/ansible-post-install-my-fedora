@@ -1,0 +1,24 @@
+---
+# tasks file for handbrake
+
+# Handbrake Compilation
+# https://handbrake.fr/docs/en/latest/developer/build-linux.html
+
+# Create Folder to Compile
+- name: Create Folder to Compile
+  file:
+    path: "/tmp/Handbrake-Build"
+    state: directory
+    mode: 0775
+
+# Download lastet version on Git Repository
+- name: Downloading HandBrake from github...
+  shell: 'cd /tmp/Handbrake-Build/ && git clone https://github.com/HandBrake/HandBrake.git'
+
+# Compile Handbrake
+- name: configure
+  shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
+
+- make:
+    chdir: "/tmp/Handbrake-Build/build"
+    target: install
