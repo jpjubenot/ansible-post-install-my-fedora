@@ -71,11 +71,9 @@
 - name: Disable IPv6 -c
   lineinfile: dest=/etc/sysctl.conf line="net.ipv6.conf.lo.disable_ipv6 = 1"
 
-# Don't Forget to disable ::1 ipv6 localhost on /etc/hosts
-- name: Disable IPv6 in Hosts file
-  lineinfile:
+# Disable ::1 ipv6 localhost on /etc/hosts
+- replace:
      path: /etc/hosts
      regexp: '::1         localhost localhost.localdomain localhost6 localhost6.localdomain6'
      replace: '#::1         localhost localhost.localdomain localhost6 localhost6.localdomain6'
-     state: present
      backup: yes
