@@ -39,14 +39,14 @@ hb-and-mmkmkv-needed-softwares : Installe les logiciels et librairies nécessair
 handbrake                      : Compilation du logiciel HanBrake.
 
 makemkv                        : Compilation du logiciel MakeMKV.
----
+
 myFedora.yml                   : Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les roles et
                                  quel machine sera impactée ou sur quel groupe seront jouer les rôles.
----
+
 myvars.yml    consiste en quelques variables à modifier en cas de besoin
               version de la Fedora et version des archives de MakeMKV
               ATTENTION : A bien modifier ce fichier avant l'exécution du script
----               
+               
 
 Pré-requis:
 Depuis une Fedora 26 il vous faut le paquet ansbile et libselinux-python.
