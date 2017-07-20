@@ -20,5 +20,5 @@
   shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
 
 - make:
-  chdir: "/tmp/Handbrake-Build/HandBrake/build"
-  target: install
+    chdir: "/tmp/Handbrake-Build/HandBrake/build"
+    target: install
