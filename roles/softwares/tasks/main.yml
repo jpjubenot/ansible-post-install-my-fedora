@@ -1,12 +1,17 @@
 ---
 # Role Softwares
 
+# Clean DNF
+- name: Clean DNF
+  shell: dnf clean all
+  tags:
+    minimum
+
 # Remove Defaults Softwares
 - name: Remove Differents Packages
   dnf: name=gnome-boxes state=absent
   tags:
     minimum
-
 
 # Install Defaults Softwares
 - name: Install Differents Packages

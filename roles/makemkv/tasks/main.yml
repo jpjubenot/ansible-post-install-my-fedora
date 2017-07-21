@@ -65,10 +65,18 @@
      mode: 0775
 
 - name: Compile MakeMKV BIN
-  shell: 'cd /tmp/MakeMKV/{{ MakeMKV_BIN }} && sleep 1 &&  make'
+  shell: 'cd /tmp/MakeMKV/{{ MakeMKV_BIN }} &&  make'
   args:
      executable: /bin/bash
 
 - make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_BIN }}"
      target: install
+
+
+# Clean MakeMKV-Build
+- name: Delete MakeMKV Folder
+  file:
+     path: "/tmp/MakeMKV"
+     state: absent
+     state: directory

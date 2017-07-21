@@ -22,3 +22,10 @@
 - make:
     chdir: "/tmp/Handbrake-Build/HandBrake/build"
     target: install
+
+# Clean Handbrake-Build
+- name: Delete Handbrake-Build Folder
+  file:
+    path: "/tmp/Handbrake-Build"
+    state: absent
+    state: directory

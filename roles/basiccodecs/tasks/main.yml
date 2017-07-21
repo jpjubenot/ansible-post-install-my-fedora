@@ -24,3 +24,15 @@
 - name: Install Mplayer Codecs...
   shell: rpm -ihv /tmp/mplayer-codecs*.rpm
   when: not mplayercodecs.stat.exists
+
+# Clean Mplayer Codecs
+- name: Delete MPlayer Codecs File
+  file:
+    path: "/tmp/mplayer-codecs-20061022-1.x86_64.rpm"
+    state: absent
+
+# Clean Mplayer Codecs
+- name: Delete MPlayer Codecs Extra File
+  file:
+    path: "/tmp/mplayer-codecs-extra-20061022-1.x86_64.rpm"
+    state: absent
