@@ -79,4 +79,3 @@
   file:
      path: "/tmp/MakeMKV"
      state: absent
-     state: directory

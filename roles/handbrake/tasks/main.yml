@@ -28,4 +28,3 @@
   file:
     path: "/tmp/Handbrake-Build"
     state: absent
-    state: directory
