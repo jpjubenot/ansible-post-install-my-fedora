@@ -18,6 +18,7 @@
   dnf: name={{ item }} state=present
   with_items:
      #- 0ad
+     - atom
      - autoconf
      - automake
      #- blueman
@@ -60,6 +61,7 @@
      - lynis
      - lzop
      - mediawriter
+     - nano
      - nethogs
      - mozilla-vlc
      - p7zip
