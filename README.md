@@ -41,7 +41,7 @@ handbrake                      : Compilation du logiciel HanBrake.
 makemkv                        : Compilation du logiciel MakeMKV.
 
 myFedora.yml                   : Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les roles et
-                                 quel machine sera impactée ou sur quels groupes d'ordinateurs seront jouer les rôles.
+                                 quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.
 
 myvars.yml    consiste en quelques variables à modifier en cas de besoin
               version de la Fedora et version des archives de MakeMKV
@@ -54,7 +54,7 @@ Depuis une Fedora 26 il vous faut le paquet ansbile et libselinux-python.
 Ce projet est à son commencement, donc il est fort possible que certains éléments ne soient pas corrects.
 
 Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil.
-Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ en local.
+zComme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ en local.
 
 Creer un dossier dans lequel vous pourrez reprendre le scénario Ansible que je mets à disposition.
 
