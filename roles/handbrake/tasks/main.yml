@@ -10,8 +10,8 @@
   register: handbrakeexist
 
 # Exit if exist
-#- meta: end_play
-#  when: handbrakeexist.stat.exists
+- meta: end_play
+  when: handbrakeexist.stat.exists
 
 # Create Folder to Compile
 - name: Create Folder to Compile
@@ -19,26 +19,26 @@
     path: "/tmp/Handbrake-Build"
     state: directory
     mode: 0775
-  when: not handbrakeexist.stat.exists
+#  when: not handbrakeexist.stat.exists
 
 # Download lastet version on Git Repository
 - name: Downloading HandBrake from github...
   shell: 'cd /tmp/Handbrake-Build/ && git clone https://github.com/HandBrake/HandBrake.git'
-  when: not handbrakeexist.stat.exists
+#  when: not handbrakeexist.stat.exists
 
 # Compile Handbrake
 - name: configure
   shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
-  when: not handbrakeexist.stat.exists
+#  when: not handbrakeexist.stat.exists
 
 - make:
     chdir: "/tmp/Handbrake-Build/HandBrake/build"
     target: install
-    when: not handbrakeexist.stat.exists
+#    when: not handbrakeexist.stat.exists
 
 # Clean Handbrake-Build
 - name: Delete Handbrake-Build Folder
   file:
     path: "/tmp/Handbrake-Build"
     state: absent
-    when: not handbrakeexist.stat.exists
+#    when: not handbrakeexist.stat.exists
