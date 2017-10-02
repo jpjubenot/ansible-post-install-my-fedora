@@ -19,7 +19,6 @@
      path: "/tmp/MakeMKV"
      state: directory
      mode: 0775
-#  when: not makemkvexist.stat.exists
 
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV OSS
@@ -27,7 +26,6 @@
      url: http://www.makemkv.com/download/{{ MakeMKV_version_OSS }}
      dest: "/tmp/MakeMKV"
      mode: 0644
-#  when: not makemkvexist.stat.exists
 
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV BIN
@@ -35,37 +33,31 @@
      url: http://www.makemkv.com/download/{{ MakeMKV_version_BIN }}
      dest: "/tmp/MakeMKV"
      mode: 0644
-#  when: not makemkvexist.stat.exists
 
 # Uncompress BIN Files
 - name: Uncompress BIN Achive
   unarchive:
      src: "/tmp/MakeMKV/{{ MakeMKV_BIN }}.tar.gz"
      dest: "/tmp/MakeMKV"
-#  when: not makemkvexist.stat.exists
 
 # Uncompress OSS Files
 - name: Uncompress OSS Achive
   unarchive:
      src: "/tmp/MakeMKV/{{ MakeMKV_OSS }}.tar.gz"
      dest: "/tmp/MakeMKV"
-#  when: not makemkvexist.stat.exists
 
 # Compile MakeMKV OSS
 - name: configure
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && ./configure'
-#  when: not makemkvexist.stat.exists
 
 - name: Compile MakeMKV OSS
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && echo -e "\nq\nyes" | make'
   args:
      executable: /bin/bash
-#  when: not makemkvexist.stat.exists
 
 - make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_OSS }}"
      target: install
-#  when: not makemkvexist.stat.exists
 
 # Compile MakeMKV BIN
 - name: Create Folder BIN to Compile
@@ -73,29 +65,24 @@
      path: "/tmp/MakeMKV/{{ MakeMKV_BIN }}/tmp"
      state: directory
      mode: 0775
-#  when: not makemkvexist.stat.exists
 
 - name: Create File to Compile
   file:
      path: "/tmp/MakeMKV/{{ MakeMKV_BIN }}/tmp/eula_accepted"
      state: touch
      mode: 0775
-#  when: not makemkvexist.stat.exists
 
 - name: Compile MakeMKV BIN
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_BIN }} &&  make'
   args:
      executable: /bin/bash
-#  when: not makemkvexist.stat.exists
 
 - make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_BIN }}"
      target: install
-#  when: not makemkvexist.stat.exists
 
 # Clean MakeMKV-Build
 - name: Delete MakeMKV Folder
   file:
      path: "/tmp/MakeMKV"
      state: absent
-#  when: not makemkvexist.stat.exists

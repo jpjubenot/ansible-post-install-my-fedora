@@ -3,7 +3,7 @@
   roles:
       - bootstrap
       - softwares
-      #- bumblebee # NOK witk Wayland but worked with X11
+      #- bumblebee # NOK with Wayland but worked with X11 on Fedora 22
       - basiccodecs
       - hb-and-mkmkv-needed-softwares
       - handbrake
