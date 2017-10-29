@@ -3,8 +3,8 @@ Jacques-Philippe JUBENOT, France
 
 Ce projet "ansible-post-install-my-fedora" a pour but de finaliser l'installation de ma Fedora.
 Pour chaque nouvelle version de Fedora, je préfère repartir d'une installation de zéro, plutôt que d'une mise à jour.
-Alors si il est facile de sauvegarder ses données puis de les restaurer.
-Concernant les applications il y en a toujours une ou deux que l'on oublie de réintégrer, et on la réinstalle d'urgence au dernier moment.
+Alors si il est facile de sauvegarder ses données puis de les restaurer, concernant les applications il y en a toujours
+une ou deux que l'on oublie de réintégrer, et on la réinstalle d'urgence au dernier moment.
 
 J'ai découvert récemment Ansible au bureau et je trouve le concept génial.
 Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appliquer à la maison.
@@ -20,7 +20,6 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - bootstrap
 - softwares
 - basiccodecs
-- bumblebee --- abandonné
 - hb-and-mmkmkv-needed-softwares
 - handbrake
 - makemkv
@@ -31,9 +30,6 @@ softwares		               : Correspond à toute une liste de paquets que j'aime 
 
 basiccodecs		               : Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats.
 
-bumblebee (abandonné)          : Installe les repositories et les paquets qui me permettent d'utiliser mon portable équipé de la
-                                 technologie Optimus de Nvidia (intel/Nvidia graphic cards) X11 Only - Fedora 22.
-
 hb-and-mmkmkv-needed-softwares : Installe les logiciels et librairies nécessaires ppour compiler HandBrake et MakeMKV.
 
 handbrake                      : Compilation du logiciel HanBrake.
@@ -43,17 +39,17 @@ makemkv                        : Compilation du logiciel MakeMKV.
 myFedora.yml                   : Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les roles et
                                  quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.
 
-myvars.yml    consiste en quelques variables à modifier en cas de besoin
-              version de la Fedora et version des archives de MakeMKV
-              ATTENTION : A bien modifier ce fichier avant l'exécution du script
-               
+myvars.yml                     : consiste en quelques variables à modifier en cas de besoin
+                                 version de la Fedora et version des archives de MakeMKV
+                                 ATTENTION : A bien modifier ce fichier avant l'exécution du script
+
 
 Pré-requis:
 Depuis une Fedora 26 il vous faut le paquet ansbile et libselinux-python.
 
 Ce projet est à son commencement, donc il est fort possible que certains éléments ne soient pas corrects.
 
-Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil. 
+Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil.
 Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ en local.
 
 Creer un dossier dans lequel vous pourrez reprendre le scénario Ansible que je mets à disposition.
