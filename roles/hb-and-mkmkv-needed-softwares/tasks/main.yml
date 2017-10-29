@@ -6,7 +6,7 @@
 - name: Clean DNF
   shell: dnf clean all
   tags:
-    minimum
+    minhbmk
 
 # Install Softwares Needed to Compile Handbrake and MakeMKV
 - name: Install Differents Group Packages
