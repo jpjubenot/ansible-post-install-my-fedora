@@ -50,3 +50,5 @@
      - webkitgtk-devel
      - yasm
      - zlib-devel
+  tags:
+    minhbmk
