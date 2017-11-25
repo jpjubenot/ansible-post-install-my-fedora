@@ -47,7 +47,7 @@
      - patch
      - qt5-qtbase-devel
      - x264-devel
-     - webkitgtk-devel
+     #- webkitgtk-devel -- OK with Fedora 26
      - yasm
      - zlib-devel
   tags:

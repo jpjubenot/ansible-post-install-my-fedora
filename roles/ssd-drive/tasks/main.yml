@@ -1,0 +1,68 @@
+---
+# tasks file for ssd-drive
+
+# Verify if RC.Local exist
+- name: Verify if RC.Local exist
+  stat: path=/etc/rc.d/rc.local
+  register: rclocal
+  tags:
+    rccnf
+
+# Create RC.Local
+- name: Create RC.Local
+  file: dest=/etc/rc.d/rc.local mode=0777 owner=root group=root
+  when: not rclocal.stat.exists
+  tags:
+    rccnf
+
+# Insert Scheduler for SSD Drive
+- name: Inssert Scheduler for SSD Driveq
+  lineinfile: dest=/etc/rc.d/rc.local line="#!/bin/bash"
+  when: not rclocal.stat.exists
+  tags:
+    rccnf
+
+# Insert Scheduler for SSD Drive
+- name: Inssert Scheduler for SSD Driveq
+  lineinfile: dest=/etc/rc.d/rc.local line="echo 'noop' > /sys/block/sda/queue/scheduler"
+  tags:
+    rccnf
+
+# Create RC.Local.Service
+- name: Create RC.Local
+  file: src=templates/rc-local.service.tpl dest=/etc/systemd/system/rc-local.service mode=0777 owner=root group=root
+  when: not rclocal.stat.exists
+  tags:
+    rccnf
+
+# Enable RC.Local.Service
+- name: Enable RC.Local.Service
+  systemd: name=rc-local.service enabled=true
+  tags:
+    rccnf
+
+# Start RC.Local.Service
+- name: Start RC.Local.Service
+  systemd: name=rc-local.service state=start
+  when: not rclocal.stat.exists
+  tags:
+    rccnf
+
+# Enable TRIM Service
+- name: Enable TRIM Service
+  systemd: name=fstrim.timer enabled=true
+  tags:
+    enabtrim
+
+# Enable SSD in LVM Configuration
+- replace:
+    path: /etc/lvm/lvm.conf
+    regexp: "issue_discards = 0"
+    replace: "issue_discards = 1"
+    backup: yes
+  tags:
+    enabtrim
+
+# Disable Swap disk activity
+- name: Disable Swap disk activity
+  lineinfile: dest=/etc/sysctl.conf line="vm.swappiness = 0"

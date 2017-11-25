@@ -3,7 +3,7 @@
 
 # Clean DNF
 - name: Clean DNF
-  shell: dnf clean all
+  command: dnf clean all
   tags:
     minimum
 
@@ -15,7 +15,8 @@
 
 # Install Defaults Softwares
 - name: Install Differents Packages
-  dnf: name={{ item }} state=present
+  dnf: name={{ item }} autoremove=yes
+  #state=present
   with_items:
      #- 0ad
      - autoconf
@@ -54,8 +55,8 @@
      - kernel-devel
      - kernel-headers
      - lame
-     - libbsd
-     - libbsd-devel
+     #- libbsd -- OK with Fedora 26
+     #- libbsd-devel -- OK with Fedora 26
      - libreoffice-langpack-fr
      - libselinux-python
      - libX11-devel
@@ -73,10 +74,10 @@
      - system-config-users
      - tar
      - tcptrack
-     #- VirtualBox-5.1
+     - VirtualBox-5.2
      - vlc
      - wget
      - xine-lib-extras-freeworld
      - xsane
   tags:
-    minimum
+    instsoft

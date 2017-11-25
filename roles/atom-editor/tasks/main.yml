@@ -1,0 +1,35 @@
+---
+# tasks file for atom-editor
+# Role Atom-Editor
+
+# Add Atom-Editor
+- name: Verify if Atom-Editor exist
+  stat: path=/usr/bin/atom
+  register: atomeditor
+
+# Download lastest version Atom-Editor
+- name: Download lastest version Atom-Editor
+#  get_url:
+#      #url: http://atom.io/download/rpm
+#      url: https://atom-installer.github.com/v1.22.1/atom.x86_64.rpm
+#      dest: /tmp/atom.x86_64.rpm
+#      mode: 0744
+  command: "wget -O /tmp/atom.x86_64.rpm http://atom.io/download/rpm"
+  when: not atomeditor.stat.exists
+  tags:
+    atom
+
+- name: Install Atom-Editor
+  shell: rpm -Uhv /tmp/atom.x86_64.rpm
+  when: not atomeditor.stat.exists
+  tags:
+    atom
+
+# Clean Mplayer Codecs
+- name: Delete Atom-Editor File
+  file:
+    path: "/tmp/atom.x86_64.rpm"
+    state: absent
+  when: not atomeditor.stat.exists
+  tags:
+    atom

@@ -3,7 +3,9 @@
   roles:
       - bootstrap
       - softwares
+      - atom-editor
       - basiccodecs
+      - ssd-drive
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
