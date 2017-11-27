@@ -8,10 +8,10 @@
     minimum
 
 # Remove Defaults Softwares
-- name: Remove Differents Packages
-  dnf: name=gnome-boxes state=absent
-  tags:
-    minimum
+#- name: Remove Differents Packages
+#  dnf: name=gnome-boxes state=absent
+#  tags:
+#    minimum
 
 # Install Defaults Softwares
 - name: Install Differents Packages

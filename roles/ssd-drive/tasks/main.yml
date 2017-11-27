@@ -10,8 +10,10 @@
 
 # Create RC.Local
 - name: Create RC.Local
-  file: dest=/etc/rc.d/rc.local mode=0777 owner=root group=root
-  when: not rclocal.stat.exists
+  command: touch /etc/rc.d/rc.local
+  #state: touch
+  #mode: 0777
+  #when: not rclocal.stat.exists
   tags:
     rccnf
 
@@ -59,7 +61,7 @@
     path: /etc/lvm/lvm.conf
     regexp: "issue_discards = 0"
     replace: "issue_discards = 1"
-    backup: yes
+    #backup: yes
   tags:
     enabtrim
 
