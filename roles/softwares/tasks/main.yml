@@ -47,6 +47,7 @@
      - gstreamer-plugins-ugly
      - gstreamer1-libav
      - gstreamer1-plugins-ugly
+     - gtk-murrine-engine
      - gtk2-devel
      - help2man
      - htop
@@ -76,6 +77,7 @@
      - tcptrack
      - VirtualBox-5.2
      - vlc
+     - vte-devel
      - wget
      - xine-lib-extras-freeworld
      - xsane
