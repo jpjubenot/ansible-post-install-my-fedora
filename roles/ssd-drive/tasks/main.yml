@@ -10,10 +10,7 @@
 
 # Create RC.Local
 - name: Create RC.Local
-  command: touch /etc/rc.d/rc.local
-  #state: touch
-  #mode: 0777
-  #when: not rclocal.stat.exists
+  command: touch /etc/rc.d/rc.local ; chmod 777 /etc/rc.d/rc.local
   tags:
     rccnf
 
