@@ -10,19 +10,24 @@
 
 # Create RC.Local
 - name: Create RC.Local
-  command: touch /etc/rc.d/rc.local ; chmod 777 /etc/rc.d/rc.local
+  command: touch /etc/rc.d/rc.local
+  tags:
+    rccnf
+
+# Change Access Rights
+- file: path=/etc/rc.d/rc.local mode=0777 owner=root group=root
   tags:
     rccnf
 
 # Insert Scheduler for SSD Drive
-- name: Inssert Scheduler for SSD Driveq
+- name: Prepare RC.Local
   lineinfile: dest=/etc/rc.d/rc.local line="#!/bin/bash"
   when: not rclocal.stat.exists
   tags:
     rccnf
 
 # Insert Scheduler for SSD Drive
-- name: Insert Scheduler for SSD Drive on /dev/sda
+- name: Insert Scheduler for SSD Drive on /dev/sda in RC.local
   lineinfile: dest=/etc/rc.d/rc.local line="echo 'noop' > /sys/block/sda/queue/scheduler"
   tags:
     rccnf
