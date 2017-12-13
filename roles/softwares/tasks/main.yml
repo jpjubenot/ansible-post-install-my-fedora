@@ -49,6 +49,7 @@
      - gstreamer1-plugins-ugly
      - gtk-murrine-engine
      - gtk2-devel
+     - hdparm
      - help2man
      - htop
      - iftop
