@@ -9,16 +9,16 @@
 # Download lastest version on www.makemkv.com
 - name: Downloading MPlayer Codecs
   get_url:
-      url: http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-20061022-1.x86_64.rpm
-      dest: /tmp
-      mode: 0644
+    url: http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-20061022-1.x86_64.rpm
+    dest: /tmp
+    mode: 0644
   when: not mplayercodecs.stat.exists
 
 - name: Downloading MPlayer Extra Codecs
   get_url:
-      url: http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-extra-20061022-1.x86_64.rpm
-      dest: /tmp
-      mode: 0644
+    url: http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-extra-20061022-1.x86_64.rpm
+    dest: /tmp
+    mode: 0644
   when: not mplayercodecs.stat.exists
 
 - name: Install Mplayer Codecs...
