@@ -47,7 +47,7 @@
 
 # Start RC.Local.Service
 - name: Start RC.Local.Service
-  systemd: name=rc-local.service state=start
+  systemd: name=rc-local.service state=started
   when: not rclocal.stat.exists
   tags:
     rccnf
