@@ -56,7 +56,7 @@ ATTENTION : A bien modifier ce fichier avant l'exécution du script
 
 
 Pré-requis:
-Depuis une Fedora 26 il vous faut le paquet ansbile et libselinux-python.
+Depuis une Fedora 26 il vous faut le paquet ansible et libselinux-python.
 
 Ce projet est à son commencement, donc il est fort possible que certains éléments
 ne soient pas corrects.

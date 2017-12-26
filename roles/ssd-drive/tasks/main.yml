@@ -34,7 +34,7 @@
 
 # Create RC.Local.Service
 - name: Create RC.Local
-  file: src=templates/rc-local.service.tpl dest=/etc/systemd/system/rc-local.service mode=0777 owner=root group=root
+  template: src=templates/rc-local.service.tpl dest=/etc/systemd/system/rc-local.service mode=0777 owner=root group=root
   when: not rclocal.stat.exists
   tags:
     rccnf
