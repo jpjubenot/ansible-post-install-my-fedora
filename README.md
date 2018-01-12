@@ -25,6 +25,7 @@ Mon projet s'articule comme suit.
 Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - bootstrap
 - softwares
+- atom-editor
 - basiccodecs
 - hb-and-mmkmkv-needed-softwares
 - handbrake
@@ -35,6 +36,8 @@ désactivation de IPv6 etc ...
 
 softwares: Correspond à toute une liste de paquets que j'aime utiliser sur ma
 machine.
+
+atom-editor: Installation du logiciel Atom Editor.
 
 basiccodecs: Correspond à des codecs pour mplayer permettant de visualiser des
 vidéos de différents formats.

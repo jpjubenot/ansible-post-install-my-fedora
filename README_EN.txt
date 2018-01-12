@@ -20,6 +20,7 @@ many other things.
 My project works like this :
 - bootstrap
 - softwares
+- atom-editor
 - basiccodecs
 - hb-and-mmkmkv-needed-softwares
 - handbrake
@@ -28,6 +29,8 @@ My project works like this :
 bootstrap   : Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
 
 softwares   : A list of my favorites softwares or librairies to install I need ...
+
+atom-editor: Atom Editor software installation.
 
 basiccodecs  : Some basics codecs to mplayer player
 
