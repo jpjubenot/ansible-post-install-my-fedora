@@ -1,0 +1,14 @@
+---
+# tasks file for packagekit
+
+# Mask PackageKit Service
+- name: Mask PackageKit Service
+  systemd: name=packagekit.service masked=yes
+  tags:
+    pkgkit
+
+# Mask PackageKit Service
+#- name: Mask PackageKit Service
+#  command: systemctl mask packagekit.service
+#  tags:
+#    pkgkit

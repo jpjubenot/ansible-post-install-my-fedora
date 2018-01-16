@@ -19,6 +19,7 @@ many other things.
 
 My project works like this :
 - bootstrap
+- packagekit
 - softwares
 - atom-editor
 - basiccodecs
@@ -27,6 +28,8 @@ My project works like this :
 - makemkv
 
 bootstrap   : Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
+
+packagekit: disable with mask option packagekit service because I do update exclusively by command line.
 
 softwares   : A list of my favorites softwares or librairies to install I need ...
 

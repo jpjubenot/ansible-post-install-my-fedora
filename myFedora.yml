@@ -2,13 +2,14 @@
   remote_user : root
   roles:
       - bootstrap
+      - packagekit
       - softwares
       - atom-editor
       - basiccodecs
       - ssd-drive
       - hb-and-mkmkv-needed-softwares
-      - handbrake
-      - makemkv
+      #- handbrake
+      #- makemkv
 
   vars_files:
     - myvars.yml
