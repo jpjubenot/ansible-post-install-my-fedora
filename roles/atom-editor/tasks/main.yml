@@ -9,11 +9,6 @@
 
 # Download lastest version Atom-Editor
 - name: Download lastest version Atom-Editor
-#  get_url:
-#      #url: http://atom.io/download/rpm
-#      url: https://atom-installer.github.com/v1.22.1/atom.x86_64.rpm
-#      dest: /tmp/atom.x86_64.rpm
-#      mode: 0744
   command: "wget -O /tmp/atom.x86_64.rpm http://atom.io/download/rpm"
   when: not atomeditor.stat.exists
   tags:
