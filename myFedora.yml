@@ -8,8 +8,8 @@
       - basiccodecs
       - ssd-drive
       - hb-and-mkmkv-needed-softwares
-      #- handbrake
-      #- makemkv
+      - handbrake
+      - makemkv
 
   vars_files:
     - myvars.yml

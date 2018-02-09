@@ -28,6 +28,7 @@
      - dnf-plugin-system-upgrade
      - dropbox
      - easytag
+     - elfutils-libelf-devel
      - fedora-arm-installer
      - filezilla
      - flash-plugin
