@@ -35,7 +35,8 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 bootstrap: Installe différents repositories : RPMFusion, RPMFusion NON-Free, Adobe,
 désactivation de IPv6 etc ...
 
-packagekit: désactiver le service packagekit parceque je ne fais mes mises à jour système que en ligne de commmande
+packagekit: désactiver le service packagekit parceque je ne fais mes mises à jour
+système que en ligne de commmande
 
 softwares: Correspond à toute une liste de paquets que j'aime utiliser sur ma
 machine.

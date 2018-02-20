@@ -1,4 +1,9 @@
 ---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
+
 # tasks file for ssd-drive
 
 # Verify if RC.Local exist

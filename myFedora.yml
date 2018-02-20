@@ -1,3 +1,8 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
 - hosts: localhost
   remote_user : root
   roles:
