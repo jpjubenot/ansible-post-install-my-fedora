@@ -52,6 +52,8 @@ myvars.yml : describe some variables wich define versions softwares.
 Needed:
 Since Fedora  you need to install ansible and libselinux-python packages.
 
+dnf install ansible libselinux-python
+
 This prject is at start, well it's possible some things not very good.
 
 I recommand you to document about Ansible to understand the philosophy of this product.
