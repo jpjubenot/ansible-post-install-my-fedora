@@ -1,0 +1,36 @@
+*** makemkv-oss-1.12.2/libffabi/src/ffabi.c.ORIG   2018-04-27 20:53:47.000000000 -0500
+--- makemkv-oss-1.12.2/libffabi/src/ffabi.c   2018-05-13 09:11:26.215809333 -0500
+***************
+*** 517,523 ****
+          info->profile : FF_PROFILE_UNKNOWN;
+ 
+      if ((CodecFlags&FFM_CODEC_FLAG_GLOBAL_HEADER)!=0)
+!         ctx->avctx->flags |= CODEC_FLAG_GLOBAL_HEADER;
+ 
+      if (argp) {
+          for (i=0;argp[i];i+=2) {
+--- 517,523 ----
+          info->profile : FF_PROFILE_UNKNOWN;
+ 
+      if ((CodecFlags&FFM_CODEC_FLAG_GLOBAL_HEADER)!=0)
+!         ctx->avctx->flags |= AV_CODEC_FLAG_GLOBAL_HEADER;
+ 
+      if (argp) {
+          for (i=0;argp[i];i+=2) {
+***************
+*** 718,724 ****
+      info->delay = (int32_t)ctx->avctx->delay;
+      info->flags = 0;
+ 
+!     if ((ctx->avctx->flags&CODEC_FLAG_GLOBAL_HEADER)!=0)
+          info->flags |= FFM_CODEC_FLAG_GLOBAL_HEADER;
+ 
+      return 0;
+--- 718,724 ----
+      info->delay = (int32_t)ctx->avctx->delay;
+      info->flags = 0;
+ 
+!     if ((ctx->avctx->flags&AV_CODEC_FLAG_GLOBAL_HEADER)!=0)
+          info->flags |= FFM_CODEC_FLAG_GLOBAL_HEADER;
+ 
+      return 0;
