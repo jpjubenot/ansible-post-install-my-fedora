@@ -48,7 +48,7 @@ machine.
 
 
 <strong>Pré-requis:</strong>
-Depuis une Fedora 26 il vous faut le paquet ansible et libselinux-python.
+Il vous faut installer les paquets ansible et libselinux-python.
 
 <code>dnf install ansible libselinux-python</code>
 
