@@ -64,7 +64,7 @@ Il vous faut installer les paquets ansible et libselinux-python.
 
 <code>cd ansible-post-install-my-fedora</code>
 
-<p><strong>Exemple pour tester</strong> : # ansible-playbook -i hosts myFedora.yml --check
+<p><strong>Exemple pour tester:</strong> <code># ansible-playbook -i hosts myFedora.yml --check</code>
 Il se peut que le test envoi des erreurs car il ne fait que tester l'exécution
 des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit être utilisé dans un rôle plus tard on aura une erreur puisqu'il n'est pas présent sur la machine.</p>
 
