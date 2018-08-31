@@ -10,9 +10,9 @@ Rationaliser l'installation et la gestion des systèmes peut tout à fait
 s'appliquer à la maison.</p>
 <p>Ce projet permet de réinstaller une bonne partie des applications présentent sur ma Fedora. GitHub est dès lors tout désigné pour partager ce mini projet.</p>
 
-D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes nos applications préférées.
+<p>D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes nos applications préférées.</p>
 
-Mon projet s'articule comme suit.
+<p>Mon projet s'articule comme suit.</p>
 
 Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>bootstrap</strong>
@@ -52,12 +52,11 @@ Depuis une Fedora 26 il vous faut le paquet ansible et libselinux-python.
 
 <code>dnf install ansible libselinux-python</code>
 
-Ce projet est à son commencement, donc il est fort possible que certains éléments ne soient pas corrects.
+<p>Ce projet est à son commencement, donc il est fort possible que certains éléments ne soient pas corrects.</p>
 
-Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil.
-Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ en local.
+<p>Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil. Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ en local.</p>
 
-Creer un dossier dans lequel vous pourrez reprendre le scénario Ansible que je mets à disposition.
+<p>Creer un dossier dans lequel vous pourrez reprendre le scénario Ansible que je mets à disposition.</p>
 
 <code>mkdir Depot-Git && cd Depot-Git</code>
 
@@ -65,21 +64,18 @@ Creer un dossier dans lequel vous pourrez reprendre le scénario Ansible que je 
 
 <code>cd ansible-post-install-my-fedora</code>
 
-Exemple pour tester : # ansible-playbook -i hosts myFedora.yml --check
+<p><strong>Exemple pour tester</strong> : # ansible-playbook -i hosts myFedora.yml --check
 Il se peut que le test envoi des erreurs car il ne fait que tester l'exécution
-des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit être utilisé dans
-un rôle plus tard on aura une erreur puisqu'il n'est pas présent sur la machine.
+des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit être utilisé dans un rôle plus tard on aura une erreur puisqu'il n'est pas présent sur la machine.</p>
 
-<strong>Exemple</strong> pour effectuer les installations : <code># ansible-playbook  -i hosts myFedora.yml</code>
+<strong>Exemple</strong> pour effectuer les installations: <code># ansible-playbook  -i hosts myFedora.yml</code>
 
-Ce script peut tout à fait être utiliser sur des machines distantes utilisant
+<p>Ce script peut tout à fait être utiliser sur des machines distantes utilisant
 Fedora en vous référant à la documentation de Ansible ou sur les différents tuto
-présents sur le web.
+présents sur le web.</p>
 
-Par ce biais vous êtes assuré que toutes la machines de votre réseau sont
-finalisées de la même manière.
+<p>Par ce biais vous êtes assuré que toutes la machines de votre réseau sont finalisées de la même manière.</p>
 
-Je vous conseil dans la mesure du possible de tester sur une machine virtuelle
-cela vous donnera un aperçu de ce qui se passe.
-Le temps d'exécution du script dépend de la vitesse de la machine ainsi que de
-la bande passante dont vous disposez pour les différents téléchargements.
+<p>Je vous conseil dans la mesure du possible de tester sur une machine virtuelle
+cela vous donnera un aperçu de ce qui se passe.</p>
+<p>Le temps d'exécution du script dépend de la vitesse de la machine ainsi que de la bande passante dont vous disposez pour les différents téléchargements.</p>
