@@ -49,7 +49,7 @@ compile HandBrake software and MakeMKV software
 <strong>!! Be carefull to modify this file before to execute the Playbook !!</strong>
 
 <strong>Needed:</strong>
-Since Fedora  you need to install ansible and libselinux-python packages.
+It is necessary to install ansible and libselinux-python packages.
 
 <code>dnf install ansible libselinux-python</code>
 
