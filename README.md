@@ -58,7 +58,7 @@ indique dans quel ordre jouer les roles et quel machine sera impactée ou sur
 quels groupes d'ordinateurs seront joués les rôles.
 
 myvars.yml: consiste en quelques variables à modifier en cas de besoin version de
-la Fedora et version des archives de MakeMKV
+la Fedora et version des archives de MakeMKV.
 ATTENTION : A bien modifier ce fichier avant l'exécution du script
 
 
