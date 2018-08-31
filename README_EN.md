@@ -67,7 +67,7 @@ I suggest you to create a folder to download the complete script.
 
 <code>cd ansible-post-install-my-fedora</code>
 
-<strong>If you just want to test it:</strong> <code># ansible-playbook -i hosts myFedora.yml --check<:code>
+<strong>If you just want to test it:</strong> <code># ansible-playbook -i hosts myFedora.yml --check</code>
 
 <p>It's logical if you have error at this point because some features need really
 install to progression.</p>
