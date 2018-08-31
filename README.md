@@ -36,7 +36,7 @@ bootstrap: Installe différents repositories : RPMFusion, RPMFusion NON-Free, Ad
 désactivation de IPv6 etc ...
 
 packagekit: désactiver le service packagekit parce que je ne fais mes mises à jour
-système que en ligne de commande
+système qu'en ligne de commande
 
 softwares: Correspond à toute une liste de paquets que j'aime utiliser sur ma
 machine.
