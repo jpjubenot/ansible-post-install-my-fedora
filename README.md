@@ -17,7 +17,7 @@ sur ma Fedora.
 GitHub est dès lors tout désigné pour partager ce mini projet.
 
 D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer
-différents repositories, qui vont permettre deretrouver toutes les applications
+différents repositories, qui vont permettre de retrouver toutes les applications
 qu'on aime utiliser.
 
 Mon projet s'articule comme suit.
@@ -35,8 +35,8 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 bootstrap: Installe différents repositories : RPMFusion, RPMFusion NON-Free, Adobe,
 désactivation de IPv6 etc ...
 
-packagekit: désactiver le service packagekit parceque je ne fais mes mises à jour
-système que en ligne de commmande
+packagekit: désactiver le service packagekit parce que je ne fais mes mises à jour
+système que en ligne de commande
 
 softwares: Correspond à toute une liste de paquets que j'aime utiliser sur ma
 machine.
@@ -58,7 +58,7 @@ indique dans quel ordre jouer les roles et quel machine sera impactée ou sur
 quels groupes d'ordinateurs seront joués les rôles.
 
 myvars.yml: consiste en quelques variables à modifier en cas de besoin version de
-la Fedora et version des archives de MakeMKV
+la Fedora et version des archives de MakeMKV.
 ATTENTION : A bien modifier ce fichier avant l'exécution du script
 
 
@@ -102,4 +102,4 @@ finalisées de la même manière.
 Je vous conseil dans la mesure du possible de tester sur une machine virtuelle
 cela vous donnera un aperçu de ce qui se passe.
 Le temps d'exécution du script dépend de la vitesse de la machine ainsi que de
-la bande passante dont vous diposez pour les différents téléchargements.
+la bande passante dont vous disposez pour les différents téléchargements.
