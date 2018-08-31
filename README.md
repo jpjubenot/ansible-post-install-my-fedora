@@ -54,7 +54,7 @@ handbrake: Compilation du logiciel HanBrake.
 makemkv: Compilation du logiciel MakeMKV.
 
 myFedora.yml: Le Playbook principal, il permet ici d'inclure le fichier de variables,
-indique dans quel ordre jouer les roles et quel machine sera impactée ou sur
+indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur
 quels groupes d'ordinateurs seront joués les rôles.
 
 myvars.yml: consiste en quelques variables à modifier en cas de besoin version de
