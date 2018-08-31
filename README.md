@@ -33,8 +33,7 @@ machine.
 
 <strong>atom-editor:</strong> Installation du logiciel Atom Editor.
 
-<strong>basiccodecs:</strong> Correspond à des codecs pour mplayer permettant de visualiser des
-vidéos de différents formats.
+<strong>basiccodecs:</strong> Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats.
 
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Installe les logiciels et librairies nécessaires pour compiler HandBrake et MakeMKV.
 
@@ -71,7 +70,7 @@ Il se peut que le test envoi des erreurs car il ne fait que tester l'exécution
 des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit être utilisé dans
 un rôle plus tard on aura une erreur puisqu'il n'est pas présent sur la machine.
 
-Exemple pour effectuer les installations : # ansible-playbook  -i hosts myFedora.yml
+<strong>Exemple</strong> pour effectuer les installations : <code># ansible-playbook  -i hosts myFedora.yml</code>
 
 Ce script peut tout à fait être utiliser sur des machines distantes utilisant
 Fedora en vous référant à la documentation de Ansible ou sur les différents tuto

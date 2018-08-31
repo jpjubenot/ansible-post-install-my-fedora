@@ -1,12 +1,11 @@
 # Ansible post install my Fedora
 Jacques-Philippe JUBENOT, France
 
-This project "ansible-post-install-my-fedora" is to finish install my Fedora.
+<p>This project <strong>"ansible-post-install-my-fedora"</strong> is to finish install my Fedora.
 For each new version of Fedora, I prefer to reinstall from scratch rather to make
-an update.
+an update.</p>
 Then if it is easy to save datas and restore then, for softwares there is always
-one or more that you forget.
-You reinstall it or them in urgence at last minute.
+one or more that you forget. You reinstall it or them in urgence at last minute.
 
 I recently discover Ansible at office and I found that this project was amazing.
 Imagine and organize installation of your system is possible at home to.
@@ -15,44 +14,44 @@ With this project it's possible to finalize the install of my settings and softw
 GitHub is a fantastic way to share this mini project.
 
 When you reinstall your system, you settings repository, install softwares and
-many other things.
+many other things.</p>
 
 My project works like this :
-- bootstrap
-- packagekit
-- softwares
-- atom-editor
-- basiccodecs
-- hb-and-mmkmkv-needed-softwares
-- handbrake
-- makemkv
+- <strong>bootstrap</strong>
+- <strong>packagekit</strong>
+- <strong>softwares</strong>
+- <strong>atom-editor</strong>
+- <strong>basiccodecs</strong>
+- <strong>hb-and-mmkmkv-needed-softwares</strong>
+- <strong>handbrake</strong>
+- <strong>makemkv</strong>
 
-bootstrap   : Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
+<strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
 
-packagekit: disable with mask option packagekit service because I do update exclusively by command line.
+<strong>packagekit:</strong> disable with mask option packagekit service because I do update exclusively by command line.
 
-softwares   : A list of my favorites softwares or librairies to install I need ...
+<strong>softwares:</strong> A list of my favorites softwares or librairies to install I need ...
 
-atom-editor: Atom Editor software installation.
+<strong>atom-editor:</strong> Atom Editor software installation.
 
-basiccodecs  : Some basics codecs to mplayer player
+<strong>basiccodecs:</strong> Some basics codecs to mplayer player
 
-hb-and-mmkmkv-needed-softwares  : Install softwares an librairies needed to
+<strong>hb-and-mmkmkv-needed-softwares:</strong> Install softwares an librairies needed to
 compile HandBrake software and MakeMKV software
 
-handbrake  : Compilation of HanBrake software
+<strong>handbrake:</strong> Compilation of HanBrake software
 
-makemkv  :  Compilation of MakeMKV software
+<strong>makemkv:</strong>  Compilation of MakeMKV software
 
-myFedora.yml : It's the playbook which discribe the jobs to do and in which order.
+<strong>myFedora.yml:</strong> It's the playbook which discribe the jobs to do and in which order.
 
-myvars.yml : describe some variables wich define versions softwares.
-!! Be carefull to modify this file before to execute the Playbook !!
+<strong>myvars.yml:</strong> describe some variables wich define versions softwares.
+<strong>!! Be carefull to modify this file before to execute the Playbook !!</strong>
 
-Needed:
+<strong>Needed:</strong>
 Since Fedora  you need to install ansible and libselinux-python packages.
 
-dnf install ansible libselinux-python
+<code>dnf install ansible libselinux-python</code>
 
 This prject is at start, well it's possible some things not very good.
 
@@ -62,21 +61,20 @@ files, well you to be root to execute it.
 
 I suggest you to create a folder to download the complete script.
 
-mkdir Depot-Git && cd Depot-Git
+<code>mkdir Depot-Git && cd Depot-Git</code>
 
-git clone https://github.com/jpjubenot/ansible-post-install-my-fedora
+<code>git clone https://github.com/jpjubenot/ansible-post-install-my-fedora</code>
 
-cd ansible-post-install-my-fedora
+<code>cd ansible-post-install-my-fedora</code>
 
-If you just want to test it : # ansible-playbook -i hosts myFedora.yml --check
+<strong>If you just want to test it:</strong> <code># ansible-playbook -i hosts myFedora.yml --check<:code>
 
-It's logical if you have error at this point because some features need really
-install to progression.
-A test of install will work but if software is needed in a part of job You will
-have an error because the package is not present.
-With some modification you can execute this script on a remote computer like in
-local, look at Ansible documentation and tutorials.
-If you want to test in real maybe itès interristing to use a virtual machine to
-execute it.
-The execution time of this script depend of your computer's speed and Internet's
-speed to download all differents packages.
+<p>It's logical if you have error at this point because some features need really
+install to progression.</p>
+<p>A test of install will work but if software is needed in a part of job You will
+have an error because the package is not present. With some modifications you can execute this script on a remote computer like in
+local, look at Ansible documentation and tutorials.</p>
+<p>If you want to test in real maybe itès interristing to use a virtual machine to
+execute it.</p>
+<p>The execution time of this script depend of your computer's speed and Internet's
+speed to download all differents packages.</p>
