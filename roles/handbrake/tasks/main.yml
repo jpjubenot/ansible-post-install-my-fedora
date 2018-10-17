@@ -17,10 +17,10 @@
     minhbmk
 
 # Exit if exist
-#- meta: end_play
-#  when: handbrakeexist.stat.exists
-#  tags:
-#    minhbmk
+- meta: end_play
+  when: handbrakeexist.stat.exists
+  tags:
+    minhbmk
 
 # Create Folder to Compile
 - name: Create Folder to Compile

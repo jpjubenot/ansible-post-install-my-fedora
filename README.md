@@ -8,7 +8,7 @@ Alors si il est facile de sauvegarder ses données puis de les restaurer. Concer
 <p>J'ai découvert récemment Ansible au bureau et je trouve le concept génial.
 Rationaliser l'installation et la gestion des systèmes peut tout à fait
 s'appliquer à la maison.</p>
-<p>Ce projet permet de réinstaller une bonne partie des applications présentent sur ma Fedora. GitHub est dès lors tout désigné pour partager ce mini projet.</p>
+<p>Ce projet permet de réinstaller une bonne partie des applications présentes sur ma Fedora. GitHub est dès lors tout désigné pour partager ce mini projet.</p>
 
 <p>D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes nos applications préférées.</p>
 
@@ -65,7 +65,7 @@ Il vous faut installer les paquets ansible et libselinux-python.
 <code>cd ansible-post-install-my-fedora</code>
 
 <p><strong>Exemple pour tester:</strong> <code># ansible-playbook -i hosts myFedora.yml --check</code>
-Il se peut que le test envoi des erreurs car il ne fait que tester l'exécution
+Il se peut que le test renvoi des erreurs car il ne fait que tester l'exécution
 des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit être utilisé dans un rôle plus tard on aura une erreur puisqu'il n'est pas présent sur la machine.</p>
 
 <strong>Exemple</strong> pour effectuer les installations: <code># ansible-playbook  -i hosts myFedora.yml</code>

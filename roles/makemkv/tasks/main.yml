@@ -17,10 +17,10 @@
     mkmkv
 
 # Exit if exist
-#- meta: end_play
-#  when: makemkvexist.stat.exists
-#  tags:
-#    mkmkv
+- meta: end_play
+  when: makemkvexist.stat.exists
+  tags:
+    mkmkv
 
 # Create Folder to Compile
 - name: Create Folder to Compile
