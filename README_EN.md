@@ -37,7 +37,7 @@ My project works like this :
 
 <strong>basiccodecs:</strong> Some basics codecs to mplayer player
 
-<strong>ssd-drive:</strong> Modify options of your operating system to use SSD when it is your first drive (trim ...).
+<strong>ssd-drive:</strong> Modify options of your operating system when your first drive hard drive is a SSD (trim ...).
 
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Install softwares an librairies needed to
 compile HandBrake software and MakeMKV software

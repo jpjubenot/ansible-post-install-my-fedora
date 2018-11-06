@@ -36,7 +36,7 @@ machine.
 
 <strong>basiccodecs:</strong> Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats.
 
-<strong>ssd-drive:</strong> Modifie les options du système quand votre principal est un SSD (trim ...).  
+<strong>ssd-drive:</strong> Modifie les options du système quand votre disque principal est un SSD (trim ...).  
 
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Installe les logiciels et librairies nécessaires pour compiler HandBrake et MakeMKV.
 
