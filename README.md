@@ -1,7 +1,7 @@
 # Ansible post install my Fedora
 Jacques-Philippe JUBENOT, France
 
-<p>English README version see [here] (https://github.com/jpjubenot/ansible-post-install-my-fedora/blob/master/README_EN.md)</p>
+         English README version see [here](https://github.com/jpjubenot/ansible-post-install-my-fedora/blob/master/README_EN.md)
 
 
 <p>Ce projet <strong>"ansible-post-install-my-fedora"</strong> a pour but de finaliser l'installation de ma Fedora.</p>
