@@ -1,7 +1,7 @@
 # Ansible post install my Fedora
 Jacques-Philippe JUBENOT, France
 
-# English version
+English Readme version
 see here (https://github.com/jpjubenot/ansible-post-install-my-fedora/blob/master/README_EN.md)
 
 
