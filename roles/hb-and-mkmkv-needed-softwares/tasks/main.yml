@@ -34,7 +34,9 @@
      - gcc-c++
      - git
      - gstreamer-devel
+     - gstreamer1-devel
      - gstreamer-plugins-base-devel
+     - gstreamer1-plugins-base-devel
      - harfbuzz-devel
      - intltool
      - jansson-devel
@@ -42,6 +44,7 @@
      - libass-devel
      - libgudev1-devel
      - libnotify-devel
+     - libogg-devel
      - libsamplerate-devel
      - libtheora-devel
      - libtool
@@ -49,12 +52,18 @@
      - libxml2-devel
      - m4
      - make
+     - nasm
      - openssl-devel
      - opus-devel
      - patch
      - qt5-qtbase-devel
+     - speex-devel
      - x264-devel
      #- webkitgtk-devel -- OK with Fedora 26
+     - webkit2gtk3-devel
+     #- webkitgtk4-devel #  if webkit2gtk3-devel not work
+     #- webkitgtk3-devel #  if webkitgtk4-devel  not work also
+     - xz-devel
      - yasm
      - zlib-devel
   tags:

@@ -22,6 +22,7 @@ My project works like this :
 - <strong>softwares</strong>
 - <strong>atom-editor</strong>
 - <strong>basiccodecs</strong>
+- <strong>ssd-drive:</strong>
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
@@ -35,6 +36,8 @@ My project works like this :
 <strong>atom-editor:</strong> Atom Editor software installation.
 
 <strong>basiccodecs:</strong> Some basics codecs to mplayer player
+
+<strong>ssd-drive:</strong> Modify options of your operating system to use SSD when it is your first drive (trim ...).
 
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Install softwares an librairies needed to
 compile HandBrake software and MakeMKV software

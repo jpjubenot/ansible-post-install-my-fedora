@@ -10,17 +10,17 @@
 # https://linuxconfig.org/how-to-install-makemkv-on-fedora-linux
 
 # Check MakeMKV exist
-- name: Verify if MakeMKV exist
-  stat: path=/usr/bin/makemkv
-  register: makemkvexist
-  tags:
-    mkmkv
+#- name: Verify if MakeMKV exist
+#  stat: path=/usr/bin/makemkv
+#  register: makemkvexist
+#  tags:
+#    mkmkv
 
 # Exit if exist
-- meta: end_play
-  when: makemkvexist.stat.exists
-  tags:
-    mkmkv
+#- meta: end_play
+#  when: makemkvexist.stat.exists
+#  tags:
+#    mkmkv
 
 # Create Folder to Compile
 - name: Create Folder to Compile

@@ -20,8 +20,8 @@
 
 # Install Defaults Softwares
 - name: Install Differents Packages
-  dnf: name={{ item }} autoremove=yes
-  #state=present
+  dnf: name={{ item }} state=present
+  #autoremove=yes
   with_items:
      #- 0ad
      - autoconf
@@ -34,7 +34,7 @@
      - dropbox
      - easytag
      - elfutils-libelf-devel
-     - fedora-arm-installer
+     #- fedora-arm-installer
      - filezilla
      - flash-plugin
      - gcc
@@ -75,7 +75,7 @@
      - mediawriter
      - nano
      - nethogs
-     - nmap-frontend
+     #- nmap-frontend
      - p7zip
      - pacmanager
      - python-dnf
@@ -84,10 +84,12 @@
      - system-config-users
      - tar
      - tcptrack
-     - VirtualBox
+     #- VirtualBox-5.2
      - vlc
      - vte-devel
      - wget
+     #- wireshark-qt
+     - x264-devel
      - xine-lib-extras-freeworld
      - xsane
   tags:

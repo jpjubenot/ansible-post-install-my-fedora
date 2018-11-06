@@ -10,17 +10,17 @@
 # https://handbrake.fr/docs/en/latest/developer/build-linux.html
 
 # Check Handbrake exist
-- name: Verify if Handbrake exist
-  stat: path=/usr/local/bin/HandBrakeCLI
-  register: handbrakeexist
-  tags:
-    minhbmk
+#- name: Verify if Handbrake exist
+#  stat: path=/usr/local/bin/HandBrakeCLI
+#  register: handbrakeexist
+#  tags:
+#    minhbmk
 
 # Exit if exist
-- meta: end_play
-  when: handbrakeexist.stat.exists
-  tags:
-    minhbmk
+#- meta: end_play
+#  when: handbrakeexist.stat.exists
+#  tags:
+#    minhbmk
 
 # Create Folder to Compile
 - name: Create Folder to Compile

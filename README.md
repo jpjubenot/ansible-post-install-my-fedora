@@ -20,6 +20,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>softwares</strong>
 - <strong>atom-editor</strong>
 - <strong>basiccodecs</strong>
+- <strong>ssd-drive</strong>
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
@@ -34,6 +35,8 @@ machine.
 <strong>atom-editor:</strong> Installation du logiciel Atom Editor.
 
 <strong>basiccodecs:</strong> Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats.
+
+<strong>ssd-drive:</strong> Modifie les options du système quand votre principal est un SSD (trim ...).  
 
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Installe les logiciels et librairies nécessaires pour compiler HandBrake et MakeMKV.
 
