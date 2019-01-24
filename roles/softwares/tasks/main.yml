@@ -12,14 +12,14 @@
   tags:
     minimum
 
-# Remove Defaults Softwares
+# Remove Default Softwares
 #- name: Remove Differents Packages
 #  dnf: name=gnome-boxes state=absent
 #  tags:
 #    minimum
 
-# Install Defaults Softwares
-- name: Install Differents Packages
+# Install Default Softwares
+- name: Install Different Packages
   dnf: name={{ item }} state=present
   #autoremove=yes
   with_items:
@@ -61,6 +61,7 @@
      - help2man
      - htop
      - iftop
+     - iperf3
      - keepass
      - kernel-devel
      - kernel-headers
@@ -84,7 +85,7 @@
      - system-config-users
      - tar
      - tcptrack
-     #- VirtualBox-5.2
+     - VirtualBox-5.2
      - vlc
      - vte-devel
      - wget

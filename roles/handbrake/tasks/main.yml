@@ -10,11 +10,11 @@
 # https://handbrake.fr/docs/en/latest/developer/build-linux.html
 
 # Check Handbrake exist
-#- name: Verify if Handbrake exist
-#  stat: path=/usr/local/bin/HandBrakeCLI
-#  register: handbrakeexist
-#  tags:
-#    minhbmk
+- name: Verify if Handbrake exist
+  stat: path=/usr/local/bin/HandBrakeCLI
+  register: handbrakeexist
+  tags:
+    minhbmk
 
 # Exit if exist
 #- meta: end_play
@@ -28,24 +28,28 @@
     path: "/tmp/Handbrake-Build"
     state: directory
     mode: 0775
+  when: handbrakeexist.stat.exists == False
   tags:
     minhbmk
 
 # Download lastet version on Git Repository
 - name: Downloading HandBrake from github...
   shell: 'cd /tmp/Handbrake-Build/ && git clone https://github.com/HandBrake/HandBrake.git'
+  when: handbrakeexist.stat.exists == False
   tags:
     minhbmk
 
 # Compile Handbrake
 - name: configure
   shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
+  when: handbrakeexist.stat.exists == False
   tags:
     minhbmk
 
 - make:
     chdir: "/tmp/Handbrake-Build/HandBrake/build"
     target: install
+  when: handbrakeexist.stat.exists == False
   tags:
     minhbmk
 
@@ -54,5 +58,6 @@
   file:
     path: "/tmp/Handbrake-Build"
     state: absent
+  when: handbrakeexist.stat.exists == False
   tags:
     minhbmk

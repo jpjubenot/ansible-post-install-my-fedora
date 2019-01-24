@@ -59,10 +59,10 @@
      - qt5-qtbase-devel
      - speex-devel
      - x264-devel
-     #- webkitgtk-devel -- OK with Fedora 26
-     - webkit2gtk3-devel
-     #- webkitgtk4-devel #  if webkit2gtk3-devel not work
-     #- webkitgtk3-devel #  if webkitgtk4-devel  not work also
+     #- webkitgtk-devel  # Work with Fedora 26
+     - webkit2gtk3-devel # Work with Fedora 29
+     #- webkitgtk4-devel #  Work with Fedora 28
+     #- webkitgtk3-devel #  Work with Fedora 27
      - xz-devel
      - yasm
      - zlib-devel

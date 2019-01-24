@@ -88,19 +88,19 @@
      backup: yes
 
 # Add Blacklist file to disable Webcam
-- name: Disable Webcam test blacklist file
+- name: Test blacklist file
   stat: path=/etc/modprobe.d/blacklist.conf
   register: blacklistfile
   tags:
     - blacklistf
 
-- name: Disable Webcam blacklist file do not exist
+- name: Disable Webcam - blacklist file do not exist
   template: src=templates/disable-webcam.conf.tpl dest=/etc/modprobe.d/blacklist.conf mode=0644 owner=root group=root
   when: not blacklistfile.stat.exists
   tags:
     - blacklistf
 
-- name: Disable Webcam blacklist file exist
+- name: Disable Webcam - blacklist file exist
   lineinfile: dest=/etc/modprobe.d/blacklist.conf line="# Disable Webcam on linux"
   when: blacklistfile.stat.exists
   tags:

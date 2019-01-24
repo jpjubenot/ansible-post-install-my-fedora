@@ -10,11 +10,11 @@
 # https://linuxconfig.org/how-to-install-makemkv-on-fedora-linux
 
 # Check MakeMKV exist
-#- name: Verify if MakeMKV exist
-#  stat: path=/usr/bin/makemkv
-#  register: makemkvexist
-#  tags:
-#    mkmkv
+- name: Verify if MakeMKV exist
+  stat: path=/usr/bin/makemkv
+  register: makemkvexist
+  tags:
+    mkmkv
 
 # Exit if exist
 #- meta: end_play
@@ -28,6 +28,7 @@
      path: "/tmp/MakeMKV"
      state: directory
      mode: 0775
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -37,6 +38,7 @@
      url: http://www.makemkv.com/download/{{ MakeMKV_OSS }}.tar.gz
      dest: "/tmp/MakeMKV"
      mode: 0644
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -46,6 +48,7 @@
      url: http://www.makemkv.com/download/{{ MakeMKV_BIN }}.tar.gz
      dest: "/tmp/MakeMKV"
      mode: 0644
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -54,6 +57,7 @@
   unarchive:
      src: "/tmp/MakeMKV/{{ MakeMKV_BIN }}.tar.gz"
      dest: "/tmp/MakeMKV"
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -62,9 +66,11 @@
   unarchive:
      src: "/tmp/MakeMKV/{{ MakeMKV_OSS }}.tar.gz"
      dest: "/tmp/MakeMKV"
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
+# Only if necessary
 # Patch before Compile MakeMKV_OSS
 #- name: Patch OSS Files
 #  shell: patch /tmp/MakeMKV/{{ MakeMKV_OSS }}/libffabi/src/ffabi.c < patch.file
@@ -72,6 +78,7 @@
 # Compile MakeMKV OSS
 - name: configure
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && ./configure'
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -79,12 +86,14 @@
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && echo -e "\nq\nyes" | make'
   args:
      executable: /bin/bash
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
 - make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_OSS }}"
      target: install
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -94,6 +103,7 @@
      path: "/tmp/MakeMKV/{{ MakeMKV_BIN }}/tmp"
      state: directory
      mode: 0775
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -102,6 +112,7 @@
      path: "/tmp/MakeMKV/{{ MakeMKV_BIN }}/tmp/eula_accepted"
      state: touch
      mode: 0775
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -109,12 +120,14 @@
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_BIN }} &&  make'
   args:
      executable: /bin/bash
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
 - make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_BIN }}"
      target: install
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv
 
@@ -123,5 +136,6 @@
   file:
      path: "/tmp/MakeMKV"
      state: absent
+  when: makemkvexist.stat.exists == False
   tags:
     mkmkv

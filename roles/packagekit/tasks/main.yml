@@ -6,8 +6,21 @@
 
 # tasks file for packagekit
 
+
+# Remove existing content of Cache PackageKit
+- name: Clean old PackageKit Cache folder
+  command: pkcon refresh force -c -1
+  tags:
+    cleanpkcon
+
 # Mask PackageKit Service
 - name: Mask PackageKit Service
   systemd: name=packagekit.service masked=yes
   tags:
     pkgkit
+
+# Remove existing content of Cache PackageKit
+#- name: Remove old PackageKit Cache folder
+#  command: rm -rf /var/cache/PackageKit/
+#  tags:
+#    removepkcon
