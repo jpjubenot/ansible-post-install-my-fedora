@@ -33,7 +33,7 @@
 
 # Insert Scheduler for SSD Drive
 - name: Insert Scheduler for SSD Drive on /dev/sda in RC.local
-  lineinfile: dest=/etc/rc.d/rc.local line="echo 'noop' > /sys/block/sda/queue/scheduler"
+  lineinfile: dest=/etc/rc.d/rc.local line="echo 'deadline' > /sys/block/sda/queue/scheduler"
   tags:
     rccnf
 
