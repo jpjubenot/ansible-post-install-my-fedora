@@ -11,17 +11,19 @@
 - name: Verify if Atom-Editor exist
   stat: path=/usr/bin/atom
   register: atomeditor
+  tags:
+    atom
 
 # Download lastest version Atom-Editor
 - name: Download lastest version Atom-Editor
   command: "wget -O /tmp/atom.x86_64.rpm http://atom.io/download/rpm"
-  when: not atomeditor.stat.exists
+  when: atomeditor.stat.exists == False
   tags:
     atom
 
 - name: Install Atom-Editor
   shell: rpm -Uhv /tmp/atom.x86_64.rpm
-  when: not atomeditor.stat.exists
+  when: atomeditor.stat.exists == False
   tags:
     atom
 
@@ -30,6 +32,6 @@
   file:
     path: "/tmp/atom.x86_64.rpm"
     state: absent
-  when: not atomeditor.stat.exists
+  when: atomeditor.stat.exists == False
   tags:
     atom
