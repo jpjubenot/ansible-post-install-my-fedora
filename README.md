@@ -56,7 +56,7 @@ machine.
 <strong>Pré-requis:</strong>
 Il vous faut installer les paquets ansible et libselinux-python.
 
-<code>dnf install ansible libselinux-python</code>
+<code>sudo dnf install ansible libselinux-python</code>
 
 <p>Ce projet est à son commencement, donc il est fort possible que certains éléments ne soient pas corrects.</p>
 
@@ -70,11 +70,11 @@ Il vous faut installer les paquets ansible et libselinux-python.
 
 <code>cd ansible-post-install-my-fedora</code>
 
-<p><strong>Exemple pour tester:</strong> <code># ansible-playbook -i hosts myFedora.yml --check</code>
+<p><strong>Exemple pour tester:</strong> <code>sudo ansible-playbook -i hosts myFedora.yml --check</code>
 Il se peut que le test renvoi des erreurs car il ne fait que tester l'exécution
 des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit être utilisé dans un rôle plus tard on aura une erreur puisqu'il n'est pas présent sur la machine.</p>
 
-<strong>Exemple</strong> pour effectuer les installations: <code># ansible-playbook  -i hosts myFedora.yml</code>
+<strong>Exemple</strong> pour effectuer les installations: <code>sudo ansible-playbook  -i hosts myFedora.yml</code>
 
 <p>Ce script peut tout à fait être utiliser sur des machines distantes utilisant
 Fedora en vous référant à la documentation de Ansible ou sur les différents tuto

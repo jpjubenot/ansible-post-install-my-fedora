@@ -15,7 +15,7 @@
 
 - name: Downloading and enable RPM Fusion FREE Repository...
   command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
-  when: not fusionfrepo.stat.exists
+  when: fusionfrepo.stat.exists == False
   tags:
     repofusion
 
@@ -28,7 +28,7 @@
 
 - name: Downloading and enable RPM Fusion Non-FREE Repository...
   command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
-  when: not fusionnfrepo.stat.exists
+  when: fusionnfrepo.stat.exists == False
   tags:
     repofusion
 
@@ -41,7 +41,7 @@
 
 - name: Downloading and enable Adobe Repository...
   command: dnf install -y --nogpgcheck http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-  when: not adoberepo.stat.exists
+  when: adoberepo.stat.exists == False
   tags:
     repoadobe
 
@@ -54,7 +54,7 @@
 
 - name: Oracle VirtualBox enable Repository...
   template: src=templates/virtualbox.repo.tpl dest=/etc/yum.repos.d/virtualbox.repo mode=0644 owner=root group=root
-  when: not oraclerepo.stat.exists
+  when: oraclerepo.stat.exists == False
   tags:
     - oraclerepo
 
@@ -67,7 +67,7 @@
 
 - name: Google Chrome enable Repository
   template: src=templates/google-chrome.repo.tpl dest=/etc/yum.repos.d/google-chrome.repo mode=0644 owner=root group=root
-  when: not googlechromerepo.stat.exists
+  when: googlechromerepo.stat.exists == False
   tags:
     repochrome
 
@@ -80,7 +80,7 @@
 
 - name: Lynis enable Repository
   template: src=templates/lynis.repo.tpl dest=/etc/yum.repos.d/lynis.repo mode=0644 owner=root group=root
-  when: not googlechromerepo.stat.exists
+  when: googlechromerepo.stat.exists == False
   tags:
     repolynis
 
@@ -124,7 +124,7 @@
 
 - name: Disable Webcam - blacklist file do not exist
   template: src=templates/disable-webcam.conf.tpl dest=/etc/modprobe.d/blacklist.conf mode=0644 owner=root group=root
-  when: not blacklistfile.stat.exists
+  when: blacklistfile.stat.exists == False
   tags:
     - blacklistf
 

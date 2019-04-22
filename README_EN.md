@@ -54,7 +54,7 @@ compile HandBrake software and MakeMKV software
 <strong>Needed:</strong>
 It is necessary to install ansible and libselinux-python packages.
 
-<code>dnf install ansible libselinux-python</code>
+<code>sudo dnf install ansible libselinux-python</code>
 
 This prject is at start, well it's possible some things not very good.
 
@@ -70,7 +70,9 @@ I suggest you to create a folder to download the complete script.
 
 <code>cd ansible-post-install-my-fedora</code>
 
-<strong>If you just want to test it:</strong> <code># ansible-playbook -i hosts myFedora.yml --check</code>
+<strong>If you just want to test it:</strong> <code>sudo ansible-playbook -i hosts myFedora.yml --check</code>
+
+<strong>If you just want to apply:</strong> <code>sudo ansible-playbook -i hosts myFedora.yml</code>
 
 <p>It's logical if you have error at this point because some features need really
 install to progression.</p>

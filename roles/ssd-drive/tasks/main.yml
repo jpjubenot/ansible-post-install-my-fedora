@@ -27,7 +27,7 @@
 # Insert Scheduler for SSD Drive
 - name: Prepare RC.Local
   lineinfile: dest=/etc/rc.d/rc.local line="#!/bin/bash"
-  when: not rclocal.stat.exists
+  when: rclocal.stat.exists == False
   tags:
     rccnf
 
@@ -40,7 +40,7 @@
 # Create RC.Local.Service
 - name: Create RC.Local
   template: src=templates/rc-local.service.tpl dest=/etc/systemd/system/rc-local.service mode=0777 owner=root group=root
-  when: not rclocal.stat.exists
+  when: rclocal.stat.exists == False
   tags:
     rccnf
 
@@ -53,7 +53,7 @@
 # Start RC.Local.Service
 - name: Start RC.Local.Service
   systemd: name=rc-local.service state=started
-  when: not rclocal.stat.exists
+  when: rclocal.stat.exists == False
   tags:
     rccnf
 

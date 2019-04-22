@@ -85,7 +85,7 @@
      - system-config-users
      - tar
      - tcptrack
-     - VirtualBox-5.2
+     - VirtualBox-6.0
      - vlc
      - vte-devel
      - wget
