@@ -37,6 +37,8 @@
      #- fedora-arm-installer
      - filezilla
      - flash-plugin
+     # print on Samsung printers foo2qpdl
+     - foo2qpdl
      - gcc
      - gcstar
      - gimp
