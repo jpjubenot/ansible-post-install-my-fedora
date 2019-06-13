@@ -37,7 +37,7 @@
      #- fedora-arm-installer
      - filezilla
      - flash-plugin
-     # print on Samsung printers foo2qpdl
+     # print on Samsung Laser printers foo2qpdl
      - foo2qpdl
      - gcc
      - gcstar
@@ -82,7 +82,8 @@
      - p7zip
      - pacmanager
      - python-dnf
-     - shutter
+     # For now Shutter do not work correctly on Gnome and Wayland
+     #- shutter
      - shotwell
      - system-config-users
      - tar
