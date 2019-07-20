@@ -94,6 +94,7 @@
      - wget
      #- wireshark-qt
      - x264-devel
+     - x265-devel
      - xine-lib-extras-freeworld
      - xsane
   tags:
