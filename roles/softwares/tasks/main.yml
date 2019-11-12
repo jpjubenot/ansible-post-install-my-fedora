@@ -27,13 +27,17 @@
      - autoconf
      - automake
      #- blueman
-     - compat-libstdc++-33
-     - corebird
+     #- compat-libstdc++-33
+     #- corebird
      - dmidecode
      - dnf-plugin-system-upgrade
      - dropbox
      - easytag
      - elfutils-libelf-devel
+     #- eclipse
+     #- eclipse-pydev
+     #- eclipse-mpc
+     - evolution
      #- fedora-arm-installer
      - filezilla
      - flash-plugin
@@ -71,7 +75,7 @@
      #- libbsd -- OK with Fedora 26
      #- libbsd-devel -- OK with Fedora 26
      - libreoffice-langpack-fr
-     - libselinux-python
+     - libselinux-python3
      - libX11-devel
      - lynis
      - lzop
@@ -85,7 +89,7 @@
      # For now Shutter do not work correctly on Gnome and Wayland
      #- shutter
      - shotwell
-     - system-config-users
+     #- system-config-users
      - tar
      - tcptrack
      - VirtualBox-6.0

@@ -33,10 +33,10 @@
      - fribidi-devel
      - gcc-c++
      - git
-     - gstreamer-devel
-     - gstreamer1-devel
-     - gstreamer-plugins-base-devel
-     - gstreamer1-plugins-base-devel
+     #- gstreamer-devel
+     #- gstreamer1-devel
+     #- gstreamer-plugins-base-devel
+     #- gstreamer1-plugins-base-devel
      - harfbuzz-devel
      - intltool
      - jansson-devel
@@ -53,12 +53,15 @@
      - libxml2-devel
      - m4
      - make
+     - meson
      - nasm
+     - ninja-build
      - numactl
      - numactl-devel
      - openssl-devel
      - opus-devel
      - patch
+     - pkg-config
      - qt5-qtbase-devel
      - speex-devel
      - x264-devel
