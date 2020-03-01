@@ -28,7 +28,7 @@
      - automake
      #- blueman
      #- compat-libstdc++-33
-     #- corebird
+     - cawbird
      - dmidecode
      - dnf-plugin-system-upgrade
      - dropbox
@@ -93,6 +93,7 @@
      - tar
      - tcptrack
      - VirtualBox-6.0
+     - vim
      - vlc
      - vte-devel
      - wget
