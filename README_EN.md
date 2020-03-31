@@ -18,7 +18,6 @@ many other things.</p>
 
 My project works like this :
 - <strong>bootstrap</strong>
-- <strong>packagekit</strong>
 - <strong>softwares</strong>
 - <strong>atom-editor</strong>
 - <strong>basiccodecs</strong>
@@ -28,8 +27,6 @@ My project works like this :
 - <strong>makemkv</strong>
 
 <strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
-
-<strong>packagekit:</strong> disable with mask option packagekit service because I do update exclusively by command line.
 
 <strong>softwares:</strong> A list of my favorites softwares or librairies to install I need ...
 

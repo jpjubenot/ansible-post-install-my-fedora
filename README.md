@@ -19,7 +19,6 @@ s'appliquer à la maison.</p>
 
 Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>bootstrap</strong>
-- <strong>packagekit</strong>
 - <strong>softwares</strong>
 - <strong>atom-editor</strong>
 - <strong>basiccodecs</strong>
@@ -29,8 +28,6 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>makemkv</strong>
 
 <strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, Adobe, désactivation de IPv6 etc ...
-
-<strong>packagekit:</strong> désactiver le service packagekit parce que je ne fais mes mises à jour système qu'en ligne de commande
 
 <strong>softwares:</strong> Correspond à toute une liste de paquets que j'aime utiliser sur ma
 machine.
