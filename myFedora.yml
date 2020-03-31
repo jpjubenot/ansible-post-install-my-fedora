@@ -7,7 +7,6 @@
   remote_user : root
   roles:
       - bootstrap
-      - packagekit
       - softwares
       - atom-editor
       - basiccodecs
