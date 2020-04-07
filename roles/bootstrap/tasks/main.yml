@@ -11,100 +11,113 @@
   stat: path=/etc/yum.repos.d/rpmfusion-free.repo
   register: fusionfrepo
   tags:
-    repofusion
+    - repofusion
+    - basicinst
 
 - name: Downloading and enable RPM Fusion FREE Repository...
   command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
   when: fusionfrepo.stat.exists == False
   tags:
-    repofusion
+    - repofusion
+    - basicinst
 
 # Add Repository RPM Fusion Non-FREE
 - name: Verify if RPM Fusion Non-FREE Repository exist
   stat: path=/etc/yum.repos.d/rpmfusion-nonfree.repo
   register: fusionnfrepo
   tags:
-    repofusion
+    - repofusion
+    - basicinst
 
 - name: Downloading and enable RPM Fusion Non-FREE Repository...
   command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
   when: fusionnfrepo.stat.exists == False
   tags:
-    repofusion
+    - repofusion
+    - basicinst
 
 # Add Repository Adobe
 - name: Verify if Adobe Repository exist
   stat: path=/etc/yum.repos.d/adobe-linux-x86_64.repo
   register: adoberepo
   tags:
-    repoadobe
+    - repoadobe
+    - basicinst
 
 - name: Downloading and enable Adobe Repository...
   command: dnf install -y --nogpgcheck http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
   when: adoberepo.stat.exists == False
   tags:
-    repoadobe
+    - repoadobe
+    - basicinst
 
 # Add Repository Oracle VirtualBox
 - name: Verify if Oracle VirtualBox Repository exist
   stat: path=/etc/yum.repos.d/virtualbox.repo
-  register: oraclerepo
+  register: repooracle
   tags:
-    - oraclerepo
+    - repooracle
 
 - name: Oracle VirtualBox enable Repository...
   template: src=templates/virtualbox.repo.tpl dest=/etc/yum.repos.d/virtualbox.repo mode=0644 owner=root group=root
-  when: oraclerepo.stat.exists == False
+  when: repooracle.stat.exists == False
   tags:
-    - oraclerepo
+    - repooracle
 
 # Add Repository Google Chrome
 - name: Verify if Google Chrome Repository exist
   stat: path=/etc/yum.repos.d/google-chrome.repo
   register: googlechromerepo
   tags:
-    repochrome
+    - repochrome
+    - basicinst
 
 - name: Google Chrome enable Repository
   template: src=templates/google-chrome.repo.tpl dest=/etc/yum.repos.d/google-chrome.repo mode=0644 owner=root group=root
   when: googlechromerepo.stat.exists == False
   tags:
-    repochrome
+    - repochrome
+    - basicinst
 
 # Add Repository Lynis
 - name: Verify if Lynis Repository exist
   stat: path=/etc/yum.repos.d/lynis-chrome.repo
   register: googlechromerepo
   tags:
-    repolynis
+    - repolynis
+    - basicinst
 
 - name: Lynis enable Repository
   template: src=templates/lynis.repo.tpl dest=/etc/yum.repos.d/lynis.repo mode=0644 owner=root group=root
   when: googlechromerepo.stat.exists == False
   tags:
-    repolynis
+    - repolynis
+    - basicinst
 
 # Fast Mirror Option for DNF
 - name: Fast Mirror Option for DNF
   lineinfile: dest=/etc/dnf/dnf.conf line="fastestmirror=true"
   tags:
     - fastmirror
-
+    - basicinst
 # Disable IPv6 - 3 lines to disable
 - name: Disable IPv6 -a
   lineinfile: dest=/etc/sysctl.conf line="net.ipv6.conf.all.disable_ipv6 = 1"
   tags:
-    ipv6
+    - ipv6
+    - basicinst
 
 - name: Disable IPv6 -b
   lineinfile: dest=/etc/sysctl.conf line="net.ipv6.conf.default.disable_ipv6 = 1"
   tags:
-    ipv6
+    - ipv6
+    - basicinst
 
 - name: Disable IPv6 -c
   lineinfile: dest=/etc/sysctl.conf line="net.ipv6.conf.lo.disable_ipv6 = 1"
   tags:
-    ipv6
+    - ipv6
+    - basicinst
 
 # Disable ::1 ipv6 localhost on /etc/hosts
 - replace:
@@ -113,7 +126,8 @@
      replace: '#::1'
      backup: yes
   tags:
-    ipv6
+    - ipv6
+    - basicinst
 
 # Add Blacklist file to disable Webcam
 - name: Test blacklist file
@@ -121,21 +135,25 @@
   register: blacklistfile
   tags:
     - blacklistf
+    - basicinst
 
 - name: Disable Webcam - blacklist file do not exist
   template: src=templates/disable-webcam.conf.tpl dest=/etc/modprobe.d/blacklist.conf mode=0644 owner=root group=root
   when: blacklistfile.stat.exists == False
   tags:
     - blacklistf
+    - basicinst
 
 - name: Disable Webcam - blacklist file exist
   lineinfile: dest=/etc/modprobe.d/blacklist.conf line="# Disable Webcam on linux"
   when: blacklistfile.stat.exists
   tags:
     - blacklistf
+    - basicinst
 
 - name: Disable Webcam blacklist file exist
   lineinfile: dest=/etc/modprobe.d/blacklist.conf line="blacklist uvcvideo"
   when: blacklistfile.stat.exists
   tags:
     - blacklistf
+    - basicinst

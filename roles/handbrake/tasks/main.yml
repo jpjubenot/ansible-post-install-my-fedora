@@ -14,13 +14,13 @@
   stat: path=/usr/local/bin/HandBrakeCLI
   register: handbrakeexist
   tags:
-    minhbmk
+    - minhbmk
 
 # Exit if exist
 #- meta: end_play
 #  when: handbrakeexist.stat.exists
 #  tags:
-#    minhbmk
+#    - minhbmk
 
 # Create Folder to Compile
 - name: Create Folder to Compile
@@ -30,28 +30,28 @@
     mode: 0775
   when: handbrakeexist.stat.exists == False
   tags:
-    minhbmk
+    - minhbmk
 
 # Download lastet version on Git Repository
 - name: Downloading HandBrake from github...
   shell: 'cd /tmp/Handbrake-Build/ && git clone https://github.com/HandBrake/HandBrake.git'
   when: handbrakeexist.stat.exists == False
   tags:
-    minhbmk
+    - minhbmk
 
 # Compile Handbrake
 - name: configure
   shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
   when: handbrakeexist.stat.exists == False
   tags:
-    minhbmk
+    - minhbmk
 
 - make:
     chdir: "/tmp/Handbrake-Build/HandBrake/build"
     target: install
   when: handbrakeexist.stat.exists == False
   tags:
-    minhbmk
+    - minhbmk
 
 # Clean Handbrake-Build
 - name: Delete Handbrake-Build Folder
@@ -60,4 +60,4 @@
     state: absent
   when: handbrakeexist.stat.exists == False
   tags:
-    minhbmk
+    - minhbmk

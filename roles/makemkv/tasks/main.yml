@@ -14,13 +14,15 @@
   stat: path=/usr/bin/makemkv
   register: makemkvexist
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Exit if exist
 #- meta: end_play
 #  when: makemkvexist.stat.exists
 #  tags:
-#    mkmkv
+#    - mkmkv
+#    - minhbmk
 
 # Create Folder to Compile
 - name: Create Folder to Compile
@@ -30,7 +32,8 @@
      mode: 0775
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV OSS
@@ -40,7 +43,8 @@
      mode: 0644
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV BIN
@@ -50,7 +54,8 @@
      mode: 0644
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Uncompress BIN Files
 - name: Uncompress BIN Achive
@@ -59,7 +64,8 @@
      dest: "/tmp/MakeMKV"
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Uncompress OSS Files
 - name: Uncompress OSS Achive
@@ -68,7 +74,8 @@
      dest: "/tmp/MakeMKV"
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Only if necessary
 # Patch before Compile MakeMKV_OSS
@@ -80,7 +87,8 @@
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && ./configure'
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 - name: Compile MakeMKV OSS
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && echo -e "\nq\nyes" | make'
@@ -88,14 +96,16 @@
      executable: /bin/bash
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 - make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_OSS }}"
      target: install
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Compile MakeMKV BIN
 - name: Create Folder BIN to Compile
@@ -105,7 +115,8 @@
      mode: 0775
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 - name: Create File to Compile
   file:
@@ -114,7 +125,8 @@
      mode: 0775
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 - name: Compile MakeMKV BIN
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_BIN }} &&  make'
@@ -122,14 +134,16 @@
      executable: /bin/bash
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 - make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_BIN }}"
      target: install
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk
 
 # Clean MakeMKV-Build
 - name: Delete MakeMKV Folder
@@ -138,4 +152,5 @@
      state: absent
   when: makemkvexist.stat.exists == False
   tags:
-    mkmkv
+    - mkmkv
+    - minhbmk

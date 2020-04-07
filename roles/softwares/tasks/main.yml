@@ -10,13 +10,13 @@
 - name: Clean DNF
   command: dnf clean all
   tags:
-    minimum
+    - minimum
 
 # Remove Default Softwares
 #- name: Remove Differents Packages
 #  dnf: name=gnome-boxes state=absent
 #  tags:
-#    minimum
+#    - minimum
 
 # Install Default Softwares
 - name: Install Different Packages
@@ -89,9 +89,11 @@
      # For now Shutter do not work correctly on Gnome and Wayland
      #- shutter
      - shotwell
+     - stacer
      #- system-config-users
      - tar
      - tcptrack
+     - timeshift
      - VirtualBox-6.0
      - vim
      - vlc
@@ -103,4 +105,4 @@
      - xine-lib-extras-freeworld
      - xsane
   tags:
-    instsoft
+    - instsoft

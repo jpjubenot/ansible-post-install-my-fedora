@@ -11,13 +11,13 @@
 - name: Clean DNF
   shell: dnf clean all
   tags:
-    minhbmk
+    - minhbmk
 
 # Install Softwares Needed to Compile Handbrake and MakeMKV
 - name: Install Differents Group Packages
   shell: dnf -y groupinstall "Development Tools" "Development Libraries" "X Software Development" "GNOME Software Development"
   tags:
-    minhbmk
+    - minhbmk
 
 - name: Install Differents Packages
   dnf: name={{ item }} state=present
@@ -74,4 +74,4 @@
      - yasm
      - zlib-devel
   tags:
-    minhbmk
+    - minhbmk

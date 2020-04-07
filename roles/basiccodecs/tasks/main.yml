@@ -11,7 +11,8 @@
   stat: path=/usr/share/doc/mplayer-codecs-20061022
   register: mplayercodecs
   tags:
-    codecs
+    - codecs
+    - basicinst
 
 # Download lastest version on www.makemkv.com
 - name: Downloading MPlayer Codecs
@@ -21,7 +22,8 @@
     mode: 0644
   when: mplayercodecs.stat.exists == False
   tags:
-    codecs
+    - codecs
+    - basicinst
 
 - name: Downloading MPlayer Extra Codecs
   get_url:
@@ -30,13 +32,15 @@
     mode: 0644
   when: mplayercodecs.stat.exists == False
   tags:
-    codecs
+    - codecs
+    - basicinst
 
 - name: Install Mplayer Codecs...
   shell: rpm -ihv /tmp/mplayer-codecs*.rpm
   when: mplayercodecs.stat.exists == False
   tags:
-    codecs
+    - codecs
+    - basicinst
 
 # Clean Mplayer Codecs
 - name: Delete MPlayer Codecs File
@@ -44,7 +48,8 @@
     path: "/tmp/mplayer-codecs-20061022-1.x86_64.rpm"
     state: absent
   tags:
-    codecs
+    - codecs
+    - basicinst
 
 # Clean Mplayer Codecs
 - name: Delete MPlayer Codecs Extra File
@@ -52,4 +57,5 @@
     path: "/tmp/mplayer-codecs-extra-20061022-1.x86_64.rpm"
     state: absent
   tags:
-    codecs
+    - codecs
+    - basicinst

@@ -12,20 +12,20 @@
   stat: path=/usr/bin/atom
   register: atomeditor
   tags:
-    atom
+    - atom
 
 # Download lastest version Atom-Editor
 - name: Download lastest version Atom-Editor
   command: "wget -O /tmp/atom.x86_64.rpm http://atom.io/download/rpm"
   when: atomeditor.stat.exists == False
   tags:
-    atom
+    - atom
 
 - name: Install Atom-Editor
   shell: rpm -Uhv /tmp/atom.x86_64.rpm
   when: atomeditor.stat.exists == False
   tags:
-    atom
+    - atom
 
 # Clean Mplayer Codecs
 - name: Delete Atom-Editor File
@@ -34,4 +34,4 @@
     state: absent
   when: atomeditor.stat.exists == False
   tags:
-    atom
+    - atom
