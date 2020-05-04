@@ -21,7 +21,6 @@ My project works like this :
 - <strong>softwares</strong>
 - <strong>atom-editor</strong>
 - <strong>basiccodecs</strong>
-- <strong>ssd-drive:</strong>
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
@@ -34,8 +33,6 @@ My project works like this :
 
 <strong>basiccodecs:</strong> Some basics codecs to mplayer player
 
-<strong>ssd-drive:</strong> Modify options of your operating system when your first drive hard drive is a SSD (trim ...).
-
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Install softwares an librairies needed to
 compile HandBrake software and MakeMKV software
 
@@ -46,7 +43,7 @@ compile HandBrake software and MakeMKV software
 <strong>myFedora.yml:</strong> It's the playbook which discribe the jobs to do and in which order.
 
 <strong>myvars.yml:</strong> describe some variables wich define versions softwares.
-<strong>!! Be carefull to modify this file before to execute the Playbook !!</strong>
+<strong>!! Be careful to modify this file before to execute the Playbook !!</strong>
 
 <strong>Needed:</strong>
 It is necessary to install ansible and libselinux-python packages.
