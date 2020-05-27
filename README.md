@@ -25,6 +25,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
+- <strong>mitigate-my-fed</strong>
 
 <strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, Adobe, désactivation de IPv6 etc ...
 
@@ -40,6 +41,13 @@ machine.
 <strong>handbrake:</strong> Compilation du logiciel HanBrake.
 
 <strong>makemkv:</strong> Compilation du logiciel MakeMKV.
+
+<strong>mitigate-my-fed:</strong> Pour réduire la consommation de mémoire au boot, ce role va supprimer les paquets suivants:
+- libvrt -> Librairies de Virtualization
+- abrt -> Outils pour informer les équipes Fedora des erreus qui surviennent sur votre système.
+- Gnome-Boxes -> Outil de Virtualization
+- Gnome Software -> Pour installer, mettre à jour ou supprimer vos applications.
+- PackageKit -> lié à Gnome-Software pour précharger les mises à jour pour Gnome Software
 
 <strong>myFedora.yml:</strong> Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.
 

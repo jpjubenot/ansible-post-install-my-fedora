@@ -13,6 +13,7 @@
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
+      - mitigate-my-fed
 
   vars_files:
     - myvars.yml

@@ -24,6 +24,7 @@ My project works like this :
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
+- <strong>mitigate-my-fed</strong>
 
 <strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
 
@@ -39,6 +40,13 @@ compile HandBrake software and MakeMKV software
 <strong>handbrake:</strong> Compilation of HanBrake software
 
 <strong>makemkv:</strong>  Compilation of MakeMKV software
+
+<strong>mitigate-my-fed:</strong> To reduce memory usage on boot, this role will remove:
+- libvrt -> Virtualization Librairies
+- abrt -> tools to inform Fedora Teams about errors on your system
+- Gnome-Boxes -> Virtualization tool
+- Gnome Software -> To install, update or remove your software through GUI tool
+- PackageKit -> Linked with Gnome-Software to let user know about updates
 
 <strong>myFedora.yml:</strong> It's the playbook which discribe the jobs to do and in which order.
 
