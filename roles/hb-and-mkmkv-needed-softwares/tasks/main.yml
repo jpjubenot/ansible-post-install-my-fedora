@@ -12,12 +12,14 @@
   shell: dnf clean all
   tags:
     - minhbmk
+    - handbk
 
 # Install Softwares Needed to Compile Handbrake and MakeMKV
 - name: Install Differents Group Packages
   shell: dnf -y groupinstall "Development Tools" "Development Libraries" "X Software Development" "GNOME Software Development"
   tags:
     - minhbmk
+    - handbk
 
 - name: Install Differents Packages
   dnf: name={{ item }} state=present
@@ -34,13 +36,15 @@
      - gcc-c++
      - git
      #- gstreamer-devel
-     #- gstreamer1-devel
+     - gstreamer1-devel
+     - gstreamer1-libav
      #- gstreamer-plugins-base-devel
-     #- gstreamer1-plugins-base-devel
+     - gstreamer1-plugins-base-devel
      - harfbuzz-devel
      - intltool
      - jansson-devel
      - lame-devel
+     - lbzip2
      - libass-devel
      - libgudev1-devel
      - libnotify-devel
@@ -64,6 +68,7 @@
      - pkg-config
      - qt5-qtbase-devel
      - speex-devel
+     - turbojpeg-devel
      - x264-devel
      - x265-devel
      #- webkitgtk-devel  # Work with Fedora 26
@@ -75,3 +80,4 @@
      - zlib-devel
   tags:
     - minhbmk
+    - handbk
