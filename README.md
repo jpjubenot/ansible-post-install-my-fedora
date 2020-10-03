@@ -56,7 +56,7 @@ machine.
 
 
 <strong>Pré-requis:</strong>
-Il vous faut installer les paquets ansible et libselinux-python.
+Il vous faut installer les paquets ansible et libselinux-python3.
 
 <code>sudo dnf install ansible libselinux-python</code>
 

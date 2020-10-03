@@ -78,6 +78,7 @@
      - libreoffice-langpack-fr
      - libselinux-python3
      - libX11-devel
+     - lsb-core-noarch
      - lynis
      - lzop
      - mediawriter
