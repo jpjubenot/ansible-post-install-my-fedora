@@ -87,6 +87,7 @@
      #- nmap-frontend
      - p7zip
      - pacmanager
+     - perl
      - python-dnf
      # For now Shutter do not work correctly on Gnome and Wayland
      #- shutter
