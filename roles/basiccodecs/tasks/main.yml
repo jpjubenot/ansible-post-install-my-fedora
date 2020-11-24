@@ -14,7 +14,7 @@
     - codecs
     - basicinst
 
-# Download lastest version on www.makemkv.com
+# Download Mplayer Codecs
 - name: Downloading MPlayer Codecs
   get_url:
     url: http://www.mplayerhq.hu/MPlayer/releases/codecs/mplayer-codecs-20061022-1.x86_64.rpm

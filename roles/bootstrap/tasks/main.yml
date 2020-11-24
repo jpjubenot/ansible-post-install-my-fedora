@@ -82,14 +82,14 @@
 # Add Repository Lynis
 - name: Verify if Lynis Repository exist
   stat: path=/etc/yum.repos.d/lynis-chrome.repo
-  register: googlechromerepo
+  register: lynisrepo
   tags:
     - repolynis
     - basicinst
 
 - name: Lynis enable Repository
   template: src=templates/lynis.repo.tpl dest=/etc/yum.repos.d/lynis.repo mode=0644 owner=root group=root
-  when: googlechromerepo.stat.exists == False
+  when: lynisrepo.stat.exists == False
   tags:
     - repolynis
     - basicinst
@@ -100,6 +100,7 @@
   tags:
     - fastmirror
     - basicinst
+
 # Disable IPv6 - 3 lines to disable
 - name: Disable IPv6 -a
   lineinfile: dest=/etc/sysctl.conf line="net.ipv6.conf.all.disable_ipv6 = 1"

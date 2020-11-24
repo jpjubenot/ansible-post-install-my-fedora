@@ -17,13 +17,6 @@
     - mkmkv
     - minhbmk
 
-# Exit if exist
-#- meta: end_play
-#  when: makemkvexist.stat.exists
-#  tags:
-#    - mkmkv
-#    - minhbmk
-
 # Create Folder to Compile
 - name: Create Folder to Compile
   file:

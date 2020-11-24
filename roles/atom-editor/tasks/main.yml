@@ -27,7 +27,7 @@
   tags:
     - atom
 
-# Clean Mplayer Codecs
+# Clean Atom-Editor download
 - name: Delete Atom-Editor File
   file:
     path: "/tmp/atom.x86_64.rpm"

@@ -17,13 +17,6 @@
     - minhbmk
     - handbk
 
-# Exit if exist
-#- meta: end_play
-#  when: handbrakeexist.stat.exists
-#  tags:
-#    - minhbmk
-#    - handbk
-
 # Create Folder to Compile
 - name: Create Folder to Compile
   file:
@@ -44,7 +37,7 @@
     - handbk
 
 # Compile Handbrake
-- name: configure
+- name: configure make install
   shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
   when: handbrakeexist.stat.exists == False
   tags:
