@@ -68,6 +68,7 @@
      - help2man
      - htop
      - iftop
+     - inxi
      - iperf3
      #- keepass
      - kernel-devel
@@ -83,6 +84,7 @@
      - lzop
      - mediawriter
      - nano
+     - neofetch
      - nethogs
      #- nmap-frontend
      - p7zip
