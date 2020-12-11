@@ -76,7 +76,7 @@
 #  shell: patch /tmp/MakeMKV/{{ MakeMKV_OSS }}/libffabi/src/ffabi.c < patch.file
 
 # Compile MakeMKV OSS
-- name: configure
+- name: Configure
   shell: 'cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && ./configure'
   when: makemkvexist.stat.exists == False
   tags:
@@ -92,7 +92,8 @@
     - mkmkv
     - minhbmk
 
-- make:
+- name: Make Install
+  make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_OSS }}"
      target: install
   when: makemkvexist.stat.exists == False
@@ -130,7 +131,8 @@
     - mkmkv
     - minhbmk
 
-- make:
+- name: Make Install
+  make:
      chdir: "/tmp/MakeMKV/{{ MakeMKV_BIN }}"
      target: install
   when: makemkvexist.stat.exists == False

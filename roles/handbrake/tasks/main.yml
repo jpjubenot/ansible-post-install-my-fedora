@@ -37,14 +37,15 @@
     - handbk
 
 # Compile Handbrake
-- name: configure make install
+- name: Configure Make Mnstall
   shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
   when: handbrakeexist.stat.exists == False
   tags:
     - minhbmk
     - handbk
 
-- make:
+- name: Make Install
+  make:
     chdir: "/tmp/Handbrake-Build/HandBrake/build"
     target: install
   when: handbrakeexist.stat.exists == False
