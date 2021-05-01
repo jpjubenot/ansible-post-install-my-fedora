@@ -36,21 +36,6 @@
     - repofusion
     - basicinst
 
-# Add Repository Adobe
-- name: Verify if Adobe Repository exist
-  stat: path=/etc/yum.repos.d/adobe-linux-x86_64.repo
-  register: adoberepo
-  tags:
-    - repoadobe
-    - basicinst
-
-- name: Downloading and enable Adobe Repository...
-  command: dnf install -y --nogpgcheck http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
-  when: adoberepo.stat.exists == False
-  tags:
-    - repoadobe
-    - basicinst
-
 # Add Repository Oracle VirtualBox
 - name: Verify if Oracle VirtualBox Repository exist
   stat: path=/etc/yum.repos.d/virtualbox.repo

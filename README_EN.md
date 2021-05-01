@@ -79,8 +79,9 @@ I suggest you to create a folder to download the complete script.
 <p>It's logical if you have error at this point because some features need really
 install to progression.</p>
 <p>A test of install will work but if software is needed in a part of job You will
-have an error because the package is not present. With some modifications you can execute this script on a remote computer like in
-local, look at Ansible documentation and tutorials.</p>
+have an error because the package is not present. With some modifications you can
+execute this script on a remote computer like in local, look at Ansible documentation
+and tutorials.</p>
 <p>If you want to test in real maybe itès interristing to use a virtual machine to
 execute it.</p>
 <p>The execution time of this script depend of your computer's speed and Internet's

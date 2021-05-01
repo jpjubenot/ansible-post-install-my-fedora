@@ -37,7 +37,7 @@
     - handbk
 
 # Compile Handbrake
-- name: Configure Make Mnstall
+- name: Configure   Make   Make Install
   shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
   when: handbrakeexist.stat.exists == False
   tags:

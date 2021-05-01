@@ -27,7 +27,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>makemkv</strong>
 - <strong>mitigate-my-fed</strong>
 
-<strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, Adobe, désactivation de IPv6 etc ...
+<strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, désactivation de IPv6 etc ...
 
 <strong>softwares:</strong> Correspond à toute une liste de paquets que j'aime utiliser sur ma
 machine.

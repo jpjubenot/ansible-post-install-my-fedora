@@ -40,7 +40,6 @@
      - evolution
      #- fedora-arm-installer
      - filezilla
-     - flash-plugin
      # print on Samsung Laser printers foo2qpdl
      - foo2qpdl
      - gcc
@@ -83,6 +82,7 @@
      - lynis
      - lzop
      - mediawriter
+     - mkvtoolnix
      - nano
      - neofetch
      - nethogs
@@ -90,9 +90,11 @@
      - p7zip
      - pacmanager
      - perl
+     - perl-LWP-Protocol-https
      - python-dnf
      # For now Shutter do not work correctly on Gnome and Wayland
      #- shutter
+     - screen
      - shotwell
      - stacer
      #- system-config-users
