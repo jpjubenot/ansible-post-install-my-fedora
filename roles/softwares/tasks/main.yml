@@ -28,6 +28,7 @@
      - automake
      #- blueman
      #- compat-libstdc++-33
+     - calibre
      - cawbird
      - dmidecode
      - dnf-plugin-system-upgrade
