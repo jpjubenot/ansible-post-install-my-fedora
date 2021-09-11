@@ -95,6 +95,7 @@
      - python-dnf
      # For now Shutter do not work correctly on Gnome and Wayland
      #- shutter
+     - rpi-imager
      - screen
      - shotwell
      - stacer
