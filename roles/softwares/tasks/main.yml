@@ -89,7 +89,7 @@
      - nethogs
      #- nmap-frontend
      - p7zip
-     - pacmanager
+     #- pacmanager # now replaced by his fork Asbru-CM
      - perl
      - perl-LWP-Protocol-https
      - python-dnf

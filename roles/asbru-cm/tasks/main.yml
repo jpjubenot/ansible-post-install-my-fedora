@@ -1,0 +1,35 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
+
+# tasks file for roles/asbru-cm
+
+
+- name: Verify if Asbru-CM exist
+  stat: path=/usr/bin/asbru-cm
+  register: asbru
+  tags:
+    - asbru
+
+- name: Download Asbru-CM version 6.3.2-1.fc32.noarch.rpm
+  command: "wget -O /tmp/asbru-cm-6.3.2-1.fc32.noarch.rpm --content-disposition https://packagecloud.io/asbru-cm/asbru-cm/packages/fedora/32/asbru-cm-6.3.2-1.fc32.noarch.rpm/download.rpm"
+  when: asbru.stat.exists == False
+  tags:
+    - asbru
+
+- name: Install Asbru-CM
+  command: "yum -y install /tmp/asbru-cm-6.3.2-1.fc32.noarch.rpm"
+  when: asbru.stat.exists == False
+  tags:
+    - asbru
+
+# Clean Asbru-CM download
+- name: Delete Asbru-CM temporary file
+  file:
+    path: "/tmp/asbru-cm-6.3.2-1.fc32.noarch.rpm"
+    state: absent
+  when: asbru.stat.exists == False
+  tags:
+    - asbru
