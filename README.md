@@ -21,6 +21,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>bootstrap</strong>
 - <strong>softwares</strong>
 - <strong>atom-editor</strong>
+- <strong>asbru-cm</strong>
 - <strong>basiccodecs</strong>
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
@@ -33,6 +34,8 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 machine.
 
 <strong>atom-editor:</strong> Installation du logiciel Atom Editor.
+
+<strong>asbru-cm:</strong> Installation du logiciel Asbru-CM.
 
 <strong>basiccodecs:</strong> Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats.
 

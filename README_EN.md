@@ -20,6 +20,7 @@ My project works like this :
 - <strong>bootstrap</strong>
 - <strong>softwares</strong>
 - <strong>atom-editor</strong>
+- <strong>asbru-cm</strong>
 - <strong>basiccodecs</strong>
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
@@ -31,6 +32,8 @@ My project works like this :
 <strong>softwares:</strong> A list of my favorites softwares or librairies to install I need ...
 
 <strong>atom-editor:</strong> Atom Editor software installation.
+
+<strong>asbru-cm:</strong> Asbru-CM software installation.
 
 <strong>basiccodecs:</strong> Some basics codecs to mplayer player
 
