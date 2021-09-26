@@ -35,7 +35,7 @@ machine.
 
 <strong>atom-editor:</strong> Installation du logiciel Atom Editor.
 
-<strong>asbru-cm:</strong> Installation du logiciel Asbru-CM.
+<strong>asbru-cm:</strong> Installation du logiciel Asbru-CM (notez que KeePassXC sera aussi installé).
 
 <strong>basiccodecs:</strong> Correspond à des codecs pour mplayer permettant de visualiser des vidéos de différents formats.
 
@@ -59,11 +59,9 @@ machine.
 
 
 <strong>Pré-requis:</strong>
-Il vous faut installer les paquets ansible et libselinux-python3.
+Il vous faut installer les paquets ansible.
 
-<code>sudo dnf install ansible libselinux-python</code>
-
-<p>Ce projet est à son commencement, donc il est fort possible que certains éléments ne soient pas corrects.</p>
+<code>sudo dnf install ansible</code>
 
 <p>Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil. Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ en local.</p>
 
@@ -75,11 +73,11 @@ Il vous faut installer les paquets ansible et libselinux-python3.
 
 <code>cd ansible-post-install-my-fedora</code>
 
-<p><strong>Exemple pour tester:</strong> <code>sudo ansible-playbook -i hosts myFedora.yml --check</code>
+<p><strong>Exemple pour tester:</strong> <code>sudo ansible-playbook myFedora.yml --check</code>
 Il se peut que le test renvoi des erreurs car il ne fait que tester l'exécution
 des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit être utilisé dans un rôle plus tard on aura une erreur puisqu'il n'est pas présent sur la machine.</p>
 
-<strong>Exemple</strong> pour effectuer les installations: <code>sudo ansible-playbook  -i hosts myFedora.yml</code>
+<strong>Exemple</strong> pour effectuer les installations: <code>sudo ansible-playbook myFedora.yml</code>
 
 <p>Ce script peut tout à fait être utiliser sur des machines distantes utilisant
 Fedora en vous référant à la documentation de Ansible ou sur les différents tuto
