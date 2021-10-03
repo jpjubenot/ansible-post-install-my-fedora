@@ -4,7 +4,7 @@ Jacques-Philippe JUBENOT, France
 <p>This project <strong>"ansible-post-install-my-fedora"</strong> is to finish install my Fedora.
 For each new version of Fedora, I sometimes prefer to reinstall from scratch rather than to make
 an update.</p>
-Then if it is easy to save datas and restore then, for softwares there is always
+Then if it is easy to save datas and restore then, regarding softwares there is always
 one or more that you forget. You reinstall it or them in emergency at last minute.
 
 I recently discovered Ansible at my office and I found that this project was amazing.
@@ -77,7 +77,7 @@ I suggest to create a folder to download the complete script.
 
 <strong>If you just want to apply:</strong> <code>sudo ansible-playbook myFedora.yml</code>
 
-<p>During the test, you could get errorr at this point because some features need really
+<p>During the test, you could get errors at this point because some features really need
 to be installed for progression.</p>
 <p>A test of install will work but if this software is needed in a part of the job, you will
 face an error because the package is not present. With some modifications you can
