@@ -83,7 +83,14 @@
 - name: Fast Mirror Option for DNF
   lineinfile: dest=/etc/dnf/dnf.conf line="fastestmirror=true"
   tags:
-    - fastmirror
+    - fastdnf
+    - basicinst
+
+# Parallel Download for DNF
+- name: Parallel Download for DNF
+  lineinfile: dest=/etc/dnf/dnf.conf line="max_parallel_downloads=10"
+  tags:
+    - fastdnf
     - basicinst
 
 # Disable IPv6 - 3 lines to disable
@@ -168,4 +175,4 @@
   shell: ldconfig
   when: modulegtk3file.stat.exists
   tags:
-    - modulegtk3file 
+    - modulegtk3file
