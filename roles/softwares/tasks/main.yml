@@ -12,106 +12,102 @@
   tags:
     - minimum
 
-# Remove Default Softwares
-#- name: Remove Differents Packages
-#  dnf: name=gnome-boxes state=absent
-#  tags:
-#    - minimum
-
 # Install Default Softwares
 - name: Install Different Packages
-  dnf: name={{ item }} state=present
-  #autoremove=yes
-  with_items:
-     #- 0ad
-     - autoconf
-     - automake
-     #- blueman
-     #- compat-libstdc++-33
-     - calibre
-     - cawbird
-     - dmidecode
-     - dnf-plugin-system-upgrade
-     - dropbox
-     - easytag
-     - elfutils-libelf-devel
-     #- eclipse
-     #- eclipse-pydev
-     #- eclipse-mpc
-     - evolution
-     #- fedora-arm-installer
-     - filezilla
-     # print on Samsung Laser printers foo2qpdl
-     - foo2qpdl
-     - gcc
-     - gcstar
-     - gimp
-     - git
-     - gitg
-     - glib2
-     - glib2-devel
-     - glibc-devel
-     - gnome-battery-bench
-     - google-chrome-stable
-     - gnome-passwordsafe
-     - gnome-nettool
-     - gnome-tweak-tool
-     - gparted
-     - grip
-     - gstreamer-ffmpeg
-     - gstreamer1-libav
-     - gstreamer-plugins-ugly
-     - gstreamer1-plugins-ugly
-     - gtk-murrine-engine
-     - gtk2-devel
-     - hdparm
-     - help2man
-     - htop
-     - iftop
-     - inxi
-     - iperf3
-     #- keepass
-     - kernel-devel
-     - kernel-headers
-     - lame
-     #- libbsd -- OK with Fedora 26
-     #- libbsd-devel -- OK with Fedora 26
-     - libreoffice-langpack-fr
-     - libselinux-python3
-     - libX11-devel
-     - lsb-core-noarch
-     - lynis
-     - lzop
-     - mediawriter
-     - mkvtoolnix
-     - nano
-     - neofetch
-     - nethogs
-     #- nmap-frontend
-     - p7zip
-     #- pacmanager # now replaced by his fork Asbru-CM
-     - perl
-     - perl-LWP-Protocol-https
-     - python-dnf
-     # For now Shutter do not work correctly on Gnome and Wayland
-     #- shutter
-     - rpi-imager
-     - screen
-     - shotwell
-     - stacer
-     #- system-config-users
-     - tar
-     - tcptrack
-     - timeshift
-     #- VirtualBox-6.0
-     - vim
-     - vlc
-     - vte-devel
-     - wget
-     #- wireshark-qt
-     - x264-devel
-     - x265-devel
-     - xine-lib-extras-freeworld
-     - xsane
+  dnf:
+    name:
+       #- 0ad
+       - autoconf
+       - automake
+       #- blueman
+       #- compat-libstdc++-33
+       - calibre
+       - cawbird
+       - cura # 3D printer software
+       - deja-dup # backup software
+       - dmidecode
+       - dnf-plugin-system-upgrade
+       - dropbox
+       - easytag
+       - elfutils-libelf-devel
+       #- eclipse
+       #- eclipse-pydev
+       #- eclipse-mpc
+       - evolution
+       #- fedora-arm-installer
+       - filezilla
+       # print on Samsung Laser printers foo2qpdl
+       - foo2qpdl
+       - gcc
+       - gcstar
+       - gimp
+       - git
+       - gitg
+       - glib2
+       - glib2-devel
+       - glibc-devel
+       - gnome-battery-bench
+       - google-chrome-stable
+       - gnome-passwordsafe
+       - gnome-nettool
+       - gnome-tweak-tool
+       - gparted
+       - grip
+       - gstreamer-ffmpeg
+       - gstreamer1-libav
+       - gstreamer-plugins-ugly
+       - gstreamer1-plugins-ugly
+       - gtk-murrine-engine
+       - gtk2-devel
+       - hdparm
+       - help2man
+       - htop
+       - iftop
+       - inxi
+       - iperf3
+       #- keepass
+       - kernel-devel
+       - kernel-headers
+       - lame
+       #- libbsd -- OK with Fedora 26
+       #- libbsd-devel -- OK with Fedora 26
+       - libreoffice-langpack-fr
+       - libselinux-python3
+       - libX11-devel
+       - lsb-core-noarch
+       - lynis
+       - lzop
+       - mediawriter
+       - mkvtoolnix
+       - nano
+       - neofetch
+       - nethogs
+       #- nmap-frontend
+       - p7zip
+       #- pacmanager # now replaced by his fork Asbru-CM
+       - perl
+       - perl-LWP-Protocol-https
+       - python-dnf
+       # For now Shutter do not work correctly on Gnome and Wayland
+       #- shutter
+       - rpi-imager
+       - screen
+       - shotwell
+       - stacer
+       #- system-config-users
+       - tar
+       - tcptrack
+       - timeshift
+       #- VirtualBox-6.0
+       - vim
+       - vlc
+       - vte-devel
+       - wget
+       #- wireshark-qt
+       - x264-devel
+       - x265-devel
+       - xine-lib-extras-freeworld
+       - xsane
+    state: present
   tags:
     - instsoft

@@ -30,7 +30,7 @@
     - mitigate
 
 # Remove Gnome-Software Softwares
-- name: Remove Gnome-Software
-  command: dnf -y autoremove gnome-software
-  tags:
-    - mitigate
+#- name: Remove Gnome-Software
+#  command: dnf -y autoremove gnome-software
+#  tags:
+#    - mitigate
