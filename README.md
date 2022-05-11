@@ -27,6 +27,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
 - <strong>mitigate-my-fed</strong>
+- <strong>rescue-boot</strong>
 
 <strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, désactivation de IPv6 etc ...
 
@@ -51,6 +52,8 @@ machine.
 - Gnome-Boxes -> Outil de Virtualization
 - Gnome Software -> Pour installer, mettre à jour ou supprimer vos applications.
 - PackageKit -> lié à Gnome-Software pour précharger les mises à jour pour Gnome Software
+
+<strong>rescue-boot:</strong> Pour recréer le menu de Rescue-boot de votre Fedora.
 
 <strong>myFedora.yml:</strong> Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.
 
