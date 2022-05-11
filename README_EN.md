@@ -26,6 +26,7 @@ My project works like this :
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
 - <strong>mitigate-my-fed</strong>
+- <strong>rescue-boot</strong>
 
 <strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
 
@@ -50,6 +51,8 @@ compile HandBrake software and MakeMKV software
 - Gnome-Boxes -> Virtualization tool
 - Gnome Software -> To install, update or remove your software through GUI tool
 - PackageKit -> Linked with Gnome-Software to let user know about updates
+
+<strong>rescue-boot:</strong> To recreate your Rescue Boot Menu.
 
 <strong>myFedora.yml:</strong> This is the playbook which discribe the jobs to execute and in which order.
 

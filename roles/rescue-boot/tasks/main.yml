@@ -1,0 +1,43 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
+# tasks file for roles/rescue-boot
+
+- name: Find Old rescue vmlinuz
+  find:
+    paths: /boot/
+    patterns: "vmlinuz-0-rescue-*"
+  register: find_vmlinuz
+  tags:
+    - rescuemode
+
+- name: Remove Old rescue vmlinuz
+  file:
+    path: "{{ item['path'] }}"
+    state: absent
+  with_items: "{{ find_vmlinuz['files'] }}"
+  tags:
+    - rescuemode
+
+- name: Find Old rescue initramfs
+  find:
+    paths: /boot/
+    patterns: "initramfs-0-rescue-*.img"
+  register: find_initramfs
+  tags:
+    - rescuemode
+
+- name: Remove Old rescue initramfs
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ find_initramfs['files'] }}"
+  tags:
+    - rescuemode
+
+- name: Recreate Rescume Mode Menu
+  shell: /usr/lib/kernel/install.d/51-dracut-rescue.install add $(uname -r) "" /lib/modules/$(uname -r)/vmlinuz
+  tags:
+    - rescuemode

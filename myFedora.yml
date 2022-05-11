@@ -15,6 +15,7 @@
       - handbrake
       - makemkv
       - mitigate-my-fed
+      - rescue-boot
 
   vars_files:
     - myvars.yml

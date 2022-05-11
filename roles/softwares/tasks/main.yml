@@ -98,7 +98,8 @@
        - tar
        - tcptrack
        - timeshift
-       #- VirtualBox-6.0
+       #- VirtualBox
+       #- VirtualBox-guest-additions
        - vim
        - vlc
        - vte-devel
