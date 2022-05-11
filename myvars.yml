@@ -10,7 +10,7 @@
 ansible_python_interpreter: /usr/bin/python3
 
 # Fedora version
-fedora_version: 35
+fedora_version: 36
 
 # MakeMKV version - Need to look at https://www.makemkv.com/download/ to get lastest version
 MakeMKV_OSS: makemkv-oss-1.16.7
