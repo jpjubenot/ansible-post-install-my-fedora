@@ -7,7 +7,7 @@ an update.</p>
 Then if it is easy to save datas and restore then, regarding softwares there is always
 one or more that you forget. You reinstall it or them in emergency at last minute.
 
-I recently discovered Ansible at my office and I found that this project was amazing.
+Since I discovered Ansible at my office, I found this project was amazing.
 Imagine and organize installation of your system is possible at home too.
 
 With this project it's possible to finalize the installation of my settings and softwares.

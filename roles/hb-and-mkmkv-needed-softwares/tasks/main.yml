@@ -72,9 +72,9 @@
        - x264-devel
        - x265-devel
        #- webkitgtk-devel  # Work with Fedora 26
-       - webkit2gtk3-devel # Work with Fedora 29
        #- webkitgtk4-devel #  Work with Fedora 28
        #- webkitgtk3-devel #  Work with Fedora 27
+       - webkit2gtk3-devel # Work with Fedora 29 and more
        - xz-devel
        - yasm
        - zlib-devel

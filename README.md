@@ -8,9 +8,8 @@ English README version see [here](https://jpjubenot.github.io/ansible-post-insta
 <p>Pour chaque nouvelle version de Fedora, je préfère souvent repartir d'une installation de zéro, plutôt que de faire une mise à jour.
 Alors si il est facile de sauvegarder ses données puis de les restaurer. Concernant les applications, il y en a toujours une ou deux que l'on oublie de réintégrer, et on la réinstalle d'urgence au dernier moment.</p>
 
-<p>J'ai découvert récemment Ansible au bureau et je trouve le concept génial.
-Rationaliser l'installation et la gestion des systèmes peut tout à fait
-s'appliquer à la maison.</p>
+<p>Depuis que j'ai découvert Ansible au bureau, je trouve le concept génial.
+Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appliquer à la maison.</p>
 <p>Ce projet permet de réinstaller une bonne partie des applications présentes sur ma Fedora. GitHub est dès lors tout désigné pour partager ce mini projet.</p>
 
 <p>D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes nos applications préférées.</p>
