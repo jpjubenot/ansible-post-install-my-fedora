@@ -47,10 +47,11 @@
        - glib2-devel
        - glibc-devel
        - gnome-battery-bench
-       - google-chrome-stable
+       - gnome-extensions-app
        - gnome-passwordsafe
        - gnome-nettool
        - gnome-tweak-tool
+       - google-chrome-stable
        - gparted
        - grip
        - gstreamer-ffmpeg
@@ -91,6 +92,7 @@
        # For now Shutter do not work correctly on Gnome and Wayland
        #- shutter
        - rpi-imager
+       - rubygem-rexml
        - screen
        - shotwell
        - stacer
@@ -98,6 +100,7 @@
        - tar
        - tcptrack
        - timeshift
+       - vagrant
        #- VirtualBox
        #- VirtualBox-guest-additions
        - vim
