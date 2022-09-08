@@ -4,16 +4,13 @@ Jacques-Philippe JUBENOT, France
 <p>This project <strong>"ansible-post-install-my-fedora"</strong> is to finish install my Fedora.
 For each new version of Fedora, I sometimes prefer to reinstall from scratch rather than to make
 an update.</p>
-Then if it is easy to save datas and restore then, regarding softwares there is always
-one or more that you forget. You reinstall it or them in emergency at last minute.
-
-Since I discovered Ansible at my office, I found this project was amazing.
-Imagine and organize installation of your system is possible at home too.
-
-With this project it's possible to finalize the installation of my settings and softwares.
-GitHub is a fantastic way to share this mini project.
-
-When you reinstall your system, you set your repositories, install softwares and
+<p>Then if it is easy to save datas and restore then, regarding softwares there is always
+one or more that you forget. You reinstall it or them in emergency at last minute.</p>
+<p>Since I discovered Ansible at my office, I found this project was amazing.
+Imagine and organize installation of your system is possible at home too.</p>
+<p>With this project it's possible to finalize the installation of my settings and softwares.
+GitHub is a fantastic way to share this mini project.</p>
+<p>When you reinstall your system, you set your repositories, install softwares and
 many other things.</p>
 
 My project works like this :
