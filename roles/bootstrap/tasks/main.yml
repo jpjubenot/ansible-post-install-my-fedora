@@ -105,7 +105,7 @@
     - ipv6
     - basicinst
 
-# Disable ::1 ipv6 localhost on /etc/hosts
+# Disable ::1 ipv6 localhost in /etc/hosts
 - name: Disable ::1 ipv6 localhost on /etc/hosts
   replace:
      path: /etc/hosts
@@ -115,6 +115,21 @@
   tags:
     - ipv6
     - basicinst
+
+# Disable ipv6 in /etc/default/grub
+- name: Disable ipv6 in /etc/default/grub
+  replace:
+     path: /etc/default/grub
+     regexp: 'quiet'
+     replace: 'ipv6.disable=1 quiet'
+     backup: yes
+  tags:
+    - ipv6
+    - basicinst
+
+- name: Run grub2-mkconfig to update /boot/grub/grub.cfg
+  command:
+    cmd: grub2-mkconfig
 
 # Add Blacklist file to disable Webcam
 - name: Test blacklist file

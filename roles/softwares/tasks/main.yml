@@ -101,6 +101,7 @@
        - tcptrack
        - timeshift
        - vagrant
+       - vagrant-libvirt
        #- VirtualBox
        #- VirtualBox-guest-additions
        - vim
