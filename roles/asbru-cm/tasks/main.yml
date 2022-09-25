@@ -13,22 +13,22 @@
   tags:
     - asbru
 
-- name: Download Asbru-CM version 6.3.2-1.fc32.noarch.rpm
-  command: "wget -O /tmp/asbru-cm-6.3.2-1.fc32.noarch.rpm --content-disposition https://packagecloud.io/asbru-cm/asbru-cm/packages/fedora/32/asbru-cm-6.3.2-1.fc32.noarch.rpm/download.rpm"
+- name: Download Asbru-CM
+  command: "wget -O /tmp/asbru-cm.rpm --content-disposition {{ Asbru_Url_Version }}" 
   when: asbru.stat.exists == False
   tags:
     - asbru
 
 - name: Install Asbru-CM
-  command: "yum -y install /tmp/asbru-cm-6.3.2-1.fc32.noarch.rpm"
+  command: "dnf -y install /tmp/asbru-cm.rpm"
   when: asbru.stat.exists == False
   tags:
     - asbru
 
 # Clean Asbru-CM download
-- name: Delete Asbru-CM temporary file
+- name: Delete Asbru-CM temporary downloaded file
   file:
-    path: "/tmp/asbru-cm-6.3.2-1.fc32.noarch.rpm"
+    path: "/tmp/asbru-cm.rpm"
     state: absent
   when: asbru.stat.exists == False
   tags:
