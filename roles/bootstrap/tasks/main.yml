@@ -88,7 +88,7 @@
 
 # Parallel Download for DNF
 - name: Parallel Download for DNF
-  lineinfile: dest=/etc/dnf/dnf.conf line="max_parallel_downloads=8"
+  lineinfile: dest=/etc/dnf/dnf.conf line="max_parallel_downloads=10"
   tags:
     - fastdnf
     - basicinst

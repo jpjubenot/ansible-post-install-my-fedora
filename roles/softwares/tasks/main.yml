@@ -16,7 +16,7 @@
 - name: Install Different Packages
   dnf:
     name:
-       #- 0ad
+       #- 0ad # Gameplay like Age of Empire
        - autoconf
        - automake
        #- blueman
@@ -43,6 +43,7 @@
        - gimp
        - git
        - gitg
+       - glances
        - glib2
        - glib2-devel
        - glibc-devel
@@ -85,12 +86,10 @@
        - nethogs
        #- nmap-frontend
        - p7zip
-       #- pacmanager # now replaced by his fork Asbru-CM
        - perl
        - perl-LWP-Protocol-https
        - python-dnf
-       # For now Shutter do not work correctly on Gnome and Wayland
-       #- shutter
+       #- shutter # For now Shutter do not work correctly on Gnome and Wayland
        - rpi-imager
        - rubygem-rexml
        - screen
@@ -100,12 +99,12 @@
        - tar
        - tcptrack
        - timeshift
-       - vagrant-libvirt
+       #- vagrant-libvirt
        #- VirtualBox
        #- VirtualBox-guest-additions
        - vim
        - vlc
-       - vte-devel
+       #- vte-devel
        - wget
        #- wireshark-qt
        - x264-devel
