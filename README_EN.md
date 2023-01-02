@@ -46,11 +46,6 @@ compile HandBrake software and MakeMKV software
 - libvrt -> Virtualization Librairies
 - abrt -> tools to inform Fedora Teams about errors on your system
 - Gnome-Boxes -> Virtualization tool
-<<<<<<< HEAD
-- PackageKit -> Linked with Gnome-Software to let user know about updates
-=======
-
->>>>>>> 4e86bad... Fedora 37 - update readme and myvars
 
 <strong>rescue-boot:</strong> To recreate your Rescue Boot Menu.
 
