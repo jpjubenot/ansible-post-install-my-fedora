@@ -49,7 +49,6 @@ machine.
 - libvrt -> Librairies de Virtualization
 - abrt -> Outils pour informer les équipes Fedora des erreus qui surviennent sur votre système.
 - Gnome-Boxes -> Outil de Virtualization
-- Gnome Software -> Pour installer, mettre à jour ou supprimer vos applications.
 - PackageKit -> lié à Gnome-Software pour précharger les mises à jour pour Gnome Software
 
 <strong>rescue-boot:</strong> Pour recréer le menu de Rescue-boot de votre Fedora.
