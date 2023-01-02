@@ -49,7 +49,10 @@ machine.
 - libvrt -> Librairies de Virtualization
 - abrt -> Outils pour informer les équipes Fedora des erreus qui surviennent sur votre système.
 - Gnome-Boxes -> Outil de Virtualization
+<<<<<<< HEAD
 - PackageKit -> lié à Gnome-Software pour précharger les mises à jour pour Gnome Software
+=======
+>>>>>>> 4e86bad... Fedora 37 - update readme and myvars
 
 <strong>rescue-boot:</strong> Pour recréer le menu de Rescue-boot de votre Fedora.
 
