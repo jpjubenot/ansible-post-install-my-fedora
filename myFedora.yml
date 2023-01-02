@@ -14,7 +14,7 @@
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
-      - mitigate-my-fed
+      #- mitigate-my-fed
       - rescue-boot
 
   vars_files:

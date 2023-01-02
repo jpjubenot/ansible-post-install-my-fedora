@@ -19,7 +19,7 @@
 
 # Remove LibVirt Softwares
 - name: Remove LibVirt*
-  command: dnf -y autoremove libvrt*
+  command: dnf -y autoremove libvirt*
   tags:
     - mitigate
 
