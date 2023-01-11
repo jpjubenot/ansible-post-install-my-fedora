@@ -8,14 +8,14 @@
   roles:
       - bootstrap
       - softwares
-      - atom-editor
+      #- atom-editor # Atom Editor is now depreacated
       - asbru-cm
       - basiccodecs
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
       #- mitigate-my-fed
-      #- rescue-boot
+      - rescue-boot
 
   vars_files:
     - myvars.yml

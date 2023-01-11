@@ -79,6 +79,21 @@
     - repolynis
     - basicinst
 
+# Add Repository VScode
+- name: Verify if VScode Repository exist
+  stat: path=/etc/yum.repos.d/vscode.repo
+  register: vscoderepo
+  tags:
+    - repovscode
+    - basicinst
+
+- name: VScode enable Repository
+  template: src=templates/vscode.repo.tpl dest=/etc/yum.repos.d/vscode.repo mode=0644 owner=root group=root
+  when: vscoderepo.stat.exists == False
+  tags:
+    - repovscode
+    - basicinst
+
 # Fast Mirror Option for DNF
 - name: Fast Mirror Option for DNF
   lineinfile: dest=/etc/dnf/dnf.conf line="fastestmirror=true"
