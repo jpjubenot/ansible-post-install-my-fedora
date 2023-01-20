@@ -16,29 +16,20 @@
 - name: Install Different Packages
   dnf:
     name:
-       #- 0ad # Gameplay like Age of Empire
+       #- 0ad                          # Game like Microsoft Age of Empire
        - autoconf
        - automake
-       #- blueman
-       #- compat-libstdc++-33
        - calibre
        - cawbird
-       - cura # 3D printer software
-       - deja-dup # backup software
+       - code                          # Visual Studio Code
        - dmidecode
        - dnf-plugin-system-upgrade
        - easytag
        - elfutils-libelf-devel
-       #- eclipse
-       #- eclipse-pydev
-       #- eclipse-mpc
        - evolution
-       #- fedora-arm-installer
        - filezilla
-       # print on Samsung Laser printers foo2qpdl
-       - foo2qpdl
+       - foo2qpdl                      # print on Samsung Laser printers foo2qpdl
        - gcc
-       - gcstar
        - gimp
        - git
        - gitg
@@ -53,7 +44,7 @@
        - gnome-tweak-tool
        - google-chrome-stable
        - gparted
-       - grip
+       - grip                          # Audio ripping
        - gstreamer-ffmpeg
        - gstreamer1-libav
        - gstreamer-plugins-ugly
@@ -66,12 +57,9 @@
        - iftop
        - inxi
        - iperf3
-       #- keepass
        - kernel-devel
        - kernel-headers
        - lame
-       #- libbsd -- OK with Fedora 26
-       #- libbsd-devel -- OK with Fedora 26
        - libreoffice-langpack-fr
        - libselinux-python3
        - libX11-devel
@@ -84,31 +72,28 @@
        - nautilus-dropbox
        - neofetch
        - nethogs
-       #- nmap-frontend
+       - obs-studio                    # Software for video recording and live streaming
        - p7zip
        - perl
        - perl-LWP-Protocol-https
+       - pycharm-community
        - python-dnf
        - python3-dnf-plugin-snapper
-       #- shutter # For now Shutter do not work correctly on Gnome and Wayland
        - rpi-imager
        - rubygem-rexml
        - screen
        - shotwell
        - snapper
        - stacer
-       #- system-config-users
        - tar
        - tcptrack
        - timeshift
-       #- vagrant-libvirt
-       #- VirtualBox
-       #- VirtualBox-guest-additions
+       #- VirtualBox                   # Virtualization software
+       #- VirtualBox-guest-additions   # Virtualization software tools
        - vim
        - vlc
        #- vte-devel
        - wget
-       #- wireshark-qt
        - x264-devel
        - x265-devel
        - xine-lib-extras-freeworld
