@@ -16,21 +16,3 @@
   command: dnf -y autoremove abrt*
   tags:
     - mitigate
-
-# Remove LibVirt Softwares
-- name: Remove LibVirt*
-  command: dnf -y autoremove libvirt*
-  tags:
-    - mitigate
-
-# Remove Gnome-Boxes Softwares
-- name: Remove Gnome-Boxes
-  command: dnf -y autoremove gnome-boxes
-  tags:
-    - mitigate
-
-# Remove Gnome-Software Softwares
-#- name: Remove Gnome-Software
-#  command: dnf -y autoremove gnome-software
-#  tags:
-#    - mitigate
