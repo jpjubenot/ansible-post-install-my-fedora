@@ -8,7 +8,6 @@
   roles:
       - bootstrap
       - softwares
-      #- atom-editor # Atom Editor is now depreacated
       - asbru-cm
       - basiccodecs
       - hb-and-mkmkv-needed-softwares

@@ -16,7 +16,6 @@ many other things.</p>
 My project works like this :
 - <strong>bootstrap</strong>
 - <strong>softwares</strong>
-- <strong>atom-editor</strong>
 - <strong>asbru-cm</strong>
 - <strong>basiccodecs</strong>
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
@@ -28,8 +27,6 @@ My project works like this :
 <strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
 
 <strong>softwares:</strong> A list of my favorites softwares or librairies to install I need ...
-
-<strong>atom-editor:</strong> Atom Editor software installation.
 
 <strong>asbru-cm:</strong> Asbru-CM software installation (note that KeePassXC will be installed too).
 
