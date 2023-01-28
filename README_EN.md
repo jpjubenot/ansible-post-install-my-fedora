@@ -4,7 +4,7 @@ Jacques-Philippe JUBENOT, France
 <p>This project <strong>"ansible-post-install-my-fedora"</strong> is to finish install my Fedora.
 For each new version of Fedora, I sometimes prefer to reinstall from scratch rather than to make
 an update.</p>
-<p>Then if it is easy to save datas and restore then, regarding softwares there is always
+<p>Then if it is easy to save datas and restore them, regarding softwares there is always
 one or more that you forget. You reinstall it or them in emergency at last minute.</p>
 <p>Since I discovered Ansible at my office, I found this project was amazing.
 Imagine and organize installation of your system is possible at home too.</p>
@@ -21,7 +21,6 @@ My project works like this :
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
-- <strong>mitigate-my-fed</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
 
