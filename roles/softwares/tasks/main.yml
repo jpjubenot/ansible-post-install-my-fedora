@@ -16,24 +16,24 @@
 - name: Install Different Packages
   dnf:
     name:
-       #- 0ad                          # Game like Microsoft Age of Empire
+       #- 0ad                          # Game like Microsoft Age of Empire -- Great gaming software
        - autoconf
        - automake
-       - calibre
-       - cawbird
+       - calibre                       # Ebook and numuric book software
+       - cawbird                       # Twitter tool
        - code                          # Visual Studio Code
        - dmidecode
        - dnf-plugin-system-upgrade
-       - easytag
+       - easytag                       # Audio tagging tool and adding image in MP3 audio file
        - elfutils-libelf-devel
-       - evolution
-       - filezilla
+       - evolution                     # Email software
+       - filezilla                     # Ftp software
        - foo2qpdl                      # print on Samsung Laser printers foo2qpdl
-       - gcc
+       - gcc                           # Compiliation software
        - gimp
        - git
        - gitg
-       - glances
+       - glances                       # CLI System MOnitoring
        - glib2
        - glib2-devel
        - glibc-devel
@@ -45,60 +45,61 @@
        - google-chrome-stable
        - gnome-sudoku
        - gparted
-       - grip                          # Audio ripping
-       - gstreamer-ffmpeg
-       - gstreamer1-libav
-       - gstreamer-plugins-ugly
-       - gstreamer1-plugins-ugly
-       - gtk-murrine-engine
+       - grip                          # Audio ripping software
+       - gstreamer-ffmpeg              # Video Codec tool
+       - gstreamer1-libav              # Video Codec tool
+       - gstreamer-plugins-ugly        # Video Codec tool
+       - gstreamer1-plugins-ugly       # Video Codec tool
+       - gtk-murrine-engine            # GTK2 engine
        - gtk2-devel
        - hdparm
        - help2man
-       - htop
-       - iftop
+       - htop                          # Monitoring tool like "top"
+       - iftop                         # Network tool - View bandwidth
        - inxi
-       - iperf3
+       - iperf3                        # Network tool - Bandwidth test
        - kernel-devel
        - kernel-headers
-       - lame
+       - lame                          # MP3 Codec tool
        - libreoffice-langpack-fr
        - libselinux-python3
        - libX11-devel
        - lsb-core-noarch
-       - lynis
-       - lzop
+       - lynis                         # Security Tool - Very interesting
+       - lzop                          # Compression Tool
        - mediawriter
-       - mkvtoolnix
+       - mkvtoolnix                    # MKV Codec Tools
        - nano
-       - nautilus-dropbox
+       - nautilus-dropbox              # Dropbox in Nautilus -- Legacy package
        - neofetch
-       - nethogs
+       - nethogs                       # Network tool
        - obs-studio                    # Software for video recording and live streaming
-       - p7zip
+       - p7zip                         # Compression Tool
        - perl
        - perl-LWP-Protocol-https
-       - pycharm-community
+       - pycharm-community             # Python IDE
        - python-dnf
-       - python3-dnf-plugin-snapper
-       - rpi-imager
+       - python3-dnf-plugin-snapper    # Snapper Features
+       - rpi-imager                    # Raspberry card/disk imager
        - rubygem-rexml
-       - screen                        # Snapper Features
-       - shotwell
-       - snapper
+       - screen                        # Terminal tool like TMux
+       - shotwell                      # Pictures manager tool
+       - snapper                       # Snapper Features
        - stacer
        - tar
-       - tcptrack
-       - timeshift
+       - tcptrack                      # Network tool
+       - timeshift                     # Backup software
+       - tmux                          # Terminal tool like Screen
        #- VirtualBox                   # Virtualization software
        #- VirtualBox-guest-additions   # Virtualization software tools
        - vim
        - vlc
        #- vte-devel
        - wget
-       - x264-devel
-       - x265-devel
-       - xine-lib-extras-freeworld
-       - xsane
+       - x264-devel                    # Codec Dev Library
+       - x265-devel                    # Codec Dev Library
+       - xine-lib-extras-freeworld     # Codec files Xine Library
+       - xsane                         # Scanner tool for printer/scanner or simple scanner 
     state: present
   tags:
     - instsoft
