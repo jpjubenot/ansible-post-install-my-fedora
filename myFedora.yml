@@ -7,6 +7,7 @@
   remote_user : root
   roles:
       - bootstrap
+      - disable-ipv6
       - softwares
       - asbru-cm
       - basiccodecs
@@ -14,6 +15,7 @@
       - handbrake
       - makemkv
       - rescue-boot
+      #- disable-webcam
 
   vars_files:
     - myvars.yml

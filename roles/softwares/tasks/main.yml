@@ -43,6 +43,7 @@
        - gnome-nettool
        - gnome-tweak-tool
        - google-chrome-stable
+       - gnome-sudoku
        - gparted
        - grip                          # Audio ripping
        - gstreamer-ffmpeg

@@ -18,6 +18,7 @@ Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appl
 
 Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>bootstrap</strong>
+- <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
 - <strong>asbru-cm</strong>
 - <strong>basiccodecs</strong>
@@ -26,8 +27,11 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>makemkv</strong>
 - <strong>mitigate-my-fed</strong>
 - <strong>rescue-boot</strong>
+- <strong>disable-webcam</strong>
 
 <strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, désactivation de IPv6 etc ...
+
+<strong>disable-ipv6</strong> Pour désactiver IPv6 sur la machine.
 
 <strong>softwares:</strong> Correspond à toute une liste de paquets que j'aime utiliser sur ma
 machine.
@@ -42,12 +46,9 @@ machine.
 
 <strong>makemkv:</strong> Compilation du logiciel MakeMKV.
 
-<strong>mitigate-my-fed:</strong> Pour réduire la consommation de mémoire au boot, ce role va supprimer les paquets suivants:
-- libvrt -> Librairies de Virtualization
-- abrt -> Outils pour informer les équipes Fedora des erreus qui surviennent sur votre système.
-- Gnome-Boxes -> Outil de Virtualization
-
 <strong>rescue-boot:</strong> Pour recréer le menu de Rescue-boot de votre Fedora.
+
+<strong>disable-webcam</strong> Pour désactiver le support de la webcam par défaut quand elle utilise le driver uvcvideo.
 
 <strong>myFedora.yml:</strong> Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.
 

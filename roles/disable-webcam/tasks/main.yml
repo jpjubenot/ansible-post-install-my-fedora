@@ -1,0 +1,35 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
+
+# Role Add Blacklist file to disable Webcam
+
+- name: Test blacklist file
+  stat: path=/etc/modprobe.d/blacklist.conf
+  register: blacklistfile
+  tags:
+    - blacklistf
+    - basicinst
+
+- name: Disable Webcam - blacklist file do not exist
+  template: src=templates/disable-webcam.conf.tpl dest=/etc/modprobe.d/blacklist.conf mode=0644 owner=root group=root
+  when: blacklistfile.stat.exists == False
+  tags:
+    - blacklistf
+    - basicinst
+
+- name: Disable Webcam - blacklist file exist
+  lineinfile: dest=/etc/modprobe.d/blacklist.conf line="# Disable Webcam on linux"
+  when: blacklistfile.stat.exists
+  tags:
+    - blacklistf
+    - basicinst
+
+- name: Disable Webcam blacklist file exist
+  lineinfile: dest=/etc/modprobe.d/blacklist.conf line="blacklist uvcvideo"
+  when: blacklistfile.stat.exists
+  tags:
+    - blacklistf
+    - basicinst

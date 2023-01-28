@@ -15,6 +15,7 @@ many other things.</p>
 
 My project works like this :
 - <strong>bootstrap</strong>
+- <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
 - <strong>asbru-cm</strong>
 - <strong>basiccodecs</strong>
@@ -23,8 +24,11 @@ My project works like this :
 - <strong>makemkv</strong>
 - <strong>mitigate-my-fed</strong>
 - <strong>rescue-boot</strong>
+- <strong>disable-webcam</strong>
 
 <strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
+
+<strong>disable-ipv6:</strong> Disable IPv6.
 
 <strong>softwares:</strong> A list of my favorites softwares or librairies to install I need ...
 
@@ -39,13 +43,11 @@ compile HandBrake software and MakeMKV software
 
 <strong>makemkv:</strong>  Compilation of MakeMKV software
 
-<strong>mitigate-my-fed:</strong> To reduce memory usage on boot, this role will remove:
-- libvrt -> Virtualization Librairies
-- abrt -> tools to inform Fedora Teams about errors on your system
-- Gnome-Boxes -> Virtualization tool
-
 <strong>rescue-boot:</strong> To recreate your Rescue Boot Menu.
 
+<strong>disable-webcam:</strong> To disable your webcam support by default when your webcam use uvcvideo driver.
+
+Important files:
 <strong>myFedora.yml:</strong> This is the playbook which discribe the jobs to execute and in which order.
 
 <strong>myvars.yml:</strong> describe some variables wich define softwares versions.
