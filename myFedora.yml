@@ -14,7 +14,7 @@
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
-      - rescue-boot
+      #- rescue-boot
       #- disable-webcam
 
   vars_files:
