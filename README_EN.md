@@ -18,7 +18,6 @@ My project works like this :
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
 - <strong>asbru-cm</strong>
-- <strong>basiccodecs</strong>
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
@@ -33,8 +32,6 @@ My project works like this :
 <strong>softwares:</strong> A list of my favorites softwares or librairies to install I need ...
 
 <strong>asbru-cm:</strong> Asbru-CM software installation (note that KeePassXC will be installed too).
-
-<strong>basiccodecs:</strong> Some basics codecs to mplayer player
 
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Install softwares an librairies needed to
 compile HandBrake software and MakeMKV software
