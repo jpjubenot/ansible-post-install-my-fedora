@@ -10,7 +10,6 @@
       - disable-ipv6
       - softwares
       - asbru-cm
-      - basiccodecs
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
