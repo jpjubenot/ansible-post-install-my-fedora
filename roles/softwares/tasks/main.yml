@@ -82,7 +82,7 @@
        - python3-dnf-plugin-snapper
        - rpi-imager
        - rubygem-rexml
-       - screen
+       - screen                        # Snapper Features
        - shotwell
        - snapper
        - stacer
