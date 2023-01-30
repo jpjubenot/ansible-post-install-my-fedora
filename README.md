@@ -24,7 +24,6 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
-- <strong>mitigate-my-fed</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
 
