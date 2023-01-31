@@ -21,7 +21,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
 - <strong>asbru-cm</strong>
-- <strong>hb-and-mmkmkv-needed-softwares</strong>
+- <strong>hb-and-mkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
 - <strong>libdvdcss</strong>
@@ -37,7 +37,7 @@ machine.
 
 <strong>asbru-cm:</strong> Installation du logiciel Asbru-CM (notez que KeePassXC sera aussi installé).
 
-<strong>hb-and-mmkmkv-needed-softwares:</strong> Installe les logiciels et librairies nécessaires pour compiler HandBrake et MakeMKV.
+<strong>hb-and-mkmkv-needed-softwares:</strong> Installe les logiciels et librairies nécessaires pour compiler HandBrake et MakeMKV.
 
 <strong>handbrake:</strong> Compilation du logiciel HanBrake.
 

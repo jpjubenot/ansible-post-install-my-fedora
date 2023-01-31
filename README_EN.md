@@ -18,7 +18,7 @@ My project works like this :
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
 - <strong>asbru-cm</strong>
-- <strong>hb-and-mmkmkv-needed-softwares</strong>
+- <strong>hb-and-mkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
 - <strong>libdvdcss</strong>
@@ -33,7 +33,7 @@ My project works like this :
 
 <strong>asbru-cm:</strong> Asbru-CM software installation (note that KeePassXC will be installed too).
 
-<strong>hb-and-mmkmkv-needed-softwares:</strong> Install softwares an librairies needed to
+<strong>hb-and-mkmkv-needed-softwares:</strong> Install softwares an librairies needed to
 compile HandBrake software and MakeMKV software
 
 <strong>handbrake:</strong> Compilation of HanBrake software.
