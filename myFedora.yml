@@ -13,6 +13,7 @@
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
+      #- libdvdcss
       #- rescue-boot
       #- disable-webcam
 

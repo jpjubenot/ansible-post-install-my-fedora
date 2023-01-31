@@ -1,0 +1,45 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
+
+# Role libdvdcss
+
+# Add Repository Livna only to install libdvdcss
+- name: Verify if Livna Repository exist
+  stat: path=/etc/yum.repos.d/livna.repo
+  register: livnarepo
+  tags:
+    - libdvdcss
+    - basicinst
+
+- name: Livna enable Repository only to install libdvdcss
+  template: src=templates/livna.repo.tpl dest=/etc/yum.repos.d/livna.repo mode=0644 owner=root group=root
+  when: livnarepo.stat.exists == False
+  tags:
+    - libdvdcss
+    - basicinst
+
+
+# Install Default Softwares
+- name: Install Different Packages
+  dnf:
+    name:
+       - libdvdcss                     # To be able to read dvd on your computer
+    state: present
+  tags:
+    - libdvdcss
+
+# Remove Livna Repository
+- name: Verify if Livna Repository exist
+  stat: path=/etc/yum.repos.d/livna.repo
+  register: livnarepo
+  tags:
+    - libdvdcss
+
+- name: Remove Livna Repository
+  command: "rm /etc/yum.repos.d/livna.repo"
+  when: livnarepo.stat.exists == True
+  tags:
+    - libdvdcss

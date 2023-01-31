@@ -24,6 +24,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
+- <strong>libdvdcss</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
 
@@ -41,6 +42,8 @@ machine.
 <strong>handbrake:</strong> Compilation du logiciel HanBrake.
 
 <strong>makemkv:</strong> Compilation du logiciel MakeMKV.
+
+<strong>libdvdcss:</strong> Permettre de lire des DVD sur votre ordinateur.
 
 <strong>rescue-boot:</strong> Pour recréer le menu de Rescue-boot de votre Fedora.
 

@@ -149,3 +149,29 @@
   tags:
     - mkmkv
     - minhbmk
+
+# Create Symbolic Link for VLC
+- name: Create Symbolic Link for VLC - libaacs
+  ansible.builtin.file:
+    src: /usr/lib64/libmmbd.so.0
+    dest: /usr/lib64/libaacs.so.0
+    owner: root
+    group: root
+    state: link
+  tags:
+    - mkmkv
+    - minhbmk
+    - symlinkvlc
+
+# Create Symbolic Link for VLC
+- name: Create Symbolic Link for VLC - libaacs
+  ansible.builtin.file:
+    src: /usr/lib64/libmmbd.so.0
+    dest: /usr/lib64/libbdplus.so.0
+    owner: root
+    group: root
+    state: link
+  tags:
+    - mkmkv
+    - minhbmk
+    - symlinkvlc

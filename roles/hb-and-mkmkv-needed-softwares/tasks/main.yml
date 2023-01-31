@@ -96,16 +96,16 @@
        - qt5-qtbase-devel
        - speex-devel
        - turbojpeg-devel
-       - x264
-       - x264-devel
-       - x265
-       - x265-devel
        #- webkitgtk3-devel             # Worked with Fedora 27
        #- webkitgtk4-devel             # Worked with Fedora 28
        #- webkit2gtk3-devel            # Worked with Fedora 29 
        - webkit2gtk4.0-devel           # Worked with Fedora 37 and above 
        - webkit2gtk4.1-devel           # Worked with Fedora 37 and above
        - webkit2gtk5.0-devel           # Worked with Fedora 37 and above
+       - x264
+       - x264-devel
+       - x265
+       - x265-devel
        - xz-devel
        - yasm
        - zlib-devel

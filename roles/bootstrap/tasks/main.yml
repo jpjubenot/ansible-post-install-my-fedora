@@ -78,7 +78,6 @@
   tags:
     - repolynis
     - basicinst
-
 # Add Repository VScode
 - name: Verify if VScode Repository exist
   stat: path=/etc/yum.repos.d/vscode.repo

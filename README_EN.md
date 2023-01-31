@@ -21,6 +21,7 @@ My project works like this :
 - <strong>hb-and-mmkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
+- <strong>libdvdcss</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
 
@@ -35,9 +36,11 @@ My project works like this :
 <strong>hb-and-mmkmkv-needed-softwares:</strong> Install softwares an librairies needed to
 compile HandBrake software and MakeMKV software
 
-<strong>handbrake:</strong> Compilation of HanBrake software
+<strong>handbrake:</strong> Compilation of HanBrake software.
 
-<strong>makemkv:</strong>  Compilation of MakeMKV software
+<strong>makemkv:</strong>  Compilation of MakeMKV software.
+
+<strong>libdvdcss:</strong>  Permit to read DVD on your computer.
 
 <strong>rescue-boot:</strong> To recreate your Rescue Boot Menu.
 
