@@ -21,11 +21,16 @@
        - automake
        - calibre                       # Ebook and numuric book software
        - cawbird                       # Twitter tool
+       - clamd                         # ClamAV Anti-Virus daemon
+       - clamav                        # ClamAV Anti-Virus
+       - clamav-update                 # ClamAV Anti-Virus definition updater
        - code                          # Visual Studio Code
        - dmidecode
        - dnf-plugin-system-upgrade
        - easytag                       # Audio tagging tool and adding image in MP3 audio file
        - elfutils-libelf-devel
+       - etckeeper                     # Etc versionning software
+       - etckeeper-dnf                 # Etc versionning software DNF tool
        - evolution                     # Email software
        - filezilla                     # Ftp software
        - foo2qpdl                      # print on Samsung Laser printers foo2qpdl
@@ -39,13 +44,12 @@
        - glibc-devel
        - gnome-battery-bench
        - gnome-extensions-app
-       - gnome-passwordsafe
-       - gnome-nettool
-       - gnome-tweak-tool
-       - google-chrome-stable
-       - gnome-sudoku
-       - gparted
-       - grip                          # Audio ripping software
+       - gnome-nettool                 # Gnome Network graphical tool
+       - gnome-tweak-tool              # Tweak Gnome shell
+       - google-chrome-stable          # Google Chrome browser
+       - gnome-sudoku                  # Sudoku game
+       - gparted                       # Disks and partitions manager
+       - grip                          # Audio CD ripping software
        - gstreamer-ffmpeg              # Video Codec tool
        - gstreamer1-libav              # Video Codec tool
        - gstreamer-plugins-ugly        # Video Codec tool
@@ -56,12 +60,13 @@
        - help2man
        - htop                          # Monitoring tool like "top"
        - iftop                         # Network tool - View bandwidth
-       - inxi
+       - inxi                          # Hardware components informations
        - iperf3                        # Network tool - Bandwidth test
        - kernel-devel
        - kernel-headers
-       - lame                          # MP3 Codec tool
+       - lame                          # MP3 Encoder tool
        - libreoffice-langpack-fr
+       - lisassc                       # Library for sassc CSS pre-processor language
        - libselinux-python3
        - libX11-devel
        - lsb-core-noarch
@@ -69,7 +74,7 @@
        - lzop                          # Compression Tool
        - mediawriter
        - mkvtoolnix                    # MKV Codec Tools
-       - nano
+       - nano                          # Text editor
        - nautilus-dropbox              # Dropbox in Nautilus -- Legacy package
        - neofetch
        - nethogs                       # Network tool
@@ -82,18 +87,20 @@
        - python3-dnf-plugin-snapper    # Snapper Features
        - rpi-imager                    # Raspberry card/disk imager
        - rubygem-rexml
+       - sassc                         # CSS pre-processor language
        - screen                        # Terminal tool like TMux
+       - secrets                       # Password manager like Keepass
        - shotwell                      # Pictures manager tool
        - snapper                       # Snapper Features
-       - stacer
-       - tar
+       - stacer                        # Monitoring graphic tool
+       - tar                           # Archiving tool
        - tcptrack                      # Network tool
        - timeshift                     # Backup software
        - tmux                          # Terminal tool like Screen
        #- VirtualBox                   # Virtualization software
        #- VirtualBox-guest-additions   # Virtualization software tools
-       - vim
-       - vlc
+       - vim                           # Text editor
+       - vlc                           # VideoLAN player
        #- vte-devel
        - wget
        - x264-devel                    # Codec Dev Library
