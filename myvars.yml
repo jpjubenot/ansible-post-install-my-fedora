@@ -13,8 +13,8 @@ ansible_python_interpreter: /usr/bin/python3
 fedora_version: 37
 
 # MakeMKV version - Need to look at this url https://www.makemkv.com/download/ to get lastest version
-MakeMKV_OSS: makemkv-oss-1.17.2
-MakeMKV_BIN: makemkv-bin-1.17.2
+MakeMKV_OSS: makemkv-oss-1.17.3
+MakeMKV_BIN: makemkv-bin-1.17.3
 
 # Asbru-CM Version - Need to look at this url https://packagecloud.io/asbru-cm/asbru-cm/ select your version and copy/past there the good url
 # Go to the Website above and identify the version for your Linux Distribution and then on left side you have Wget bloc instruction with good URL to put below.

@@ -25,6 +25,7 @@
        - clamav                        # ClamAV Anti-Virus
        - clamav-update                 # ClamAV Anti-Virus definition updater
        - code                          # Visual Studio Code
+       - dconf-editor                  # Gnome Shell DConf-Editor
        - dmidecode
        - dnf-plugin-system-upgrade
        - easytag                       # Audio tagging tool and adding image in MP3 audio file
@@ -101,7 +102,6 @@
        #- VirtualBox-guest-additions   # Virtualization software tools
        - vim                           # Text editor
        - vlc                           # VideoLAN player
-       #- vte-devel
        - wget
        - x264-devel                    # Codec Dev Library
        - x265-devel                    # Codec Dev Library
