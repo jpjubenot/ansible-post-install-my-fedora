@@ -89,7 +89,6 @@
        - rpi-imager                    # Raspberry card/disk imager
        - rubygem-rexml
        - sassc                         # CSS pre-processor language
-       - screen                        # Terminal tool like TMux
        - secrets                       # Password manager like Keepass
        - shotwell                      # Pictures manager tool
        - snapper                       # Snapper Features
@@ -97,7 +96,7 @@
        - tar                           # Archiving tool
        - tcptrack                      # Network tool
        - timeshift                     # Backup software
-       - tmux                          # Terminal tool like Screen
+       - tmux                          # Terminal Multiplexer
        #- VirtualBox                   # Virtualization software
        #- VirtualBox-guest-additions   # Virtualization software tools
        - vim                           # Text editor
