@@ -67,7 +67,7 @@
        - kernel-headers
        - lame                          # MP3 Encoder tool
        - libreoffice-langpack-fr
-       - lisassc                       # Library for sassc CSS pre-processor language
+       - libsass                       # Library for sassc CSS pre-processor language
        - libselinux-python3
        - libX11-devel
        - lsb-core-noarch
