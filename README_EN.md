@@ -33,7 +33,7 @@ My project works like this :
 
 <strong>asbru-cm:</strong> Asbru-CM software installation (note that KeePassXC will be installed too).
 
-<strong>hb-and-mkmkv-needed-softwares:</strong> Install softwares an librairies needed to
+<strong>hb-and-mkmkv-needed-softwares:</strong> Install softwares and librairies needed to
 compile HandBrake software and MakeMKV software
 
 <strong>handbrake:</strong> Compilation of HanBrake software.
@@ -42,7 +42,7 @@ compile HandBrake software and MakeMKV software
 
 <strong>libdvdcss:</strong>  Permit to read DVD on your computer.
 
-<strong>rescue-boot:</strong> To recreate your Rescue Boot Menu.
+<strong>rescue-boot:</strong> To recreate your Rescue Boot Menu after many upgrade of your system.
 
 <strong>disable-webcam:</strong> To disable your webcam support by default when your webcam use uvcvideo driver.
 
@@ -59,7 +59,7 @@ It is necessary to install ansible package.
 
 I recommand you to document yourself about Ansible to figure out the philosophy of this product.
 Like you understand this project will install some softwares and modify your files system,
-well you need to be root to execute it.
+well you need privilegies to execute it.
 
 I suggest to create a folder to download the complete script.
 

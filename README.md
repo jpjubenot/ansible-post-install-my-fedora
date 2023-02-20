@@ -60,7 +60,7 @@ Il vous faut installer les paquets ansible.
 
 <code>sudo dnf install ansible</code>
 
-<p>Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil. Comme il s'agit d'installation, vous devez être Root sur votre poste pour lancer le script de départ en local.</p>
+<p>Je vous recommande de vous documenter sur Ansible pour comprendre un peu le principe de ce formidable outil. Comme il s'agit d'installation de logiciels, vous avez besoin de privilèges pour exécuter ce script localement.</p>
 
 <p>Creer un dossier dans lequel vous pourrez reprendre le scénario Ansible que je mets à disposition.</p>
 
