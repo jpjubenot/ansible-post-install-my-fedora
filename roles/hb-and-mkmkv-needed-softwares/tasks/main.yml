@@ -57,8 +57,8 @@
        - cmake
        - dbus-glib-devel
        - expat-devel
-       - ffmpeg-free
-       - ffmpeg-free-devel
+       - ffmpeg
+       - ffmpeg-devel
        - fontconfig-devel
        - freetype-devel
        - fribidi-devel
