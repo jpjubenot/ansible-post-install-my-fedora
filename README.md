@@ -49,6 +49,9 @@ machine.
 
 <strong>disable-webcam</strong> Pour désactiver le support de la webcam par défaut quand elle utilise le driver uvcvideo.
 
+<strong>remove-softwares</strong> Pour supprimer des logiciels inutiles à mon usage.
+
+Fichiers Importants:
 <strong>myFedora.yml:</strong> Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.
 
 <strong>myvars.yml:</strong> consiste en quelques variables à modifier en cas de besoin version de la Fedora et version des archives de MakeMKV.

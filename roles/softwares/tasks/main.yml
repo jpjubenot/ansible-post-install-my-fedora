@@ -34,7 +34,7 @@
        - etckeeper-dnf                 # Etc versionning software DNF tool
        - evolution                     # Email software
        - filezilla                     # Ftp software
-       - foo2qpdl                      # print on Samsung Laser printers foo2qpdl
+       - foo2qpdl                      # print on Samsung Laser printers
        - gcc                           # Compiliation software
        - gimp
        - git
@@ -66,7 +66,7 @@
        - kernel-devel
        - kernel-headers
        - lame                          # MP3 Encoder tool
-       - libreoffice-langpack-fr
+       - libreoffice-langpack-fr       # Libreoffice language pack French
        - libsass                       # Library for sassc CSS pre-processor language
        - libselinux-python3
        - libX11-devel
@@ -92,7 +92,7 @@
        - secrets                       # Password manager like Keepass
        - shotwell                      # Pictures manager tool
        - snapper                       # Snapper Features
-       - stacer                        # Monitoring graphic tool
+       - stacer                        # Monitoring and Tweaking graphic tool
        - tar                           # Archiving tool
        - tcptrack                      # Network tool
        - timeshift                     # Backup software

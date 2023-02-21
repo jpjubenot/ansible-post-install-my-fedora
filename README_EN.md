@@ -46,6 +46,8 @@ compile HandBrake software and MakeMKV software
 
 <strong>disable-webcam:</strong> To disable your webcam support by default when your webcam use uvcvideo driver.
 
+<strong>remove-softwares</strong> To remove unnecessary softwares on my fresh installation.
+
 Important files:
 <strong>myFedora.yml:</strong> This is the playbook which discribe the jobs to execute and in which order.
 
