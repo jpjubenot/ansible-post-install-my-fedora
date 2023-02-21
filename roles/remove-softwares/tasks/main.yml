@@ -16,7 +16,7 @@
 - name: Remove some unnecessary softwares
   dnf:
     name:
-       - keepassxc                     # This Keepass software comes with Asbru-CM compilation, but I never use it.
+       - keepassxc                     # This Keepass software comes with Asbru-CM installation, but I never use it.
     state: absent       
   tags:
     - rm-softwares
