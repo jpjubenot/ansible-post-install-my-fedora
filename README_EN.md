@@ -24,6 +24,7 @@ My project works like this :
 - <strong>libdvdcss</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
+- <strong>remove-softwares</strong>
 
 <strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
 
@@ -49,10 +50,11 @@ compile HandBrake software and MakeMKV software
 <strong>remove-softwares</strong> To remove unnecessary softwares on my fresh installation.
 
 Important files:
+
 <strong>myFedora.yml:</strong> This is the playbook which discribe the jobs to execute and in which order.
 
 <strong>myvars.yml:</strong> describe some variables wich define softwares versions.
-<strong>!! Be careful to modify this file before to execute the Playbook !!</strong>
+<p><strong>!! Be careful to modify this file before to execute the Playbook !!</strong>
 
 <strong>Needed:</strong>
 It is necessary to install ansible package.

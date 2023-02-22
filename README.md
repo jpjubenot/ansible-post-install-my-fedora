@@ -27,6 +27,7 @@ Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
 - <strong>libdvdcss</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
+- <strong>remove-softwares</strong>
 
 <strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, désactivation de IPv6 etc ...
 

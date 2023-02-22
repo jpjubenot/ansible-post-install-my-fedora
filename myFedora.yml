@@ -16,7 +16,7 @@
       #- libdvdcss
       #- rescue-boot
       #- disable-webcam
-      - remove-softwares
+      #- remove-softwares
 
   vars_files:
     - myvars.yml
