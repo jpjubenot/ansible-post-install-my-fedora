@@ -54,10 +54,11 @@ Important files:
 <strong>myFedora.yml:</strong> This is the playbook which discribe the jobs to execute and in which order.
 
 <strong>myvars.yml:</strong> describe some variables wich define softwares versions.
-<p><strong>!! Be careful to modify this file before to execute the Playbook !!</strong></p>
+<p><strong>!! Pay attention: </strong>Modify this file before to execute the Playbook !!</p>
 
-<strong>Needed:</strong>
-It is necessary to install ansible package.
+
+<strong>Requirement:</strong>
+It is necessary to install ansible packages.
 
 <code>sudo dnf install ansible</code>
 

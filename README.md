@@ -3,7 +3,6 @@ Jacques-Philippe JUBENOT, France
 
 English README version see [here](https://jpjubenot.github.io/ansible-post-install-my-fedora/README_EN)
 
-
 <p>Ce projet <strong>"ansible-post-install-my-fedora"</strong> a pour but de finaliser l'installation de ma Fedora.</p>
 <p>Pour chaque nouvelle version de Fedora, je préfère souvent repartir d'une installation de zéro, plutôt que de faire une mise à jour.
 Alors si il est facile de sauvegarder ses données puis de les restaurer. Concernant les applications, il y en a toujours une ou deux que l'on oublie de réintégrer, et on la réinstalle d'urgence au dernier moment.</p>
