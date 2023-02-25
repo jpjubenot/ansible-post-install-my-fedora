@@ -3,8 +3,8 @@ Jacques-Philippe JUBENOT, France
 
 <p>This project <strong>"ansible-post-install-my-fedora"</strong> is to finish install my Fedora.
 For each new version of Fedora, I sometimes prefer to reinstall from scratch rather than to make
-an update.</p>
-<p>Then if it is easy to save datas and restore them, regarding softwares there is always
+an upgrade.</p>
+<p>If it is easy to save datas and restore them, regarding softwares there is always
 one or more that you forget. You reinstall it or them in emergency at last minute.</p>
 <p>Since I discovered Ansible at my office, I found this project was amazing.
 Imagine and organize installation of your system is possible at home too.</p>
@@ -39,9 +39,9 @@ compile HandBrake software and MakeMKV software
 
 <strong>handbrake:</strong> Compilation of HanBrake software.
 
-<strong>makemkv:</strong>  Compilation of MakeMKV software.
+<strong>makemkv:</strong> Compilation of MakeMKV software.
 
-<strong>libdvdcss:</strong>  Permit to read DVD on your computer.
+<strong>libdvdcss:</strong> Permit to read DVD on your computer.
 
 <strong>rescue-boot:</strong> To recreate your Rescue Boot Menu after many upgrade of your system.
 
@@ -51,10 +51,10 @@ compile HandBrake software and MakeMKV software
 
 Important files:
 
-<strong>myFedora.yml:</strong> This is the playbook which discribe the jobs to execute and in which order.
+<strong>myFedora.yml:</strong> This is the playbook which describe the jobs to execute and in which order.
 
-<strong>myvars.yml:</strong> describe some variables wich define softwares versions.
-<p><strong>!! Pay attention: </strong>Modify this file before to execute the Playbook !!</p>
+<strong>myvars.yml:</strong> Define some variables like softwares versions.
+<p><strong>!! Pay attention:</strong> Modify this file before to execute the Playbook !!</p>
 
 
 <strong>Requirement:</strong>
@@ -64,7 +64,7 @@ It is necessary to install ansible packages.
 
 I recommand you to document yourself about Ansible to figure out the philosophy of this product.
 Like you understand this project will install some softwares and modify your files system,
-well you need privilegies to execute it.
+then you need privilegies to execute it.
 
 I suggest to create a folder to download the complete script.
 
@@ -74,15 +74,15 @@ I suggest to create a folder to download the complete script.
 
 <code>cd ansible-post-install-my-fedora</code>
 
-<strong>If you just want to test it:</strong> <code>sudo ansible-playbook myFedora.yml --check</code>
+<strong>If you just want to simulate it without modify your system:</strong> <code>sudo ansible-playbook myFedora.yml --check</code>
 
 <strong>If you just want to apply:</strong> <code>sudo ansible-playbook myFedora.yml</code>
 
-<p>During the test, you could get errors at this point because some features really need
-to be installed for progression.</p>
+<p>During the test, you could face errors at this point because some features really need
+to be installed for the suite.</p>
 <p>A test of install will work but if this software is needed in a part of the job, you will
-face an error because the package is not present. With some modifications you can
-execute this script on a remote computer like in local, look at Ansible documentation
+face an error because the package is not really present.</p>
+<p>With some modifications you can execute this script on a remote computer like in local, look at Ansible documentation
 and tutorials.</p>
 <p>If you want to test in real maybe it could be interristing to use a virtual machine to
 execute it.</p>
