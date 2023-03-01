@@ -45,4 +45,3 @@
 - name: Run grub2-mkconfig to update /boot/grub/grub.cfg
   command:
     cmd: grub2-mkconfig
-

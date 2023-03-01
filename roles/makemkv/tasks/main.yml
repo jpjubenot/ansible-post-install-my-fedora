@@ -70,7 +70,7 @@
     - mkmkv
     - minhbmk
 
-# Only if necessary
+# Only if necessary [it was for Fedora 28]                   # https://forum.makemkv.com/forum/viewtopic.php?t=17460
 # Patch before Compile MakeMKV_OSS
 #- name: Patch OSS Files
 #  shell: patch /tmp/MakeMKV/{{ MakeMKV_OSS }}/libffabi/src/ffabi.c < patch.file
