@@ -14,7 +14,7 @@
 
 # Install Default Softwares
 - name: Install Different Packages
-  dnf:
+  ansible.builtin.dnf:
     name:
        #- 0ad                          # Game like Microsoft Age of Empire -- Great gaming software
        - autoconf

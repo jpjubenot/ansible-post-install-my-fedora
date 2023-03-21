@@ -6,7 +6,6 @@
 
 # tasks file for roles/asbru-cm
 
-
 - name: Verify if Asbru-CM exist
   stat: path=/usr/bin/asbru-cm
   register: asbru

@@ -24,7 +24,7 @@
 
 # Install Default Softwares
 - name: Install Different Packages
-  dnf:
+  ansible.builtin.dnf:
     name:
        - libdvdcss                     # To be able to read dvd on your computer
     state: present

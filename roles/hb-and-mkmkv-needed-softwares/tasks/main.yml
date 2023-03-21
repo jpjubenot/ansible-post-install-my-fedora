@@ -51,7 +51,7 @@
     - handbk
 
 - name: Install Differents Packages
-  dnf:
+  ansible.builtin.dnf:
     name:
        - bzip2-devel
        - cmake
