@@ -38,14 +38,41 @@
     
 # Clean DNF
 - name: Clean DNF
-  shell: dnf clean all
+  ansible.builtin.dnf:
+    clean: yes
   tags:
     - minhbmk
     - handbk
 
 # Install Softwares Needed to Compile Handbrake and MakeMKV
-- name: Install Differents Group Packages
-  shell: dnf -y groupinstall "Development Tools" "Development Libraries" "X Software Development" "GNOME Software Development"
+- name: Install Group Packages Development Tools
+  ansible.builtin.dnf:
+    name: '@Development Tools'
+    state: present
+  tags:
+    - minhbmk
+    - handbk
+
+- name: Install Group Packages Development Libraries
+  ansible.builtin.dnf:
+    name: '@Development Libraries'
+    state: present
+  tags:
+    - minhbmk
+    - handbk
+
+- name: Install Group Packages X Software Development
+  ansible.builtin.dnf:
+    name: '@X Software Development'
+    state: present
+  tags:
+    - minhbmk
+    - handbk
+
+- name: Install Group Packages GNOME Software Development
+  ansible.builtin.dnf:
+    name: '@GNOME Software Development'
+    state: present
   tags:
     - minhbmk
     - handbk
