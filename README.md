@@ -15,7 +15,7 @@ Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appl
 
 <p>Mon projet s'articule comme suit.</p>
 
-Un Playbook (script) principal myFedora.yml, qui induit 7 rôles.
+Mon projet s'articule autour de ces rôles.
 - <strong>bootstrap</strong>
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
