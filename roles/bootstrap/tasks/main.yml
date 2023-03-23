@@ -132,7 +132,7 @@
     - fastdnf
     - basicinst
 
-# Add ldconfig file to enable lib modules gtk3   # I don't remember for which softwate it was necessary to do that ! Probably PACmanager
+# Add ldconfig file to enable lib modules gtk3   # I don't remember for which software it was necessary to do that ! Probably PACmanager
 #- name: Test gtk3 file modules exist
 #  stat: path=/etc/ld.so.conf.d/gtk3.conf
 #  register: modulegtk3file
