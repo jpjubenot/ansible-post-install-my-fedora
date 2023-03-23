@@ -14,7 +14,7 @@
     - repofusion
     - basicinst
 
-- name: Downloading and enable RPM Fusion FREE Repository...
+- name: Add Repository RPM Fusion FREE
   command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
   when: fusionfrepo.stat.exists == False
   tags:
@@ -29,7 +29,7 @@
     - repofusion
     - basicinst
 
-- name: Downloading and enable RPM Fusion Non-FREE Repository...
+- name: Add Repository RPM Fusion Non-FREE
   command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
   when: fusionnfrepo.stat.exists == False
   tags:
@@ -43,8 +43,14 @@
   tags:
     - repooracle
 
-- name: Oracle VirtualBox enable Repository...
-  template: src=templates/virtualbox.repo.tpl dest=/etc/yum.repos.d/virtualbox.repo mode=0644 owner=root group=root
+- name: Add Oracle VirtualBox Repository
+  ansible.builtin.yum_repository:
+    name: virtualbox
+    description: Virtualbox
+    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
+    enabled: yes
+    gpgcheck: yes
+    repo_gpgcheck: true
   when: repooracle.stat.exists == False
   tags:
     - repooracle
@@ -57,8 +63,14 @@
     - repochrome
     - basicinst
 
-- name: Google Chrome enable Repository
-  template: src=templates/google-chrome.repo.tpl dest=/etc/yum.repos.d/google-chrome.repo mode=0644 owner=root group=root
+- name: Add Google Chrome Repository
+  ansible.builtin.yum_repository:
+    name: google-chrome
+    description: Google-Chrome
+    baseurl: https://dl.google.com/linux/chrome/rpm/stable/x86_64
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://dl.google.com/linux/linux_signing_key.pub
   when: googlechromerepo.stat.exists == False
   tags:
     - repochrome
@@ -72,8 +84,14 @@
     - repolynis
     - basicinst
 
-- name: Lynis enable Repository
-  template: src=templates/lynis.repo.tpl dest=/etc/yum.repos.d/lynis.repo mode=0644 owner=root group=root
+- name: Add Lynis Repository
+  ansible.builtin.yum_repository:
+    name: lynis
+    description: Lynis
+    baseurl: https://packages.cisofy.com/community/lynis/rpm/
+    gpgkey: https://packages.cisofy.com/keys/cisofy-software-rpms-public.key
+    enabled: yes
+    gpgcheck: yes
   when: lynisrepo.stat.exists == False
   tags:
     - repolynis
@@ -88,7 +106,13 @@
     - basicinst
 
 - name: VScode enable Repository
-  template: src=templates/vscode.repo.tpl dest=/etc/yum.repos.d/vscode.repo mode=0644 owner=root group=root
+  ansible.builtin.yum_repository:
+    name: vscode
+    description: VSCode
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    enabled: yes
+    gpgcheck: yes
   when: vscoderepo.stat.exists == False
   tags:
     - repovscode
@@ -108,27 +132,27 @@
     - fastdnf
     - basicinst
 
-# Add ldconfig file to enable lib modules gtk3
-- name: Test gtk3 file modules exist
-  stat: path=/etc/ld.so.conf.d/gtk3.conf
-  register: modulegtk3file
-  tags:
-    - modulegtk3file
+# Add ldconfig file to enable lib modules gtk3   # I don't remember for which softwate it was necessary to do that ! Probably PACmanager
+#- name: Test gtk3 file modules exist
+#  stat: path=/etc/ld.so.conf.d/gtk3.conf
+#  register: modulegtk3file
+#  tags:
+#    - modulegtk3file
 
-- name: Copy from template gtk3 list modules
-  template: src=templates/gtk3.conf.tpl dest=/etc/ld.so.conf.d/gtk3.conf mode=0644 owner=root group=root
-  when: modulegtk3file.stat.exists == False
-  tags:
-    - modulegtk3file
+#- name: Copy from template gtk3 list modules
+#  template: src=templates/gtk3.conf.tpl dest=/etc/ld.so.conf.d/gtk3.conf mode=0644 owner=root group=root
+#  when: modulegtk3file.stat.exists == False
+#  tags:
+#    - modulegtk3file
 
-- name: Complete gtk3 lib modules file
-  lineinfile: dest=/etc/ld.so.conf.d/gtk3.conf line="/usr/lib64/gtk-3.0/modules"
-  when: modulegtk3file.stat.exists
-  tags:
-    - modulegtk3file
+#- name: Complete gtk3 lib modules file
+#  lineinfile: dest=/etc/ld.so.conf.d/gtk3.conf line="/usr/lib64/gtk-3.0/modules"
+#  when: modulegtk3file.stat.exists
+#  tags:
+#    - modulegtk3file
 
-- name: Reload Dynamic Lync
-  shell: ldconfig
-  when: modulegtk3file.stat.exists
-  tags:
-    - modulegtk3file
+#- name: Reload Dynamic Lync
+#  shell: ldconfig
+#  when: modulegtk3file.stat.exists
+#  tags:
+#    - modulegtk3file
