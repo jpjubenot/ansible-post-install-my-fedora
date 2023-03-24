@@ -16,96 +16,96 @@
 - name: Install Different Packages
   ansible.builtin.dnf:
     name:
-       #- 0ad                          # Game like Microsoft Age of Empire -- Great gaming software
-       - autoconf
-       - automake
-       - calibre                       # Ebook and numuric book software
-       - cawbird                       # Twitter tool
-       - clamd                         # ClamAV Anti-Virus daemon
-       - clamav                        # ClamAV Anti-Virus
-       - clamav-update                 # ClamAV Anti-Virus definition updater
-       - code                          # Visual Studio Code
-       - dconf-editor                  # Gnome Shell DConf-Editor
-       - dmidecode
-       - dnf-plugin-system-upgrade
-       - easytag                       # Audio tagging tool and adding image in MP3 audio file
-       - elfutils-libelf-devel
-       - etckeeper                     # Etc versionning software
-       - etckeeper-dnf                 # Etc versionning software DNF tool
-       - evolution                     # Email software
-       - filezilla                     # Ftp software
-       - foo2qpdl                      # print on Samsung Laser printers
-       - gcc                           # Compiliation software
-       - gimp
-       - git
-       - gitg
-       - glances                       # CLI System MOnitoring
-       - glib2
-       - glib2-devel
-       - glibc-devel
-       - gnome-battery-bench
-       - gnome-extensions-app
-       - gnome-nettool                 # Gnome Network graphical tool
-       - gnome-tweak-tool              # Tweak Gnome shell
-       - google-chrome-stable          # Google Chrome browser
-       - gnome-sudoku                  # Sudoku game
-       - gparted                       # Disks and partitions manager
-       - grip                          # Audio CD ripping software
-       - gstreamer-ffmpeg              # Video Codec tool
-       - gstreamer1-libav              # Video Codec tool
-       - gstreamer-plugins-ugly        # Video Codec tool
-       - gstreamer1-plugins-ugly       # Video Codec tool
-       - gtk-murrine-engine            # GTK2 engine
-       - gtk2-devel
-       - hdparm
-       - help2man
-       - htop                          # Monitoring tool like "top"
-       - iftop                         # Network tool - View bandwidth
-       - inxi                          # Hardware components informations
-       - iperf3                        # Network tool - Bandwidth test
-       - kernel-devel
-       - kernel-headers
-       - lame                          # MP3 Encoder tool
-       - libreoffice-langpack-fr       # Libreoffice language pack French
-       - libsass                       # Library for sassc CSS pre-processor language
-       - libselinux-python3
-       - libX11-devel
-       - lsb-core-noarch
-       - lynis                         # Security Tool - Very interesting
-       - lzop                          # Compression Tool
-       - mediawriter
-       - mkvtoolnix                    # MKV Codec Tools
-       - nano                          # Text editor
-       - nautilus-dropbox              # Dropbox in Nautilus -- Legacy package
-       - neofetch
-       - nethogs                       # Network tool
-       - obs-studio                    # Software for video recording and live streaming
-       - p7zip                         # Compression Tool
-       - perl
-       - perl-LWP-Protocol-https
-       - pycharm-community             # Python IDE
-       - python-dnf
-       - python3-dnf-plugin-snapper    # Snapper Features
-       - rpi-imager                    # Raspberry card/disk imager
-       - rubygem-rexml
-       - sassc                         # CSS pre-processor language
-       - secrets                       # Password manager like Keepass
-       - shotwell                      # Pictures manager tool
-       - snapper                       # Snapper Features
-       - stacer                        # Monitoring and Tweaking graphic tool
-       - tar                           # Archiving tool
-       - tcptrack                      # Network tool
-       - timeshift                     # Backup software
-       - tmux                          # Terminal Multiplexer
-       #- VirtualBox                   # Virtualization software
-       #- VirtualBox-guest-additions   # Virtualization software tools
-       - vim                           # Text editor
-       - vlc                           # VideoLAN player
-       - wget
-       - x264-devel                    # Codec Dev Library
-       - x265-devel                    # Codec Dev Library
-       - xine-lib-extras-freeworld     # Codec files Xine Library
-       - xsane                         # Scanner tool for printer/scanner or simple scanner 
+      #- 0ad                          # Game like Microsoft Age of Empire -- Great gaming software
+      - autoconf
+      - automake
+      - calibre                       # Ebook and numuric book software
+      - cawbird                       # Twitter tool
+      - clamd                         # ClamAV Anti-Virus daemon
+      - clamav                        # ClamAV Anti-Virus
+      - clamav-update                 # ClamAV Anti-Virus definition updater
+      - code                          # Visual Studio Code
+      - dconf-editor                  # Gnome Shell DConf-Editor
+      - dmidecode
+      - dnf-plugin-system-upgrade
+      - easytag                       # Audio tagging tool and adding image in MP3 audio file
+      - elfutils-libelf-devel
+      - etckeeper                     # Etc versionning software
+      - etckeeper-dnf                 # Etc versionning software DNF tool
+      - evolution                     # Email software
+      - filezilla                     # Ftp software
+      - foo2qpdl                      # print on Samsung Laser printers
+      - gcc                           # Compiliation software
+      - gimp
+      - git
+      - gitg
+      - glances                       # CLI System MOnitoring
+      - glib2
+      - glib2-devel
+      - glibc-devel
+      - gnome-battery-bench
+      - gnome-extensions-app
+      - gnome-nettool                 # Gnome Network graphical tool
+      - gnome-tweak-tool              # Tweak Gnome shell
+      - google-chrome-stable          # Google Chrome browser
+      - gnome-sudoku                  # Sudoku game
+      - gparted                       # Disks and partitions manager
+      - grip                          # Audio CD ripping software
+      - gstreamer-ffmpeg              # Video Codec tool
+      - gstreamer1-libav              # Video Codec tool
+      - gstreamer-plugins-ugly        # Video Codec tool
+      - gstreamer1-plugins-ugly       # Video Codec tool
+      - gtk-murrine-engine            # GTK2 engine
+      - gtk2-devel
+      - hdparm
+      - help2man
+      - htop                          # Monitoring tool like "top"
+      - iftop                         # Network tool - View bandwidth
+      - inxi                          # Hardware components informations
+      - iperf3                        # Network tool - Bandwidth test
+      - kernel-devel
+      - kernel-headers
+      - lame                          # MP3 Encoder tool
+      - libreoffice-langpack-fr       # Libreoffice language pack French
+      - libsass                       # Library for sassc CSS pre-processor language
+      - libselinux-python3
+      - libX11-devel
+      - lsb-core-noarch
+      - lynis                         # Security Tool - Very interesting
+      - lzop                          # Compression Tool
+      - mediawriter
+      - mkvtoolnix                    # MKV Codec Tools
+      - nano                          # Text editor
+      - nautilus-dropbox              # Dropbox in Nautilus -- Legacy package
+      - neofetch
+      - nethogs                       # Network tool
+      - obs-studio                    # Software for video recording and live streaming
+      - p7zip                         # Compression Tool
+      - perl
+      - perl-LWP-Protocol-https
+      - pycharm-community             # Python IDE
+      - python-dnf
+      - python3-dnf-plugin-snapper    # Snapper Features
+      - rpi-imager                    # Raspberry card/disk imager
+      - rubygem-rexml
+      - sassc                         # CSS pre-processor language
+      - secrets                       # Password manager like Keepass
+      - shotwell                      # Pictures manager tool
+      - snapper                       # Snapper Features
+      - stacer                        # Monitoring and Tweaking graphic tool
+      - tar                           # Archiving tool
+      - tcptrack                      # Network tool
+      - timeshift                     # Backup software
+      - tmux                          # Terminal Multiplexer
+      #- VirtualBox                   # Virtualization software
+      #- VirtualBox-guest-additions   # Virtualization software tools
+      - vim                           # Text editor
+      - vlc                           # VideoLAN player
+      - wget
+      - x264-devel                    # Codec Dev Library
+      - x265-devel                    # Codec Dev Library
+      - xine-lib-extras-freeworld     # Codec files Xine Library
+      - xsane                         # Scanner tool for printer/scanner or simple scanner 
     state: present
   tags:
     - instsoft

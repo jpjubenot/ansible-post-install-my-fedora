@@ -84,62 +84,62 @@
 - name: Install Differents Packages
   ansible.builtin.dnf:
     name:
-       - bzip2-devel
-       - cmake
-       - dbus-glib-devel
-       - expat-devel
-       - ffmpeg
-       - ffmpeg-devel
-       - fontconfig-devel
-       - freetype-devel
-       - fribidi-devel
-       - gcc-c++
-       - git
-       - gstreamer1-devel
-       - gstreamer1-libav
-       - gstreamer1-plugins-base-devel
-       - harfbuzz-devel
-       - intltool
-       - jansson-devel
-       - lame-devel
-       - lbzip2
-       - libass-devel
-       - libgudev1-devel
-       - libnotify-devel
-       - libogg-devel
-       - libsamplerate-devel
-       - libtheora-devel
-       - libtool
-       - libvorbis-devel
-       - libvpx-devel
-       - libxml2-devel
-       - m4
-       - make
-       - meson
-       - nasm
-       - ninja-build
-       - numactl
-       - numactl-devel
-       - openssl-devel
-       - opus-devel
-       - patch
-       - pkg-config
-       - qt5-qtbase-devel
-       - speex-devel
-       - turbojpeg-devel
-       #- webkitgtk3-devel             # Worked with Fedora 27
-       #- webkitgtk4-devel             # Worked with Fedora 28
-       #- webkit2gtk3-devel            # Worked with Fedora 29 
-       - webkit2gtk4.0-devel           # Worked with Fedora 37 and above 
-       - webkit2gtk4.1-devel           # Worked with Fedora 37 and above
-       - webkit2gtk5.0-devel           # Worked with Fedora 37 and above
-       - x264
-       - x264-devel
-       - x265
-       - x265-devel
-       - xz-devel
-       - yasm
-       - zlib-devel
+      - bzip2-devel
+      - cmake
+      - dbus-glib-devel
+      - expat-devel
+      - ffmpeg
+      - ffmpeg-devel
+      - fontconfig-devel
+      - freetype-devel
+      - fribidi-devel
+      - gcc-c++
+      - git
+      - gstreamer1-devel
+      - gstreamer1-libav
+      - gstreamer1-plugins-base-devel
+      - harfbuzz-devel
+      - intltool
+      - jansson-devel
+      - lame-devel
+      - lbzip2
+      - libass-devel
+      - libgudev1-devel
+      - libnotify-devel
+      - libogg-devel
+      - libsamplerate-devel
+      - libtheora-devel
+      - libtool
+      - libvorbis-devel
+      - libvpx-devel
+      - libxml2-devel
+      - m4
+      - make
+      - meson
+      - nasm
+      - ninja-build
+      - numactl
+      - numactl-devel
+      - openssl-devel
+      - opus-devel
+      - patch
+      - pkg-config
+      - qt5-qtbase-devel
+      - speex-devel
+      - turbojpeg-devel
+      #- webkitgtk3-devel             # Worked with Fedora 27
+      #- webkitgtk4-devel             # Worked with Fedora 28
+      #- webkit2gtk3-devel            # Worked with Fedora 29 
+      - webkit2gtk4.0-devel           # Worked with Fedora 37 and above 
+      - webkit2gtk4.1-devel           # Worked with Fedora 37 and above
+      - webkit2gtk5.0-devel           # Worked with Fedora 37 and above
+      - x264
+      - x264-devel
+      - x265
+      - x265-devel
+      - xz-devel
+      - yasm
+      - zlib-devel
     state: present
   tags:
     - minhbmk
