@@ -14,8 +14,10 @@
     - repofusion
     - basicinst
 
-- name: Downloading and enable RPM Fusion FREE Repository...
-  command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
+- name: Add Repository RPM Fusion FREE
+  ansible.builtin.dnf: 
+    name: https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
   when: fusionfrepo.stat.exists == False
   tags:
     - repofusion
@@ -29,8 +31,10 @@
     - repofusion
     - basicinst
 
-- name: Downloading and enable RPM Fusion Non-FREE Repository...
-  command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
+- name: Add Repository RPM Fusion Non-FREE
+  ansible.builtin.dnf:
+    name: https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
   when: fusionnfrepo.stat.exists == False
   tags:
     - repofusion

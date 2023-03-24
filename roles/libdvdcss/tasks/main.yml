@@ -15,18 +15,25 @@
     - basicinst
 
 - name: Livna enable Repository only to install libdvdcss
-  template: src=templates/livna.repo.tpl dest=/etc/yum.repos.d/livna.repo mode=0644 owner=root group=root
+  ansible.builtin.yum_repository:
+    name: livna
+    description: Livna
+    baseurl: http://rpm.livna.org/mirrorlist-source
+    mirrorlist: present
+    failovermethod: roundrobin
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: ///etc/pki/rpm-gpg/RPM-GPG-KEY-livna
   when: livnarepo.stat.exists == False
   tags:
     - libdvdcss
     - basicinst
 
-
-# Install Default Softwares
+# Install Default Softwares            # To be able to read dvd on your computer
 - name: Install Different Packages
   ansible.builtin.dnf:
     name:
-       - libdvdcss                     # To be able to read dvd on your computer
+       - libdvdcss
     state: present
   tags:
     - libdvdcss
@@ -39,7 +46,10 @@
     - libdvdcss
 
 - name: Remove Livna Repository
-  command: "rm /etc/yum.repos.d/livna.repo"
+  ansible.builtin.yum_repository:
+    name: livna
+    state: absent
+    notify: yum-clean-metadata
   when: livnarepo.stat.exists == True
   tags:
     - libdvdcss

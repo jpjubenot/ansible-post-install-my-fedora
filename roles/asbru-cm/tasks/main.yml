@@ -13,13 +13,15 @@
     - asbru
 
 - name: Download Asbru-CM
-  command: "wget -O /tmp/asbru-cm.rpm --content-disposition {{ Asbru_Url_Version }}" 
+  command: "wget -O /tmp/asbru-cm.rpm --content-disposition {{ Asbru_Url_Version }}"
   when: asbru.stat.exists == False
   tags:
     - asbru
 
 - name: Install Asbru-CM
-  command: "dnf -y install /tmp/asbru-cm.rpm"
+  ansible.builtin.dnf: 
+    name: /tmp/asbru-cm.rpm
+    state: present
   when: asbru.stat.exists == False
   tags:
     - asbru
