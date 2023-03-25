@@ -17,6 +17,7 @@
 - name: Add Repository RPM Fusion FREE
   ansible.builtin.dnf: 
     name: https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    disable_gpg_check: true
     state: present
   when: fusionfrepo.stat.exists == False
   tags:
@@ -34,6 +35,7 @@
 - name: Add Repository RPM Fusion Non-FREE
   ansible.builtin.dnf:
     name: https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    disable_gpg_check: true
     state: present
   when: fusionnfrepo.stat.exists == False
   tags:
@@ -42,8 +44,7 @@
     
 # Clean DNF
 - name: Clean DNF
-  ansible.builtin.dnf:
-    clean: yes
+  command: dnf clean all
   tags:
     - minhbmk
     - handbk
