@@ -4,7 +4,7 @@ name=rpm.livna.org for $releasever - $basearch
 mirrorlist=http://rpm.livna.org/mirrorlist
 failovermethod=roundrobin
 enabled=1
-gpgcheck=1
+gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-livna
 
 [livna-debuginfo]
@@ -14,7 +14,7 @@ mirrorlist=http://rpm.livna.org/mirrorlist-debug
 failovermethod=roundrobin
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-livna
-gpgcheck=1
+gpgcheck=0
 
 [livna-source]
 name=rpm.livna.org for $releasever - $basearch - Source
@@ -23,4 +23,4 @@ mirrorlist=http://rpm.livna.org/mirrorlist-source
 failovermethod=roundrobin
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-livna
-gpgcheck=1
+gpgcheck=0
