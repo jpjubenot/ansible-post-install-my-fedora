@@ -38,10 +38,9 @@
     - libdvdcss
 
 - name: Remove Livna Repository
-  ansible.builtin.yum_repository:
-    name: livna
+  file:
+    path: "/etc.yum.repo.d/livna.repo"
     state: absent
-    notify: yum-clean-metadata
   when: livnarepo.stat.exists == True
   tags:
-    - libdvdcss
+    - libdvdcss  
