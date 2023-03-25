@@ -40,7 +40,7 @@
 
 - name: Remove Livna Repository
   file:
-    path: /etc/yum.repo.d/livna.repo
+    path: /etc/yum.repos.d/livna.repo
     state: absent
   when: livnarepo.stat.exists == True
   tags:
