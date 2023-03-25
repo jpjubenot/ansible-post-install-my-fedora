@@ -22,7 +22,7 @@
     - basicinst
 
 # Install Default Softwares            # To be able to read dvd on your computer
-- name: Install Different Packages
+- name: Install LibDVDcss Packages
   ansible.builtin.dnf:
     name:
        - libdvdcss

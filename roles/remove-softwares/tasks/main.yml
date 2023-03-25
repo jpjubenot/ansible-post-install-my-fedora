@@ -7,7 +7,7 @@
 # Role Remove-Softwares
 
 # Clean DNF
-- name: Clean DNF
+- name: Clean DNF Remove-Softwares
   command: dnf clean all
   tags:
     - minimum

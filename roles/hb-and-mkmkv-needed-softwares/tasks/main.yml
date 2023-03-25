@@ -43,7 +43,7 @@
     - basicinst
     
 # Clean DNF
-- name: Clean DNF
+- name: Clean DNF Hanbrake_and_Makemkb
   command: dnf clean all
   tags:
     - minhbmk
@@ -82,7 +82,7 @@
     - minhbmk
     - handbk
 
-- name: Install Differents Packages
+- name: Install Differents Packages in HB and Mkmkv
   ansible.builtin.dnf:
     name:
       - bzip2-devel
