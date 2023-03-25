@@ -7,14 +7,14 @@
 # Role Remove-Softwares
 
 # Clean DNF
-- name: Clean DNF
+- name: Clean DNF Remove-Softwares
   command: dnf clean all
   tags:
     - minimum
 
 # Remove some unnecessary softwares on my system.
 - name: Remove some unnecessary softwares
-  dnf:
+  ansible.builtin.dnf:
     name:
        - keepassxc                     # This Keepass software comes with Asbru-CM installation, but I never use it.
     state: absent       

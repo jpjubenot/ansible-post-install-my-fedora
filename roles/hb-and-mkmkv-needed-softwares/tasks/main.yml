@@ -14,8 +14,11 @@
     - repofusion
     - basicinst
 
-- name: Downloading and enable RPM Fusion FREE Repository...
-  command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version }}.noarch.rpm
+- name: Add Repository RPM Fusion FREE
+  ansible.builtin.dnf: 
+    name: https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    disable_gpg_check: true
+    state: present
   when: fusionfrepo.stat.exists == False
   tags:
     - repofusion
@@ -29,86 +32,115 @@
     - repofusion
     - basicinst
 
-- name: Downloading and enable RPM Fusion Non-FREE Repository...
-  command: dnf install -y --nogpgcheck https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version }}.noarch.rpm
+- name: Add Repository RPM Fusion Non-FREE
+  ansible.builtin.dnf:
+    name: https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    disable_gpg_check: true
+    state: present
   when: fusionnfrepo.stat.exists == False
   tags:
     - repofusion
     - basicinst
     
 # Clean DNF
-- name: Clean DNF
-  shell: dnf clean all
+- name: Clean DNF Hanbrake_and_Makemkb
+  command: dnf clean all
   tags:
     - minhbmk
     - handbk
 
 # Install Softwares Needed to Compile Handbrake and MakeMKV
-- name: Install Differents Group Packages
-  shell: dnf -y groupinstall "Development Tools" "Development Libraries" "X Software Development" "GNOME Software Development"
+- name: Install Group Packages Development Tools
+  ansible.builtin.dnf:
+    name: '@Development Tools'
+    state: present
   tags:
     - minhbmk
     - handbk
 
-- name: Install Differents Packages
-  dnf:
+- name: Install Group Packages Development Libraries
+  ansible.builtin.dnf:
+    name: '@Development Libraries'
+    state: present
+  tags:
+    - minhbmk
+    - handbk
+
+- name: Install Group Packages X Software Development
+  ansible.builtin.dnf:
+    name: '@X Software Development'
+    state: present
+  tags:
+    - minhbmk
+    - handbk
+
+- name: Install Group Packages GNOME Software Development
+  ansible.builtin.dnf:
+    name: '@GNOME Software Development'
+    state: present
+  tags:
+    - minhbmk
+    - handbk
+
+- name: Install Differents Packages in HB and Mkmkv
+  ansible.builtin.dnf:
     name:
-       - bzip2-devel
-       - cmake
-       - dbus-glib-devel
-       - expat-devel
-       - ffmpeg
-       - ffmpeg-devel
-       - fontconfig-devel
-       - freetype-devel
-       - fribidi-devel
-       - gcc-c++
-       - git
-       - gstreamer1-devel
-       - gstreamer1-libav
-       - gstreamer1-plugins-base-devel
-       - harfbuzz-devel
-       - intltool
-       - jansson-devel
-       - lame-devel
-       - lbzip2
-       - libass-devel
-       - libgudev1-devel
-       - libnotify-devel
-       - libogg-devel
-       - libsamplerate-devel
-       - libtheora-devel
-       - libtool
-       - libvorbis-devel
-       - libvpx-devel
-       - libxml2-devel
-       - m4
-       - make
-       - meson
-       - nasm
-       - ninja-build
-       - numactl
-       - numactl-devel
-       - openssl-devel
-       - opus-devel
-       - patch
-       - pkg-config
-       - qt5-qtbase-devel
-       - speex-devel
-       - turbojpeg-devel
-       #- webkitgtk3-devel             # Worked with Fedora 27
-       #- webkitgtk4-devel             # Worked with Fedora 28
-       #- webkit2gtk3-devel            # Worked with Fedora 29 
-       - webkit2gtk4.0-devel           # Worked with Fedora 37 and above 
-       - webkit2gtk4.1-devel           # Worked with Fedora 37 and above
-       - webkit2gtk5.0-devel           # Worked with Fedora 37 and above
-       - x264
-       - x264-devel
-       - x265
-       - x265-devel
-       - xz-devel
-       - yasm
-       - zlib-devel
+      - bzip2-devel
+      - cmake
+      - dbus-glib-devel
+      - expat-devel
+      - ffmpeg
+      - ffmpeg-devel
+      - fontconfig-devel
+      - freetype-devel
+      - fribidi-devel
+      - gcc-c++
+      - git
+      - gstreamer1-devel
+      - gstreamer1-libav
+      - gstreamer1-plugins-base-devel
+      - harfbuzz-devel
+      - intltool
+      - jansson-devel
+      - lame-devel
+      - lbzip2
+      - libass-devel
+      - libgudev1-devel
+      - libnotify-devel
+      - libogg-devel
+      - libsamplerate-devel
+      - libtheora-devel
+      - libtool
+      - libvorbis-devel
+      - libvpx-devel
+      - libxml2-devel
+      - m4
+      - make
+      - meson
+      - nasm
+      - ninja-build
+      - numactl
+      - numactl-devel
+      - openssl-devel
+      - opus-devel
+      - patch
+      - pkg-config
+      - qt5-qtbase-devel
+      - speex-devel
+      - turbojpeg-devel
+      #- webkitgtk3-devel             # Worked with Fedora 27
+      #- webkitgtk4-devel             # Worked with Fedora 28
+      #- webkit2gtk3-devel            # Worked with Fedora 29 
+      - webkit2gtk4.0-devel           # Worked with Fedora 37 and above 
+      - webkit2gtk4.1-devel           # Worked with Fedora 37 and above
+      - webkit2gtk5.0-devel           # Worked with Fedora 37 and above
+      - x264
+      - x264-devel
+      - x265
+      - x265-devel
+      - xz-devel
+      - yasm
+      - zlib-devel
     state: present
   tags:
     - minhbmk

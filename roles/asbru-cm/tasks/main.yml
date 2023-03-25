@@ -6,7 +6,6 @@
 
 # tasks file for roles/asbru-cm
 
-
 - name: Verify if Asbru-CM exist
   stat: path=/usr/bin/asbru-cm
   register: asbru
@@ -14,13 +13,16 @@
     - asbru
 
 - name: Download Asbru-CM
-  command: "wget -O /tmp/asbru-cm.rpm --content-disposition {{ Asbru_Url_Version }}" 
+  command: "wget -O /tmp/asbru-cm.rpm --content-disposition {{ Asbru_Url_Version }}"
   when: asbru.stat.exists == False
   tags:
     - asbru
 
 - name: Install Asbru-CM
-  command: "dnf -y install /tmp/asbru-cm.rpm"
+  ansible.builtin.dnf: 
+    name: /tmp/asbru-cm.rpm
+    state: present
+    disable_gpg_check: true
   when: asbru.stat.exists == False
   tags:
     - asbru

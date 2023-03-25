@@ -21,13 +21,13 @@
     - libdvdcss
     - basicinst
 
-
-# Install Default Softwares
-- name: Install Different Packages
-  dnf:
+# Install Default Softwares            # To be able to read dvd on your computer
+- name: Install LibDVDcss Packages
+  ansible.builtin.dnf:
     name:
-       - libdvdcss                     # To be able to read dvd on your computer
+       - libdvdcss
     state: present
+    disable_gpg_check: true
   tags:
     - libdvdcss
 
@@ -39,7 +39,9 @@
     - libdvdcss
 
 - name: Remove Livna Repository
-  command: "rm /etc/yum.repos.d/livna.repo"
+  file:
+    path: /etc/yum.repos.d/livna.repo
+    state: absent
   when: livnarepo.stat.exists == True
   tags:
-    - libdvdcss
+    - libdvdcss  

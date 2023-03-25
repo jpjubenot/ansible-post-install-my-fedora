@@ -4,8 +4,9 @@
 # Licensed under CC BY 3.0. All rights reserved.
 #
 
-# Role Add Blacklist file to disable Webcam
+# Role Disable Webcam
 
+# Add Blacklist file to disable Webcam
 - name: Test blacklist file
   stat: path=/etc/modprobe.d/blacklist.conf
   register: blacklistfile
