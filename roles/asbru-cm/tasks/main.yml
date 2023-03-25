@@ -31,6 +31,7 @@
   file:
     path: "/tmp/asbru-cm.rpm"
     state: absent
+    disable_gpg_check: true
   when: asbru.stat.exists == False
   tags:
     - asbru
