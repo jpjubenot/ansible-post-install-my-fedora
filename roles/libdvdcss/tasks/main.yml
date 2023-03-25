@@ -27,6 +27,7 @@
     name:
        - libdvdcss
     state: present
+    disable_gpg_check: true
   tags:
     - libdvdcss
 
