@@ -15,15 +15,7 @@
     - basicinst
 
 - name: Livna enable Repository only to install libdvdcss
-  ansible.builtin.yum_repository:
-    name: livna
-    description: Livna
-    baseurl: http://rpm.livna.org/mirrorlist-source
-    mirrorlist: present
-    failovermethod: roundrobin
-    enabled: yes
-    gpgcheck: yes
-    gpgkey: ///etc/pki/rpm-gpg/RPM-GPG-KEY-livna
+  template: src=templates/livna.repo.tpl dest=/etc/yum.repos.d/livna.repo mode=0644 owner=root group=root
   when: livnarepo.stat.exists == False
   tags:
     - libdvdcss
