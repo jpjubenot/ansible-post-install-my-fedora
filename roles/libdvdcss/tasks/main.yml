@@ -14,8 +14,46 @@
     - libdvdcss
     - basicinst
 
-- name: Livna enable Repository only to install libdvdcss
-  template: src=templates/livna.repo.tpl dest=/etc/yum.repos.d/livna.repo mode=0644 owner=root group=root
+- name: Add Livna Repository only to install libdvdcss
+  ansible.builtin.yum_repository:
+    name: livna
+    description: Livna
+    file: livna    
+    baseurl: #blablabla
+    mirrorlist: http://rpm.livna.org/mirrorlist
+    enabled: yes
+    gpgcheck: yes
+    failovermethod: roundrobin
+  when: livnarepo.stat.exists == False
+  tags:
+    - libdvdcss
+    - basicinst
+
+- name: Add Livna-Debug Repository only to install libdvdcss
+  ansible.builtin.yum_repository:
+    name: livna-debug
+    description: Livna-Debug
+    file: livna    
+    baseurl: #blablabla
+    mirrorlist: http://rpm.livna.org/mirrorlist-debug
+    enabled: yes
+    gpgcheck: yes
+    failovermethod: roundrobin
+  when: livnarepo.stat.exists == False
+  tags:
+    - libdvdcss
+    - basicinst
+
+- name: Add Livna-Source Repository only to install libdvdcss
+  ansible.builtin.yum_repository:
+    name: livna-Source
+    description: Livna-Source
+    file: livna    
+    baseurl: #blablabla
+    mirrorlist: http://rpm.livna.org/mirrorlist-source
+    enabled: yes
+    gpgcheck: yes
+    failovermethod: roundrobin
   when: livnarepo.stat.exists == False
   tags:
     - libdvdcss
