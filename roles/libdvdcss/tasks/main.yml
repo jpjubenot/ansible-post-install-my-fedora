@@ -19,7 +19,7 @@
     name: livna
     description: Livna
     file: livna    
-    baseurl: #blablabal
+    baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist
     enabled: yes
     gpgcheck: yes
@@ -34,7 +34,7 @@
     name: livna-debug
     description: Livna-Debug
     file: livna    
-    baseurl: #blablabal
+    baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist-debug
     enabled: yes
     gpgcheck: yes
@@ -46,10 +46,10 @@
 
 - name: Add Livna-Source Repository only to install libdvdcss
   ansible.builtin.yum_repository:
-    name: livna
+    name: livna-Source
     description: Livna-Source
     file: livna    
-    baseurl: #blablabal
+    baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist-source
     enabled: yes
     gpgcheck: yes
