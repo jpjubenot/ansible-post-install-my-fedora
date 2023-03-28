@@ -48,7 +48,7 @@
   ansible.builtin.yum_repository:
     name: livna-Source
     description: Livna-Source
-    file: livna    
+    file: livna-source    
     baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist-source
     enabled: yes
