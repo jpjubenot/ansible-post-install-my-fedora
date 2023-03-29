@@ -15,22 +15,25 @@
     - basicinst
 
 - name: Disable Webcam - blacklist file do not exist
-  template: src=templates/disable-webcam.conf.tpl dest=/etc/modprobe.d/blacklist.conf mode=0644 owner=root group=root
+  ansible.builtin.file: 
+    path: /etc/modprobe.d/blacklist.conf 
+    state: touch
+    mode: 0644
+    owner: root
+    group: root
   when: blacklistfile.stat.exists == False
   tags:
     - blacklistf
     - basicinst
 
-- name: Disable Webcam - blacklist file exist
+- name: Disable Webcam - blacklist file exist - comment
   lineinfile: dest=/etc/modprobe.d/blacklist.conf line="# Disable Webcam on linux"
-  when: blacklistfile.stat.exists
   tags:
     - blacklistf
     - basicinst
 
-- name: Disable Webcam blacklist file exist
+- name: Disable Webcam - blacklist file exist - blacklist module
   lineinfile: dest=/etc/modprobe.d/blacklist.conf line="blacklist uvcvideo"
-  when: blacklistfile.stat.exists
   tags:
     - blacklistf
     - basicinst
