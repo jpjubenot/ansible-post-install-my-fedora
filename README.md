@@ -13,8 +13,6 @@ Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appl
 
 <p>D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes nos applications préférées.</p>
 
-<p>Mon projet s'articule comme suit.</p>
-
 Mon projet s'articule autour de ces rôles.
 - <strong>bootstrap</strong>
 - <strong>disable-ipv6</strong>
