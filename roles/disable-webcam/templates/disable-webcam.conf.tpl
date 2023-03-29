@@ -1,2 +1,0 @@
-# Disable Webcam
-blacklist uvcvideo
