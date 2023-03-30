@@ -146,7 +146,7 @@
     - minhbmk
 
 # Check libmmbd.so.0 x64 exist
-- name: Verify if MakeMKV exist
+- name: Verify if libmmbd.so.0 x64 exist
   stat: path=/usr/lib64/libmmbd.so.0
   register: limmbd64exist
   tags:
@@ -155,7 +155,7 @@
     - symlinkvlc
 
 # Create Symbolic Link x64 for VLC
-- name: Create Symbolic Link for VLC - libaacs
+- name: Create Symbolic Link x64 for VLC - libaacs
   ansible.builtin.file:
     src: /usr/lib64/libmmbd.so.0
     dest: /usr/lib64/libaacs.so.0
@@ -169,7 +169,7 @@
     - symlinkvlc
 
 # Create Symbolic Link x64 for VLC
-- name: Create Symbolic Link for VLC - libaacs
+- name: Create Symbolic Link x64 for VLC - libaacs
   ansible.builtin.file:
     src: /usr/lib64/libmmbd.so.0
     dest: /usr/lib64/libbdplus.so.0
@@ -183,7 +183,7 @@
     - symlinkvlc
 
 # Check libmmbd.so.0 x32 exist
-- name: Verify if MakeMKV exist
+- name: Verify if libmmbd.so.0 x32 exist
   stat: path=/usr/lib/libmmbd.so.0
   register: limmbd32exist
   tags:
@@ -192,7 +192,7 @@
     - symlinkvlc
 
 # Create Symbolic Link x32 for VLC
-- name: Create Symbolic Link for VLC - libaacs
+- name: Create Symbolic Link x32 for VLC - libaacs
   ansible.builtin.file:
     src: /usr/lib/libmmbd.so.0
     dest: /usr/lib/libaacs.so.0
@@ -206,7 +206,7 @@
     - symlinkvlc
 
 # Create Symbolic Link x32 for VLC
-- name: Create Symbolic Link for VLC - libaacs
+- name: Create Symbolic Link x32 for VLC - libaacs
   ansible.builtin.file:
     src: /usr/lib/libmmbd.so.0
     dest: /usr/lib/libbdplus.so.0
