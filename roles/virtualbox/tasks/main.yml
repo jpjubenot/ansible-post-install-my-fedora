@@ -35,7 +35,7 @@
     - virtualbox
 
 # Install Default Softwares
-- name: Install Different Packages
+- name: Install VirtualBox Packages
   ansible.builtin.dnf:
     name:
       - VirtualBox                   # Virtualization software
