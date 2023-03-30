@@ -25,6 +25,7 @@ Mon projet s'articule autour de ces rôles.
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
 - <strong>remove-softwares</strong>
+- <strong>virtualbox</strong>
 
 <strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, désactivation de IPv6 etc ...
 
@@ -48,6 +49,8 @@ machine.
 <strong>disable-webcam</strong> Pour désactiver le support de la webcam par défaut quand elle utilise le driver uvcvideo.
 
 <strong>remove-softwares</strong> Pour supprimer des logiciels inutiles à mon usage.
+
+- <strong>virtualbox</strong> Pour installer VirtualBox.
 
 Fichiers Importants:
 <strong>myFedora.yml:</strong> Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.

@@ -25,6 +25,7 @@ My project works like this :
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
 - <strong>remove-softwares</strong>
+- <strong>virtualbox</strong>
 
 <strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
 
@@ -48,6 +49,8 @@ compile HandBrake software and MakeMKV software
 <strong>disable-webcam:</strong> To disable your webcam support by default when your webcam use uvcvideo driver.
 
 <strong>remove-softwares</strong> To remove unnecessary softwares on my fresh installation.
+
+<strong>virtualbox</strong> To install VirtualBox.
 
 Important files:
 

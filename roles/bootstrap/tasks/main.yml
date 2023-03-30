@@ -42,25 +42,6 @@
     - repofusion
     - basicinst
 
-# Add Repository Oracle VirtualBox
-- name: Verify if Oracle VirtualBox Repository exist
-  stat: path=/etc/yum.repos.d/virtualbox.repo
-  register: repooracle
-  tags:
-    - repooracle
-
-- name: Add Oracle VirtualBox Repository
-  ansible.builtin.yum_repository:
-    name: virtualbox
-    description: Virtualbox
-    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
-    enabled: yes
-    gpgcheck: yes
-    repo_gpgcheck: true
-  when: repooracle.stat.exists == False
-  tags:
-    - repooracle
-
 # Add Repository Google Chrome
 - name: Verify if Google Chrome Repository exist
   stat: path=/etc/yum.repos.d/google-chrome.repo

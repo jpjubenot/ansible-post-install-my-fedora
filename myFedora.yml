@@ -17,6 +17,7 @@
       #- rescue-boot
       #- disable-webcam
       #- remove-softwares
+      #- virtualbox
 
   vars_files:
     - myvars.yml

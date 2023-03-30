@@ -1,0 +1,45 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
+
+# Role VirtualBox
+
+# Add Repository Oracle VirtualBox
+- name: Verify if Oracle VirtualBox Repository exist
+  stat: path=/etc/yum.repos.d/virtualbox.repo
+  register: repooraclevbox
+  tags:
+    - repooraclevbox
+    - virtualbox
+
+- name: Add Oracle VirtualBox Repository
+  ansible.builtin.yum_repository:
+    name: virtualbox
+    description: Virtualbox
+    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
+    enabled: yes
+    gpgcheck: yes
+    repo_gpgcheck: true
+  when: repooraclevbox.stat.exists == False
+  tags:
+    - repooraclevbox
+    - virtualbox
+
+# Clean DNF
+- name: Clean DNF before Install VirtualBox
+  command: dnf clean all
+  tags:
+    - repooraclevbox
+    - virtualbox
+
+# Install Default Softwares
+- name: Install Different Packages
+  ansible.builtin.dnf:
+    name:
+      - VirtualBox                   # Virtualization software
+      - virtualbox-guest-additions   # Virtualization software tools and guest drivers.
+    state: present
+  tags:
+    - virtualbox

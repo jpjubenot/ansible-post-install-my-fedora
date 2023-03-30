@@ -97,8 +97,6 @@
       - tcptrack                      # Network tool
       - timeshift                     # Backup software
       - tmux                          # Terminal Multiplexer
-      #- VirtualBox                   # Virtualization software
-      #- VirtualBox-guest-additions   # Virtualization software tools
       - vim                           # Text editor
       - vlc                           # VideoLAN player
       - wget
