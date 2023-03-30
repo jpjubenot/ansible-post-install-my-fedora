@@ -152,6 +152,7 @@
   tags:
     - mkmkv
     - minhbmk
+    - symlinkvlc
 
 # Create Symbolic Link x64 for VLC
 - name: Create Symbolic Link for VLC - libaacs
@@ -161,7 +162,7 @@
     owner: root
     group: root
     state: link
-  when: limmbd64exist.stat.exists
+  when: limmbd64exist.stat.exists 
   tags:
     - mkmkv
     - minhbmk
@@ -188,6 +189,7 @@
   tags:
     - mkmkv
     - minhbmk
+    - symlinkvlc
 
 # Create Symbolic Link x32 for VLC
 - name: Create Symbolic Link for VLC - libaacs
