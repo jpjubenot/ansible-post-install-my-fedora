@@ -83,7 +83,7 @@
       - p7zip                         # Compression Tool
       - perl
       - perl-LWP-Protocol-https
-      - pycharm-community             # Python IDE
+      #- pycharm-community             # Python IDE
       - python-dnf
       - python3-dnf-plugin-snapper    # Snapper Features
       - rpi-imager                    # Raspberry card/disk imager
