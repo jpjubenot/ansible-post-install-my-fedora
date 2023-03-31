@@ -131,7 +131,7 @@
       #- webkitgtk3-devel             # Worked with Fedora 27
       #- webkitgtk4-devel             # Worked with Fedora 28
       #- webkit2gtk3-devel            # Worked with Fedora 29 
-      - webkit2gtk4.0-devel           # Worked with Fedora 37 and above 
+      #- webkit2gtk4.0-devel          # Worked with Fedora 36 and above 
       - webkit2gtk4.1-devel           # Worked with Fedora 37 and above
       - webkit2gtk5.0-devel           # Worked with Fedora 37 and above
       - x264

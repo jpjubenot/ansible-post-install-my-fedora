@@ -69,6 +69,8 @@ I recommand you to document yourself about Ansible to figure out the philosophy 
 Like you understand this project will install some softwares and modify your files system,
 then you need privilegies to execute it.
 
+<p>Be sure, your Fedora system is up to date before starting !!</p>
+
 I suggest to create a folder to download the complete script.
 
 <code>mkdir Depot-Git && cd Depot-Git</code>
