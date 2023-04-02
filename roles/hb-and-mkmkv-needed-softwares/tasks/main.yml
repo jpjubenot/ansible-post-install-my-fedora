@@ -128,7 +128,7 @@
       - qt5-qtbase-devel
       - speex-devel
       - turbojpeg-devel
-      - webkit2gtk5.0-devel           # Worked with Fedora 37 and above
+      - webkit2gtk5.0-devel           # Work with Fedora 37 and above
       - x264
       - x264-devel
       - x265

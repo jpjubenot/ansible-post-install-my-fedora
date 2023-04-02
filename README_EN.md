@@ -58,7 +58,7 @@ My project works like this :
 
 <strong>disable-webcam:</strong> Disable your webcam support by default when your webcam use uvcvideo driver.
 
-<strong>virtualbox</strong> Install VirtualBox.
+<strong>virtualbox</strong> Install VirtualBox virtualization tool.
 
 
 Important files:
