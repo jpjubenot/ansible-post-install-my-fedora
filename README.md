@@ -18,25 +18,33 @@ Mon projet s'articule autour de ces rôles.
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
 - <strong>asbru-cm</strong>
+- <strong>google-chrome</strong>
+- <strong>lynis</strong>
+- <strong>vscode</strong>
 - <strong>hb-and-mkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
 - <strong>libdvdcss</strong>
+- <strong>remove-softwares</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
-- <strong>remove-softwares</strong>
 - <strong>virtualbox</strong>
 
-<strong>bootstrap:</strong> Installe différents repositories : RPMFusion, RPMFusion NON-Free, désactivation de IPv6 etc ...
+<strong>bootstrap:</strong> Configure des options DNF, Installer les dépots : RPMFusion, RPMFusion NON-Free, désactivation.
 
 <strong>disable-ipv6</strong> Pour désactiver IPv6 sur la machine.
 
-<strong>softwares:</strong> Correspond à toute une liste de paquets que j'aime utiliser sur ma
-machine.
+<strong>softwares:</strong> Correspond à toute une liste de paquets que j'aime utiliser sur ma machine.
 
 <strong>asbru-cm:</strong> Installation du logiciel Asbru-CM (notez que KeePassXC sera aussi installé).
 
-<strong>hb-and-mkmkv-needed-softwares:</strong> Installe les logiciels et librairies nécessaires pour compiler HandBrake et MakeMKV.
+<strong>google-chrome:</strong> Installer Google-Chrome.
+
+<strong>lynis:</strong> Installer l'outil d'audit de sécurité Lynis.
+
+<strong>vscode:</strong> Installer l'éditeur de code Visual-Studio Code de Microsoft.
+
+<strong>hb-and-mkmkv-needed-softwares:</strong> Installer les logiciels et librairies nécessaires pour compiler HandBrake et MakeMKV.
 
 <strong>handbrake:</strong> Compilation du logiciel HanBrake.
 
@@ -44,13 +52,14 @@ machine.
 
 <strong>libdvdcss:</strong> Permettre de lire des DVD sur votre ordinateur.
 
-<strong>rescue-boot:</strong> Pour recréer le menu de Rescue-boot de votre Fedora.
+<strong>remove-softwares</strong> Supprimer des logiciels inutiles à mon usage.
 
-<strong>disable-webcam</strong> Pour désactiver le support de la webcam par défaut quand elle utilise le driver uvcvideo.
+<strong>rescue-boot:</strong> Recréer le menu de Rescue-boot de votre Fedora.
 
-<strong>remove-softwares</strong> Pour supprimer des logiciels inutiles à mon usage.
+<strong>disable-webcam</strong> Désactiver le support de la webcam par défaut quand elle utilise le driver uvcvideo.
 
-- <strong>virtualbox</strong> Pour installer VirtualBox.
+<strong>virtualbox:</strong> Installer l'outil de virtualisation VirtualBox.
+
 
 Fichiers Importants:
 <strong>myFedora.yml:</strong> Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.

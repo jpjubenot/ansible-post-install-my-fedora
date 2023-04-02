@@ -24,7 +24,6 @@
       - clamd                         # ClamAV Anti-Virus daemon
       - clamav                        # ClamAV Anti-Virus
       - clamav-update                 # ClamAV Anti-Virus definition updater
-      - code                          # Visual Studio Code
       - dconf-editor                  # Gnome Shell DConf-Editor
       - dmidecode
       - dnf-plugin-system-upgrade
@@ -47,7 +46,6 @@
       - gnome-extensions-app
       - gnome-nettool                 # Gnome Network graphical tool
       - gnome-tweak-tool              # Tweak Gnome shell
-      - google-chrome-stable          # Google Chrome browser
       - gnome-sudoku                  # Sudoku game
       - gparted                       # Disks and partitions manager
       - grip                          # Audio CD ripping software
@@ -71,7 +69,6 @@
       - libselinux-python3
       - libX11-devel
       - lsb-core-noarch
-      - lynis                         # Security Tool - Very interesting
       - lzop                          # Compression Tool
       - mediawriter
       - mkvtoolnix                    # MKV Codec Tools
@@ -83,7 +80,7 @@
       - p7zip                         # Compression Tool
       - perl
       - perl-LWP-Protocol-https
-      #- pycharm-community             # Python IDE
+      #- pycharm-community            # Python IDE
       - python-dnf
       - python3-dnf-plugin-snapper    # Snapper Features
       - rpi-imager                    # Raspberry card/disk imager

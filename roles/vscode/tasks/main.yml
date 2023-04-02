@@ -1,0 +1,44 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# Licensed under CC BY 3.0. All rights reserved.
+#
+
+# Role VSCode
+
+# Clean DNF
+- name: Clean DNF before install VSCode
+  command: dnf clean all
+  tags:
+    - vscode
+
+
+# Add Repository VScode
+- name: Verify if VScode Repository exist
+  stat: path=/etc/yum.repos.d/vscode.repo
+  register: vscoderepo
+  tags:
+    - repovscode
+    - vscode
+
+- name: VScode enable Repository
+  ansible.builtin.yum_repository:
+    name: vscode
+    description: VSCode
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    enabled: yes
+    gpgcheck: yes
+  when: vscoderepo.stat.exists == False
+  tags:
+    - repovscode
+    - vscode
+
+# Install Software
+- name: Install VSCode
+  ansible.builtin.dnf:
+    name:
+      - code                          # Visual Studio Code
+    state: present
+  tags:
+    - vscode    

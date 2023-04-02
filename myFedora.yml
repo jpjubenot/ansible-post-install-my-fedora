@@ -9,14 +9,17 @@
       - bootstrap
       - disable-ipv6
       - softwares
+      - google-chrome
+      - lynis
+      - vscode
       - asbru-cm
       - hb-and-mkmkv-needed-softwares
       - handbrake
       - makemkv
       #- libdvdcss
+      #- remove-softwares
       #- rescue-boot
       #- disable-webcam
-      #- remove-softwares
       #- virtualbox
 
   vars_files:

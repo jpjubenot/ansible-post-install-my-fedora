@@ -18,16 +18,19 @@ My project works like this :
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
 - <strong>asbru-cm</strong>
+- <strong>google-chrome</strong>
+- <strong>lynis</strong>
+- <strong>vscode</strong>
 - <strong>hb-and-mkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
 - <strong>libdvdcss</strong>
+- <strong>remove-softwares</strong>
 - <strong>rescue-boot</strong>
 - <strong>disable-webcam</strong>
-- <strong>remove-softwares</strong>
 - <strong>virtualbox</strong>
 
-<strong>bootstrap:</strong> Install some repositories: RPMFusion, RPMFusion-NON-Free, disable IPv6 ...
+<strong>bootstrap:</strong> Configure DNF options, and install repositories: RPMFusion, RPMFusion-NON-Free.
 
 <strong>disable-ipv6:</strong> Disable IPv6.
 
@@ -35,8 +38,13 @@ My project works like this :
 
 <strong>asbru-cm:</strong> Asbru-CM software installation (note that KeePassXC will be installed too).
 
-<strong>hb-and-mkmkv-needed-softwares:</strong> Install softwares and librairies needed to
-compile HandBrake software and MakeMKV software
+<strong>google-chrome:</strong> Install Google-Chrome.
+
+<strong>lynis:</strong> Install Lynis audit security tool.
+
+<strong>vscode</strong> Install Visual-Studio Code.
+
+<strong>hb-and-mkmkv-needed-softwares:</strong> Install softwares and librairies needed to compile HandBrake and MakeMKV softwares.
 
 <strong>handbrake:</strong> Compilation of HanBrake software.
 
@@ -44,13 +52,14 @@ compile HandBrake software and MakeMKV software
 
 <strong>libdvdcss:</strong> Permit to read DVD on your computer.
 
-<strong>rescue-boot:</strong> To recreate your Rescue Boot Menu after many upgrade of your system.
+<strong>remove-softwares</strong> Remove unnecessary softwares on my fresh installation.
 
-<strong>disable-webcam:</strong> To disable your webcam support by default when your webcam use uvcvideo driver.
+<strong>rescue-boot:</strong> Recreate your Rescue Boot Menu after many upgrade of your system.
 
-<strong>remove-softwares</strong> To remove unnecessary softwares on my fresh installation.
+<strong>disable-webcam:</strong> Disable your webcam support by default when your webcam use uvcvideo driver.
 
-<strong>virtualbox</strong> To install VirtualBox.
+<strong>virtualbox</strong> Install VirtualBox.
+
 
 Important files:
 
