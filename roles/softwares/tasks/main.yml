@@ -95,6 +95,7 @@
       - timeshift                     # Backup software
       - tmux                          # Terminal Multiplexer
       - vim                           # Text editor
+      - virt-manager                  # Qemu and LibVirt Manager - Gnome-Boxes too
       - vlc                           # VideoLAN player
       - wget
       - x264-devel                    # Codec Dev Library
