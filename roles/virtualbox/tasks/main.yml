@@ -19,11 +19,11 @@
     name: virtualbox
     description: Virtualbox
     #baseurl: https://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
-    # Fedora 36 is the maximum release version for now
+    # Fedora 36 is the maximum released version for now
     baseurl: https://download.virtualbox.org/virtualbox/rpm/fedora/36/x86_64/
     enabled: yes
     gpgcheck: yes
-    repo_gpgcheck: false
+    repo_gpgcheck: true
   when: repooraclevbox.stat.exists == False
   tags:
     - repooraclevbox
