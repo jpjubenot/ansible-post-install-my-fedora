@@ -8,13 +8,14 @@
 
 # Clean DNF
 - name: Clean DNF before install Google-Chrome
-  command: dnf clean all
+  ansible.builtin.command: dnf clean all
   tags:
     - chrome
 
 # Add Repository Google Chrome
 - name: Verify if Google Chrome Repository exist
-  stat: path=/etc/yum.repos.d/google-chrome.repo
+  ansible.builtin.stat:
+    path=/etc/yum.repos.d/google-chrome.repo
   register: googlechromerepo
   tags:
     - repochrome

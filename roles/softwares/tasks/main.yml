@@ -8,7 +8,7 @@
 
 # Clean DNF
 - name: Clean DNF before Install list
-  command: dnf clean all
+  ansible.builtin.command: dnf clean all
   tags:
     - minimum
 

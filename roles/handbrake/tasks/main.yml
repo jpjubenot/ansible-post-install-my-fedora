@@ -11,7 +11,8 @@
 
 # Check Handbrake exist
 - name: Verify if Handbrake exist
-  stat: path=/usr/local/bin/HandBrakeCLI
+  ansible.builtin.stat:
+    path=/usr/local/bin/HandBrakeCLI
   register: handbrakeexist
   tags:
     - mixhbmk

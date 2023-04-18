@@ -8,7 +8,8 @@
 
 # Add Repository Livna only to install libdvdcss
 - name: Verify if Livna Repository exist
-  stat: path=/etc/yum.repos.d/livna.repo
+  ansible.builtin.stat:
+    path=/etc/yum.repos.d/livna.repo
   register: livnarepo
   tags:
     - libdvdcss
@@ -71,7 +72,8 @@
 
 # Remove Livna Repository
 - name: Verify if Livna Repository exist
-  stat: path=/etc/yum.repos.d/livna.repo
+  ansible.builtin.stat:
+    path=/etc/yum.repos.d/livna.repo
   register: livnarepo
   tags:
     - libdvdcss

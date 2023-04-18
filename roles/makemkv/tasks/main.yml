@@ -11,7 +11,8 @@
 
 # Check MakeMKV exist
 - name: Verify if MakeMKV exist
-  stat: path=/usr/bin/makemkv
+  ansible.builtin.stat:
+    path=/usr/bin/makemkv
   register: makemkvexist
   tags:
     - mkmkv
@@ -161,7 +162,8 @@
 
 # Check libmmbd.so.0 x64 exist
 - name: Verify if libmmbd.so.0 x64 exist
-  stat: path=/usr/lib64/libmmbd.so.0
+  ansible.builtin.stat:
+    path=/usr/lib64/libmmbd.so.0
   register: limmbd64exist
   tags:
     - mkmkv
@@ -198,7 +200,8 @@
 
 # Check libmmbd.so.0 x32 exist
 - name: Verify if libmmbd.so.0 x32 exist
-  stat: path=/usr/lib/libmmbd.so.0
+  ansible.builtin.stat:
+    path=/usr/lib/libmmbd.so.0
   register: limmbd32exist
   tags:
     - mkmkv

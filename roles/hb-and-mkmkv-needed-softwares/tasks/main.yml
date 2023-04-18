@@ -8,7 +8,8 @@
 
 # Add Repository RPM Fusion FREE
 - name: Verify if RPM Fusion FREE Repository exist
-  stat: path=/etc/yum.repos.d/rpmfusion-free.repo
+  ansible.builtin.stat:
+    path=/etc/yum.repos.d/rpmfusion-free.repo
   register: fusionfrepo
   tags:
     - mixhbmk
@@ -28,7 +29,8 @@
 
 # Add Repository RPM Fusion Non-FREE
 - name: Verify if RPM Fusion Non-FREE Repository exist
-  stat: path=/etc/yum.repos.d/rpmfusion-nonfree.repo
+  ansible.builtin.stat:
+    path=/etc/yum.repos.d/rpmfusion-nonfree.repo
   register: fusionnfrepo
   tags:
     - mixhbmk
@@ -48,7 +50,7 @@
     
 # Clean DNF
 - name: Clean DNF Hanbrake_and_Makemkv
-  command: dnf clean all
+  ansible.builtin.command: dnf clean all
   tags:
     - mixhbmk
     - handbk
