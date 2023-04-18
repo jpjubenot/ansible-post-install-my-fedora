@@ -11,8 +11,9 @@
   stat: path=/etc/yum.repos.d/rpmfusion-free.repo
   register: fusionfrepo
   tags:
-    - repofusion
-    - basicinst
+    - mixhbmk
+    - handbk
+    - mkmkv
 
 - name: Add Repository RPM Fusion FREE
   ansible.builtin.dnf: 
@@ -21,16 +22,18 @@
     state: present
   when: fusionfrepo.stat.exists == False
   tags:
-    - repofusion
-    - basicinst
+    - mixhbmk
+    - handbk
+    - mkmkv
 
 # Add Repository RPM Fusion Non-FREE
 - name: Verify if RPM Fusion Non-FREE Repository exist
   stat: path=/etc/yum.repos.d/rpmfusion-nonfree.repo
   register: fusionnfrepo
   tags:
-    - repofusion
-    - basicinst
+    - mixhbmk
+    - handbk
+    - mkmkv
 
 - name: Add Repository RPM Fusion Non-FREE
   ansible.builtin.dnf:
@@ -39,15 +42,17 @@
     state: present
   when: fusionnfrepo.stat.exists == False
   tags:
-    - repofusion
-    - basicinst
+    - mixhbmk
+    - handbk
+    - mkmkv
     
 # Clean DNF
 - name: Clean DNF Hanbrake_and_Makemkv
   command: dnf clean all
   tags:
-    - minhbmk
+    - mixhbmk
     - handbk
+    - mkmkv
 
 # Install Softwares Needed to Compile Handbrake and MakeMKV
 - name: Install Group Packages Development Tools
@@ -55,32 +60,36 @@
     name: '@Development Tools'
     state: present
   tags:
-    - minhbmk
+    - mixhbmk
     - handbk
+    - mkmkv
 
 - name: Install Group Packages Development Libraries
   ansible.builtin.dnf:
     name: '@Development Libraries'
     state: present
   tags:
-    - minhbmk
+    - mixhbmk
     - handbk
+    - mkmkv
 
 - name: Install Group Packages X Software Development
   ansible.builtin.dnf:
     name: '@X Software Development'
     state: present
   tags:
-    - minhbmk
+    - mixhbmk
     - handbk
+    - mkmkv
 
 - name: Install Group Packages GNOME Software Development
   ansible.builtin.dnf:
     name: '@GNOME Software Development'
     state: present
   tags:
-    - minhbmk
+    - mixhbmk
     - handbk
+    - mkmkv
 
 - name: Install Differents Packages in HB and Mkmkv
   ansible.builtin.dnf:
@@ -138,5 +147,6 @@
       - zlib-devel
     state: present
   tags:
-    - minhbmk
+    - mixhbmk
     - handbk
+    - mkmkv

@@ -82,6 +82,7 @@
       - perl-LWP-Protocol-https
       #- pycharm-community            # Python IDE
       - python-dnf
+      - python3-ansible-lint          # Ansible-lint
       - python3-dnf-plugin-snapper    # Snapper Features
       - rpi-imager                    # Raspberry card/disk imager
       - rubygem-rexml
