@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role libdvdcss
@@ -9,51 +9,51 @@
 # Add Repository Livna only to install libdvdcss
 - name: Verify if Livna Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/livna.repo
+    path: /etc/yum.repos.d/livna.repo
   register: livnarepo
   tags:
     - libdvdcss
     - basicinst
 
-- name: Add Livna Repository only to install libdvdcss
+- name: Adding Livna Repository only to install libdvdcss
   ansible.builtin.yum_repository:
     name: livna
     description: Livna
-    file: livna    
+    ansible.builtin.file: livna    
     baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     failovermethod: roundrobin
   when: livnarepo.stat.exists == False
   tags:
     - libdvdcss
     - basicinst
 
-- name: Add Livna-Debug Repository only to install libdvdcss
+- name: Adding Livna-Debug Repository only to install libdvdcss
   ansible.builtin.yum_repository:
     name: livna-debug
     description: Livna-Debug
-    file: livna    
+    ansible.builtin.file: livna    
     baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist-debug
     enabled: yes
-    gpgcheck: yes
+    gpgcheck: true
     failovermethod: roundrobin
   when: livnarepo.stat.exists == False
   tags:
     - libdvdcss
     - basicinst
 
-- name: Add Livna-Source Repository only to install libdvdcss
+- name: Adding Livna-Source Repository only to install libdvdcss
   ansible.builtin.yum_repository:
     name: livna-Source
     description: Livna-Source
-    file: livna    
+    ansible.builtin.file: livna    
     baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist-source
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     failovermethod: roundrobin
   when: livnarepo.stat.exists == False
   tags:
@@ -73,15 +73,15 @@
 # Remove Livna Repository
 - name: Verify if Livna Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/livna.repo
+    path: /etc/yum.repos.d/livna.repo
   register: livnarepo
   tags:
     - libdvdcss
 
 - name: Remove Livna Repository
-  file:
+  ansible.builtin.file:
     path: /etc/yum.repos.d/livna.repo
     state: absent
   when: livnarepo.stat.exists == True
   tags:
-    - libdvdcss  
+    - libdvdcss

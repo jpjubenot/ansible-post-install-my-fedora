@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # tasks file for handbrake
@@ -12,7 +12,7 @@
 # Check Handbrake exist
 - name: Verify if Handbrake exist
   ansible.builtin.stat:
-    path=/usr/local/bin/HandBrakeCLI
+    path: /usr/local/bin/HandBrakeCLI
   register: handbrakeexist
   tags:
     - mixhbmk
@@ -21,10 +21,10 @@
 
 # Create Folder to Compile
 - name: Create Folder to Compile
-  file:
+  ansible.builtin.file:
     path: "/tmp/Handbrake-Build"
     state: directory
-    mode: 0775
+    mode: '0775'
   when: handbrakeexist.stat.exists == False
   tags:
     - mixhbmk
@@ -33,7 +33,8 @@
 
 # Download lastet version on Git Repository
 - name: Downloading HandBrake from github...
-  shell: 'cd /tmp/Handbrake-Build/ && git clone https://github.com/HandBrake/HandBrake.git'
+  ansible.builtin.shell:
+    cmd: cd /tmp/Handbrake-Build/ && git clone https://github.com/HandBrake/HandBrake.git
   when: handbrakeexist.stat.exists == False
   tags:
     - mixhbmk
@@ -42,7 +43,8 @@
 
 # Compile Handbrake
 - name: Configure   Make   Make Install
-  shell: 'cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch'
+  ansible.builtin.shell:
+    cmd: cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch
   when: handbrakeexist.stat.exists == False
   tags:
     - mixhbmk
@@ -50,7 +52,7 @@
     - onlyhandbk
 
 - name: Make Install
-  make:
+  community.general.make:
     chdir: "/tmp/Handbrake-Build/HandBrake/build"
     target: install
   when: handbrakeexist.stat.exists == False
@@ -61,7 +63,7 @@
 
 # Clean Handbrake-Build
 - name: Delete Handbrake-Build Folder
-  file:
+  ansible.builtin.file:
     path: "/tmp/Handbrake-Build"
     state: absent
   when: handbrakeexist.stat.exists == False

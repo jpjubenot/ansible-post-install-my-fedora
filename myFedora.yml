@@ -1,26 +1,28 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
-- hosts: localhost
-  remote_user: root
+- name: Post install my Fedora System
+  hosts: localhost
+  become: true
+  become_method: sudo
   roles:
-      - bootstrap
-      - disable-ipv6
-      - softwares
-      - google-chrome
-      - lynis
-      - vscode
-      - asbru-cm
-      - hb-and-mkmkv-needed-softwares
-      - handbrake
-      - makemkv
-      #- libdvdcss
-      #- remove-softwares
-      #- rescue-boot
-      #- disable-webcam
-      #- virtualbox
+    - bootstrap
+    - disable-ipv6
+    - softwares
+    - google-chrome
+    - lynis
+    - vscode
+    - asbru-cm
+    - hb-and-mkmkv-needed-softwares
+    - handbrake
+    - makemkv
+    # - libdvdcss
+    # - remove-softwares
+    # - rescue-boot
+    # - disable-webcam
+    # - virtualbox
 
   vars_files:
     - myvars.yml

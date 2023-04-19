@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role Default
@@ -9,14 +9,14 @@
 # Add Repository RPM Fusion FREE
 - name: Verify if RPM Fusion FREE Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/rpmfusion-free.repo
+    path: /etc/yum.repos.d/rpmfusion-free.repo
   register: fusionfrepo
   tags:
     - repofusion
     - basicinst
 
-- name: Add Repository RPM Fusion FREE
-  ansible.builtin.dnf: 
+- name: Adding Repository RPM Fusion FREE
+  ansible.builtin.dnf:
     name: https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
     disable_gpg_check: true
     state: present
@@ -28,13 +28,13 @@
 # Add Repository RPM Fusion Non-FREE
 - name: Verify if RPM Fusion Non-FREE Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/rpmfusion-nonfree.repo
+    path: /etc/yum.repos.d/rpmfusion-nonfree.repo
   register: fusionnfrepo
   tags:
     - repofusion
     - basicinst
 
-- name: Add Repository RPM Fusion Non-FREE
+- name: Adding Repository RPM Fusion Non-FREE
   ansible.builtin.dnf:
     name: https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
     disable_gpg_check: true
@@ -46,14 +46,18 @@
 
 # Fast Mirror Option for DNF
 - name: Fast Mirror Option for DNF
-  lineinfile: dest=/etc/dnf/dnf.conf line="fastestmirror=true"
+  ansible.builtin.lineinfile:
+    path: /etc/dnf/dnf.conf
+    line: 'fastestmirror=true'
   tags:
     - fastdnf
     - basicinst
 
 # Parallel Download for DNF
 - name: Parallel Download for DNF
-  lineinfile: dest=/etc/dnf/dnf.conf line="max_parallel_downloads=10"
+  ansible.builtin.lineinfile:
+    path: /etc/dnf/dnf.conf
+    line: 'max_parallel_downloads=10'
   tags:
     - fastdnf
     - basicinst

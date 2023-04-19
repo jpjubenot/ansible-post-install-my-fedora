@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role Rescue-Boot
@@ -15,7 +15,7 @@
     - rescuemode
 
 - name: Remove Old rescue vmlinuz
-  file:
+  ansible.builtin.file:
     path: "{{ item['path'] }}"
     state: absent
   with_items: "{{ find_vmlinuz['files'] }}"
@@ -31,7 +31,7 @@
     - rescuemode
 
 - name: Remove Old rescue initramfs
-  file:
+  ansible.builtin.file:
     path: "{{ item.path }}"
     state: absent
   with_items: "{{ find_initramfs['files'] }}"
@@ -39,6 +39,7 @@
     - rescuemode
 
 - name: Recreate Rescume Mode Menu
-  shell: /usr/lib/kernel/install.d/51-dracut-rescue.install add $(uname -r) "" /lib/modules/$(uname -r)/vmlinuz
+  ansible.builtin.shell:
+    cmd: /usr/lib/kernel/install.d/51-dracut-rescue.install add $(uname -r) "" /lib/modules/$(uname -r)/vmlinuz
   tags:
     - rescuemode

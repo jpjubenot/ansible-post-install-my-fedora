@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role VSCode
@@ -16,7 +16,7 @@
 # Add Repository VScode
 - name: Verify if VScode Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/vscode.repo
+    path: /etc/yum.repos.d/vscode.repo
   register: vscoderepo
   tags:
     - repovscode
@@ -28,8 +28,8 @@
     description: VSCode
     baseurl: https://packages.microsoft.com/yumrepos/vscode
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
   when: vscoderepo.stat.exists == False
   tags:
     - repovscode
@@ -42,4 +42,4 @@
       - code                          # Visual Studio Code
     state: present
   tags:
-    - vscode    
+    - vscode

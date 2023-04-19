@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role Google-Chrome
@@ -15,19 +15,19 @@
 # Add Repository Google Chrome
 - name: Verify if Google Chrome Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/google-chrome.repo
+    path: /etc/yum.repos.d/google-chrome.repo
   register: googlechromerepo
   tags:
     - repochrome
     - chrome
 
-- name: Add Google Chrome Repository
+- name: Adding Google Chrome Repository
   ansible.builtin.yum_repository:
     name: google-chrome
     description: Google-Chrome
     baseurl: https://dl.google.com/linux/chrome/rpm/stable/x86_64
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     gpgkey: https://dl.google.com/linux/linux_signing_key.pub
   when: googlechromerepo.stat.exists == False
   tags:
@@ -41,4 +41,4 @@
       - google-chrome-stable          # Google Chrome browser
     state: present
   tags:
-    - chrome  
+    - chrome

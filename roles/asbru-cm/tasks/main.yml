@@ -1,14 +1,14 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # tasks file for roles/asbru-cm
 
 - name: Verify if Asbru-CM exist
   ansible.builtin.stat:
-    path=/usr/bin/asbru-cm
+    path: /usr/bin/asbru-cm
   register: asbru
   tags:
     - asbru
@@ -20,7 +20,7 @@
     - asbru
 
 - name: Install Asbru-CM
-  ansible.builtin.dnf: 
+  ansible.builtin.dnf:
     name: /tmp/asbru-cm.rpm
     state: present
     disable_gpg_check: true
@@ -30,7 +30,7 @@
 
 # Clean Asbru-CM download
 - name: Delete Asbru-CM temporary downloaded file
-  file:
+  ansible.builtin.file:
     path: "/tmp/asbru-cm.rpm"
     state: absent
   when: asbru.stat.exists == False

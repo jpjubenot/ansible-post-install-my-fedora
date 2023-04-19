@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role Lynis
@@ -15,20 +15,20 @@
 # Add Repository Lynis
 - name: Verify if Lynis Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/lynis-chrome.repo
+    path: /etc/yum.repos.d/lynis-chrome.repo
   register: lynisrepo
   tags:
     - repolynis
     - lynis
 
-- name: Add Lynis Repository
+- name: Adding Lynis Repository
   ansible.builtin.yum_repository:
     name: lynis
     description: Lynis
     baseurl: https://packages.cisofy.com/community/lynis/rpm/
     gpgkey: https://packages.cisofy.com/keys/cisofy-software-rpms-public.key
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
   when: lynisrepo.stat.exists == False
   tags:
     - repolynis

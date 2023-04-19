@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role Softwares
@@ -16,7 +16,7 @@
 - name: Install Different Packages
   ansible.builtin.dnf:
     name:
-      #- 0ad                          # Game like Microsoft Age of Empire -- Great gaming software
+      # - 0ad                         # Game like Microsoft Age of Empire -- Great gaming software
       - autoconf
       - automake
       - calibre                       # Ebook and numuric book software
@@ -24,7 +24,7 @@
       - clamd                         # ClamAV Anti-Virus daemon
       - clamav                        # ClamAV Anti-Virus
       - clamav-update                 # ClamAV Anti-Virus definition updater
-      - dconf-editor                  # Gnome Shell DConf-Editor
+      - dconf-editor                  # Gnome Shell: DConf-Editor
       - dmidecode
       - dnf-plugin-system-upgrade
       - easytag                       # Audio tagging tool and adding image in MP3 audio file
@@ -45,7 +45,7 @@
       - gnome-battery-bench
       - gnome-extensions-app
       - gnome-nettool                 # Gnome Network graphical tool
-      - gnome-tweak-tool              # Tweak Gnome shell
+      - gnome-tweak-tool              # Tweak Gnome Shell
       - gnome-sudoku                  # Sudoku game
       - gparted                       # Disks and partitions manager
       - grip                          # Audio CD ripping software
@@ -80,7 +80,7 @@
       - p7zip                         # Compression Tool
       - perl
       - perl-LWP-Protocol-https
-      #- pycharm-community            # Python IDE
+      # - pycharm-community           # Python IDE
       - python-dnf
       - python3-ansible-lint          # Ansible-lint
       - python3-dnf-plugin-snapper    # Snapper Features
@@ -102,7 +102,7 @@
       - x264-devel                    # Codec Dev Library
       - x265-devel                    # Codec Dev Library
       - xine-lib-extras-freeworld     # Codec files Xine Library
-      - xsane                         # Scanner tool for printer/scanner or simple scanner 
+      - xsane                         # Scanner tool for printer/scanner or simple scanner
     state: present
   tags:
     - instsoft

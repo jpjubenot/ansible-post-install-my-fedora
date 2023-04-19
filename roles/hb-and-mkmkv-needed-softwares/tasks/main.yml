@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # tasks file for hb-and-mkmkv-needed-softwares
@@ -9,15 +9,15 @@
 # Add Repository RPM Fusion FREE
 - name: Verify if RPM Fusion FREE Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/rpmfusion-free.repo
+    path: /etc/yum.repos.d/rpmfusion-free.repo
   register: fusionfrepo
   tags:
     - mixhbmk
     - handbk
     - mkmkv
 
-- name: Add Repository RPM Fusion FREE
-  ansible.builtin.dnf: 
+- name: Adding Repository RPM Fusion FREE
+  ansible.builtin.dnf:
     name: https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
     disable_gpg_check: true
     state: present
@@ -30,14 +30,14 @@
 # Add Repository RPM Fusion Non-FREE
 - name: Verify if RPM Fusion Non-FREE Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/rpmfusion-nonfree.repo
+    path: /etc/yum.repos.d/rpmfusion-nonfree.repo
   register: fusionnfrepo
   tags:
     - mixhbmk
     - handbk
     - mkmkv
 
-- name: Add Repository RPM Fusion Non-FREE
+- name: Adding Repository RPM Fusion Non-FREE
   ansible.builtin.dnf:
     name: https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
     disable_gpg_check: true
@@ -47,7 +47,7 @@
     - mixhbmk
     - handbk
     - mkmkv
-    
+
 # Clean DNF
 - name: Clean DNF Hanbrake_and_Makemkv
   ansible.builtin.command: dnf clean all

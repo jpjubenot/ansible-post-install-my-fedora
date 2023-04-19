@@ -1,7 +1,7 @@
 ---
 #
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
-# Licensed under CC BY 3.0. All rights reserved.
+# license: Licensed under CC BY 3.0. All rights reserved.
 #
 
 # Role VirtualBox
@@ -9,21 +9,21 @@
 # Add Repository Oracle VirtualBox
 - name: Verify if Oracle VirtualBox Repository exist
   ansible.builtin.stat:
-    path=/etc/yum.repos.d/virtualbox.repo
+    path: /etc/yum.repos.d/virtualbox.repo
   register: repooraclevbox
   tags:
     - repooraclevbox
     - virtualbox
 
-- name: Add Oracle VirtualBox Repository
+- name: Adding Oracle VirtualBox Repository
   ansible.builtin.yum_repository:
     name: virtualbox
     description: Virtualbox
     #baseurl: https://download.virtualbox.org/virtualbox/rpm/fedora/$releasever/$basearch
     # Fedora 36 is the maximum released version for now
     baseurl: https://download.virtualbox.org/virtualbox/rpm/fedora/36/x86_64/
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     repo_gpgcheck: true
   when: repooraclevbox.stat.exists == False
   tags:
