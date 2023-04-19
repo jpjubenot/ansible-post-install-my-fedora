@@ -92,18 +92,18 @@ des commandes. Donc le test d'installer un logiciel va marcher mais s'il doit ê
 <strong>Exemple</strong> pour effectuer les installations: <code>sudo ansible-playbook myFedora.yml</code>
 
 <strong>Bon à Savoir.</strong>
-Pour lister les tasks:
-<code>sudo ansible-playbook myFedora.yml --list-tasks</code>
+<p>Pour lister les tasks:</p>
+<p><code>sudo ansible-playbook myFedora.yml --list-tasks</code></p>
 
-Pour lister les tags:
-<code>sudo ansible-playbook myFedora.yml --list-tags</code>
+<p>Pour lister les tags:
+<p><code>sudo ansible-playbook myFedora.yml --list-tags</code></p>
 
-Pour filtrer tasks:
-<code>sudo ansible-playbook myFedora.yml --list-tasks --tags virtualbox</code>
-<code>sudo ansible-playbook myFedora.yml --list-tasks --tags ipv6,fastdnf</code>
+<p>Pour filtrer tasks:
+<p><code>sudo ansible-playbook myFedora.yml --list-tasks --tags virtualbox</code></p>
+<p><code>sudo ansible-playbook myFedora.yml --list-tasks --tags ipv6,fastdnf</code></p>
 
-Pour executer les tasks grâce aux tags:
-<code>sudo ansible-playbook myFedora.yml --tags ipv6,fastdnf</code>
+<p>Pour executer les tasks grâce aux tags:</p>
+<p><code>sudo ansible-playbook myFedora.yml --tags ipv6,fastdnf</code></p>
 
 <p>Ce script peut tout à fait être utiliser sur des machines distantes utilisant
 Fedora en vous référant à la documentation de Ansible ou sur les différents tuto

@@ -93,18 +93,18 @@ I suggest to create a folder to download the complete script.
 <strong>If you just want to apply:</strong> <code>sudo ansible-playbook myFedora.yml</code>
 
 <strong>Good to know.</strong>
-To list all tasks:
-<code>sudo ansible-playbook myFedora.yml --list-tasks</code>
+<p>To list all tasks:</p>
+<p><code>sudo ansible-playbook myFedora.yml --list-tasks</code></p>
 
-To list all tags:
-<code>sudo ansible-playbook myFedora.yml --list-tags</code>
+<p>To list all tags:</p>
+<p><code>sudo ansible-playbook myFedora.yml --list-tags</code></p>
 
-To filter tasks:
-<code>sudo ansible-playbook myFedora.yml --list-tasks --tags virtualbox</code>
-<code>sudo ansible-playbook myFedora.yml --list-tasks --tags ipv6,fastdnf</code>
+<p>To filter tasks:</p>
+<p><code>sudo ansible-playbook myFedora.yml --list-tasks --tags virtualbox</code></p>
+<p><code>sudo ansible-playbook myFedora.yml --list-tasks --tags ipv6,fastdnf</code></p>
 
-To execute tasks using tags:
-<code>sudo ansible-playbook myFedora.yml --tags ipv6,fastdnf</code>
+<p>To execute tasks using tags:</p>
+<p><code>sudo ansible-playbook myFedora.yml --tags ipv6,fastdnf</code></p>
 
 <p>During the test, you could face errors at this point because some features really need
 to be installed for the suite.</p>
