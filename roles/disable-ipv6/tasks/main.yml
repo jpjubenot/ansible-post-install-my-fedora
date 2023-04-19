@@ -43,7 +43,7 @@
     - basicinst
 
 # Deploy new grub setting
-- name: Run grub2-mkconfig to update /boot/grub/grub.cfg
+- name: Run grub2-mkconfig to update /boot/grub2/grub.cfg
   ansible.builtin.command:
     cmd: grub2-mkconfig
   tags:
