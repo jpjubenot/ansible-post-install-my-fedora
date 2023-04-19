@@ -80,7 +80,7 @@
 # Compile MakeMKV OSS
 - name: Configure
   ansible.builtin.shell:
-    cmd: cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && ./configure'
+    cmd: cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && ./configure
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
@@ -133,7 +133,7 @@
 
 - name: Compile MakeMKV BIN
   ansible.builtin.shell:
-    cmd: cd /tmp/MakeMKV/{{ MakeMKV_BIN }} &&  make
+    cmd: cd /tmp/MakeMKV/{{ MakeMKV_BIN }} && make
   args:
      executable: /bin/bash
   when: makemkvexist.stat.exists == False
