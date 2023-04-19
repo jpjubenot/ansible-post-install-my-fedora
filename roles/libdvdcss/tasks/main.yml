@@ -6,62 +6,46 @@
 #
 # Role libdvdcss
 #
-# Add Repository RPM Fusion Tainted only to install libdvdcss
-- name: Verify if RPM Fusion Tainted Repository exist
+# Install Tainted Repository
+# Add Repository RPM Fusion Free Tainted only to install libdvdcss
+- name: Verify if RPM Fusion  Free Tainted Repository exist
+  ansible.builtin.stat:
+    path: /etc/yum.repos.d/rpmfusion-free-tainted.repo
+  register: freetaintedrepo
+  tags:
+    - libdvdcss
+    - basicinst
+
+# Add Repository RPM Fusion Non-Free Tainted only to install libdvdcss
+- name: Verify if RPM Fusion  Non-Free Tainted Repository exist
   ansible.builtin.stat:
     path: /etc/yum.repos.d/rpmfusion-nonfree-tainted.repo
-  register: taintedrepo
+  register: nonfreetaintedrepo
   tags:
     - libdvdcss
     - basicinst
 
-- name: Adding RPM Fusion Tainted Repository only to install libdvdcss
-  ansible.builtin.yum_repository:
-    name: rpmfusion-nonfree-tainted
-    description: rpmfusion-nonfree-tainted
-    file: rpmfusion-nonfree-tainted
-    baseurl: #blablabla
-    metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-$releasever&arch=$basearch
-    enabled: true
-    gpgcheck: true
-    repo_gpgcheck: false
-    failovermethod: roundrobin
-  when: taintedrepo.stat.exists == False
+# RPM Fusion FREE Tainted Repository only to install libdvdcss
+- name: Adding RPM Fusion Free Tainted Repository only to install libdvdcss
+  ansible.builtin.dnf:
+    name:
+       - rpmfusion-free-release-tainted
+    state: present
+    #disable_gpg_check: true
+  when: freetaintedrepo.stat.exists == False
   tags:
     - libdvdcss
-    - basicinst
 
-- name: Adding RPM Fusion Tainted-Debug Repository only to install libdvdcss
-  ansible.builtin.yum_repository:
-    name: rpmfusion-nonfree-tainted-debug
-    description: rpmfusion-nonfree-tainted-Debug
-    file: rpmfusion-nonfree-tainted    
-    baseurl: #blablabla
-    metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-debug-$releasever&arch=$basearch
-    enabled: false
-    gpgcheck: true
-    repo_gpgcheck: false
-    failovermethod: roundrobin
-  when: taintedrepo.stat.exists == False
+# RPM Fusion Non-FREE Tainted Repository only to install libdvdcss
+- name: Adding RPM Fusion Non-Free Tainted Repository only to install libdvdcss
+  ansible.builtin.dnf:
+    name:
+       - rpmfusion-nonfree-release-tainted
+    state: present
+    #disable_gpg_check: true
+  when: nonfreetaintedrepo.stat.exists == False
   tags:
     - libdvdcss
-    - basicinst
-
-- name: Adding RPM Fusion Tainted-Source Repository only to install libdvdcss
-  ansible.builtin.yum_repository:
-    name: rpmfusion-nonfree-tainted-Source
-    description: rpmfusion-nonfree-tainted-Source
-    file: rpmfusion-nonfree-tainted    
-    baseurl: #blablabla
-    metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-source-$releasever&arch=$basearch
-    enabled: false
-    gpgcheck: true
-    repo_gpgcheck: false
-    failovermethod: roundrobin
-  when: taintedrepo.stat.exists == False
-  tags:
-    - libdvdcss
-    - basicinst
 
 # Install Default Softwares            # To be able to read dvd on your computer
 - name: Install LibDVDcss Packages
@@ -73,18 +57,43 @@
   tags:
     - libdvdcss
 
-# Remove RPM Fusion Tainted Repository
-- name: Verify if RPM Fusion Tainted Repository exist
+# Remove Tainted Repository
+# Remove Repository RPM Fusion Free Tainted only to install libdvdcss
+- name: Verify if RPM Fusion  Free Tainted Repository exist
+  ansible.builtin.stat:
+    path: /etc/yum.repos.d/rpmfusion-free-tainted.repo
+  register: freetaintedrepo
+  tags:
+    - libdvdcss
+    - basicinst
+
+# Remove Repository RPM Fusion Non-Free Tainted only to install libdvdcss
+- name: Verify if RPM Fusion  Non-Free Tainted Repository exist
   ansible.builtin.stat:
     path: /etc/yum.repos.d/rpmfusion-nonfree-tainted.repo
-  register: taintedrepo
+  register: nonfreetaintedrepo
+  tags:
+    - libdvdcss
+    - basicinst
+
+# Remove RPM Fusion FREE Tainted Repository
+- name: Removing RPM Fusion Free Tainted Repository
+  ansible.builtin.dnf:
+    name:
+       - rpmfusion-free-release-tainted
+    state: absent
+    #disable_gpg_check: true
+  when: freetaintedrepo.stat.exists == False
   tags:
     - libdvdcss
 
-- name: Remove RPM Fusion Tainted Repository
-  ansible.builtin.file:
-    path: /etc/yum.repos.d/rpmfusion-nonfree-tainted.repo
+# Remove RPM Fusion Non-FREE Tainted Repository
+- name: Removing RPM Fusion Non-Free Tainted Repository
+  ansible.builtin.dnf:
+    name:
+       - rpmfusion-nonfree-release-tainted
     state: absent
-  when: taintedrepo.stat.exists == True
+    #disable_gpg_check: true
+  when: nonfreetaintedrepo.stat.exists == False
   tags:
     - libdvdcss
