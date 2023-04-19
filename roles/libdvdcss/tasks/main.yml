@@ -85,7 +85,7 @@
        - rpmfusion-free-release-tainted
     state: absent
     #disable_gpg_check: true
-  when: freetaintedrepo.stat.exists == False
+  when: freetaintedrepo.stat.exists
   tags:
     - libdvdcss
 
@@ -96,6 +96,6 @@
        - rpmfusion-nonfree-release-tainted
     state: absent
     #disable_gpg_check: true
-  when: nonfreetaintedrepo.stat.exists == False
+  when: nonfreetaintedrepo.stat.exists
   tags:
     - libdvdcss
