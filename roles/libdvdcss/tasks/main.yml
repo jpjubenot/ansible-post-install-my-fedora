@@ -19,7 +19,7 @@
   ansible.builtin.yum_repository:
     name: livna
     description: Livna
-    ansible.builtin.file: livna    
+    file: livna    
     baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist
     enabled: true
@@ -34,7 +34,7 @@
   ansible.builtin.yum_repository:
     name: livna-debug
     description: Livna-Debug
-    ansible.builtin.file: livna    
+    file: livna    
     baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist-debug
     enabled: yes
@@ -49,7 +49,7 @@
   ansible.builtin.yum_repository:
     name: livna-Source
     description: Livna-Source
-    ansible.builtin.file: livna    
+    file: livna    
     baseurl: #blablabla
     mirrorlist: http://rpm.livna.org/mirrorlist-source
     enabled: true
