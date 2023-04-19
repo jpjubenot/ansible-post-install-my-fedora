@@ -38,7 +38,7 @@
   tags:
     - rescuemode
 
-- name: Recreate Rescume Mode Menu
+- name: Recreate Rescue Mode Menu
   ansible.builtin.shell:
     cmd: /usr/lib/kernel/install.d/51-dracut-rescue.install add $(uname -r) "" /lib/modules/$(uname -r)/vmlinuz
   tags:
