@@ -59,7 +59,7 @@
 
 # Remove Tainted Repository
 # Remove Repository RPM Fusion Free Tainted only to install libdvdcss
-- name: Verify if RPM Fusion Free Tainted Repository exist
+- name: Verify if RPM Fusion Free Tainted Repository still exist
   ansible.builtin.stat:
     path: /etc/yum.repos.d/rpmfusion-free-tainted.repo
   register: freetaintedrepo
@@ -68,7 +68,7 @@
     - basicinst
 
 # Remove Repository RPM Fusion Non-Free Tainted only to install libdvdcss
-- name: Verify if RPM Fusion Non-Free Tainted Repository exist
+- name: Verify if RPM Fusion Non-Free Tainted Repository still exist
   ansible.builtin.stat:
     path: /etc/yum.repos.d/rpmfusion-nonfree-tainted.repo
   register: nonfreetaintedrepo
