@@ -24,6 +24,7 @@
     metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-$releasever&arch=$basearch
     enabled: true
     gpgcheck: true
+    repo_gpgcheck: false
     failovermethod: roundrobin
   when: taintedrepo.stat.exists == False
   tags:
@@ -37,8 +38,9 @@
     file: rpmfusion-nonfree-tainted    
     baseurl: #blablabla
     metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-debug-$releasever&arch=$basearch
-    enabled: yes
+    enabled: false
     gpgcheck: true
+    repo_gpgcheck: false
     failovermethod: roundrobin
   when: taintedrepo.stat.exists == False
   tags:
@@ -52,8 +54,9 @@
     file: rpmfusion-nonfree-tainted    
     baseurl: #blablabla
     metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-source-$releasever&arch=$basearch
-    enabled: true
+    enabled: false
     gpgcheck: true
+    repo_gpgcheck: false
     failovermethod: roundrobin
   when: taintedrepo.stat.exists == False
   tags:
