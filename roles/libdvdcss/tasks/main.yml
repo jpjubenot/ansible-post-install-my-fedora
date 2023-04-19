@@ -6,56 +6,56 @@
 #
 # Role libdvdcss
 #
-# Add Repository Livna only to install libdvdcss
-- name: Verify if Livna Repository exist
+# Add Repository RPM Fusion Tainted only to install libdvdcss
+- name: Verify if RPM Fusion Tainted Repository exist
   ansible.builtin.stat:
-    path: /etc/yum.repos.d/livna.repo
-  register: livnarepo
+    path: /etc/yum.repos.d/rpmfusion-nonfree-tainted.repo
+  register: taintedrepo
   tags:
     - libdvdcss
     - basicinst
 
-- name: Adding Livna Repository only to install libdvdcss
+- name: Adding RPM Fusion Tainted Repository only to install libdvdcss
   ansible.builtin.yum_repository:
-    name: livna
-    description: Livna
-    file: livna    
+    name: rpmfusion-nonfree-tainted
+    description: rpmfusion-nonfree-tainted
+    file: rpmfusion-nonfree-tainted
     baseurl: #blablabla
-    mirrorlist: http://rpm.livna.org/mirrorlist
+    metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-$releasever&arch=$basearch
     enabled: true
     gpgcheck: true
     failovermethod: roundrobin
-  when: livnarepo.stat.exists == False
+  when: taintedrepo.stat.exists == False
   tags:
     - libdvdcss
     - basicinst
 
-- name: Adding Livna-Debug Repository only to install libdvdcss
+- name: Adding RPM Fusion Tainted-Debug Repository only to install libdvdcss
   ansible.builtin.yum_repository:
-    name: livna-debug
-    description: Livna-Debug
-    file: livna    
+    name: rpmfusion-nonfree-tainted-debug
+    description: rpmfusion-nonfree-tainted-Debug
+    file: rpmfusion-nonfree-tainted    
     baseurl: #blablabla
-    mirrorlist: http://rpm.livna.org/mirrorlist-debug
+    metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-debug-$releasever&arch=$basearch
     enabled: yes
     gpgcheck: true
     failovermethod: roundrobin
-  when: livnarepo.stat.exists == False
+  when: taintedrepo.stat.exists == False
   tags:
     - libdvdcss
     - basicinst
 
-- name: Adding Livna-Source Repository only to install libdvdcss
+- name: Adding RPM Fusion Tainted-Source Repository only to install libdvdcss
   ansible.builtin.yum_repository:
-    name: livna-Source
-    description: Livna-Source
-    file: livna    
+    name: rpmfusion-nonfree-tainted-Source
+    description: rpmfusion-nonfree-tainted-Source
+    file: rpmfusion-nonfree-tainted    
     baseurl: #blablabla
-    mirrorlist: http://rpm.livna.org/mirrorlist-source
+    metalink: https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-tainted-source-$releasever&arch=$basearch
     enabled: true
     gpgcheck: true
     failovermethod: roundrobin
-  when: livnarepo.stat.exists == False
+  when: taintedrepo.stat.exists == False
   tags:
     - libdvdcss
     - basicinst
@@ -70,18 +70,18 @@
   tags:
     - libdvdcss
 
-# Remove Livna Repository
-- name: Verify if Livna Repository exist
+# Remove RPM Fusion Tainted Repository
+- name: Verify if RPM Fusion Tainted Repository exist
   ansible.builtin.stat:
-    path: /etc/yum.repos.d/livna.repo
-  register: livnarepo
+    path: /etc/yum.repos.d/rpmfusion-nonfree-tainted.repo
+  register: taintedrepo
   tags:
     - libdvdcss
 
-- name: Remove Livna Repository
+- name: Remove RPM Fusion Tainted Repository
   ansible.builtin.file:
-    path: /etc/yum.repos.d/livna.repo
+    path: /etc/yum.repos.d/rpmfusion-nonfree-tainted.repo
     state: absent
-  when: livnarepo.stat.exists == True
+  when: taintedrepo.stat.exists == True
   tags:
     - libdvdcss
