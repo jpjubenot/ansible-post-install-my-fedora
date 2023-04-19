@@ -3,9 +3,9 @@
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
 # license: Licensed under CC BY 3.0. All rights reserved.
 #
-
+#
 # Role Disable Webcam
-
+#
 # Add Blacklist file to disable Webcam
 - name: Test blacklist file
   ansible.builtin.stat:

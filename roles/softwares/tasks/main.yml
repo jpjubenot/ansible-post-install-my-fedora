@@ -3,9 +3,9 @@
 # Copyright (c) 2017 Jacques-Philippe JUBENOT
 # license: Licensed under CC BY 3.0. All rights reserved.
 #
-
+#
 # Role Softwares
-
+#
 # Clean DNF
 - name: Clean DNF before Install list
   ansible.builtin.command: dnf clean all
