@@ -95,6 +95,7 @@
      regexp: 'av_mallocz_array'
      replace: 'av_calloc'
      backup: true
+  when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
     - mixhbmk
