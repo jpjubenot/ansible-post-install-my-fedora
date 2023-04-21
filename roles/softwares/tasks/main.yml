@@ -104,5 +104,6 @@
       - xine-lib-extras-freeworld     # Codec files Xine Library
       - xsane                         # Scanner tool for printer/scanner or simple scanner
     state: present
+    allowerasing: true
   tags:
     - instsoft

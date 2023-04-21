@@ -139,7 +139,6 @@
       - qt5-qtbase-devel
       - speex-devel
       - turbojpeg-devel
-      - webkit2gtk5.0-devel           # Work with Fedora 37 and above
       - x264
       - x264-devel
       - x265
@@ -148,6 +147,7 @@
       - yasm
       - zlib-devel
     state: present
+    allowerasing: true
   tags:
     - mixhbmk
     - handbk

@@ -87,6 +87,19 @@
     - mixhbmk
     - onlymkmkv
 
+# Patch OSS libffabi/src/ffabi.c file to prevent compile error
+# Take a look There : https://forum.makemkv.com/forum/viewtopic.php?f=3&p=132993
+- name: Patch OSS libffabi/src/ffabi.c file to prevent compile error
+  ansible.builtin.replace:
+     path: /tmp/MakeMKV/{{ MakeMKV_OSS }}/libffabi/src/ffabi.c
+     regexp: 'av_mallocz_array'
+     replace: 'av_calloc'
+     backup: true
+  tags:
+    - mkmkv
+    - mixhbmk
+    - onlymkmkv
+
 - name: Compile MakeMKV OSS
   ansible.builtin.shell:
     cmd: cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && echo -e "\nq\nyes" | make
