@@ -30,7 +30,7 @@ Mon projet s'articule autour de ces rôles.
 - <strong>disable-webcam</strong>
 - <strong>virtualbox</strong>
 
-<strong>bootstrap:</strong> Configure des options DNF, Installer les dépots : RPMFusion, RPMFusion NON-Free, désactivation.
+<strong>bootstrap:</strong> Configure des options DNF, Installer les dépots : RPMFusion, RPMFusion NON-Free.
 
 <strong>disable-ipv6</strong> Pour désactiver IPv6 sur la machine.
 

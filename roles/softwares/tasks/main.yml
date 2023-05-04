@@ -77,6 +77,7 @@
       - neofetch
       - nethogs                       # Network tool
       - obs-studio                    # Software for video recording and live streaming
+      - openssl                       # OpenSSL
       - p7zip                         # Compression Tool
       - perl
       - perl-LWP-Protocol-https
