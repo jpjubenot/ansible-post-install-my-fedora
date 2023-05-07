@@ -25,6 +25,7 @@
     enabled: true
     gpgcheck: true
     repo_gpgcheck: true
+    gpgkey: https://www.virtualbox.org/download/oracle_vbox_2016.asc
   when: repooraclevbox.stat.exists == False
   tags:
     - repooraclevbox
