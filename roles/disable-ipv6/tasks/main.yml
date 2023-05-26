@@ -35,8 +35,8 @@
 - name: Disable ipv6 in /etc/default/grub
   ansible.builtin.replace:
      path: /etc/default/grub
-     regexp: 'quiet'
-     replace: 'ipv6.disable=1 quiet'
+     regexp: 'rhgb quiet'
+     replace: 'rhgb ipv6.disable=1 quiet'
      backup: true
   tags:
     - ipv6
