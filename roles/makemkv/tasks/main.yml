@@ -202,7 +202,7 @@
     - symlinkvlc
 
 # Create Symbolic Link x64 for VLC
-- name: Create Symbolic Link x64 for VLC - libaacs
+- name: Create Symbolic Link x64 for VLC - libbdplus
   ansible.builtin.file:
     src: /usr/lib64/libmmbd.so.0
     dest: /usr/lib64/libbdplus.so.0
@@ -240,7 +240,7 @@
     - symlinkvlc
 
 # Create Symbolic Link x32 for VLC
-- name: Create Symbolic Link x32 for VLC - libaacs
+- name: Create Symbolic Link x32 for VLC - libbdplus
   ansible.builtin.file:
     src: /usr/lib/libmmbd.so.0
     dest: /usr/lib/libbdplus.so.0
