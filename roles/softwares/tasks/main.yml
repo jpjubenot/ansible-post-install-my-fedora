@@ -104,6 +104,7 @@
       - x265-devel                    # Codec Dev Library
       - xine-lib-extras-freeworld     # Codec files Xine Library
       - xsane                         # Scanner tool for printer/scanner or simple scanner
+      - zeal                          # Zeal is an offline documentation browser for software developers
     state: present
     allowerasing: true
   tags:
