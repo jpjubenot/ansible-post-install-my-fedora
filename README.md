@@ -11,7 +11,7 @@ Alors si il est facile de sauvegarder ses données puis de les restaurer. Concer
 Rationaliser l'installation et la gestion des systèmes peut tout à fait s'appliquer à la maison.</p>
 <p>Ce projet permet de réinstaller une bonne partie des applications présentes sur ma Fedora. GitHub est dès lors tout désigné pour partager ce mini projet.</p>
 
-<p>D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes nos applications préférées.</p>
+<p>D'une manière générale, quand on a réinstallé son OS, on s'attèle à reconfigurer différents repositories, qui vont permettre de retrouver toutes nos applications préférées, ensuite on modifie certains réglages par ici ou là.</p>
 
 Mon projet s'articule autour de ces rôles.
 - <strong>bootstrap</strong>
