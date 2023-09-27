@@ -34,7 +34,7 @@
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV OSS
   get_url:
-     url: http://www.makemkv.com/download/{{ MakeMKV_OSS }}.tar.gz
+     url: http://www.makemkv.com/download/makemkv-oss-{{ MakeMKV_Ver }}.tar.gz
      dest: "/tmp/MakeMKV"
      mode: '0644'
   when: makemkvexist.stat.exists == False
@@ -46,7 +46,7 @@
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV BIN
   get_url:
-     url: http://www.makemkv.com/download/{{ MakeMKV_BIN }}.tar.gz
+     url: http://www.makemkv.com/download/makemkv-bin-{{ MakeMKV_Ver }}.tar.gz
      dest: "/tmp/MakeMKV"
      mode: '0644'
   when: makemkvexist.stat.exists == False
@@ -58,7 +58,7 @@
 # Uncompress BIN Files
 - name: Uncompress BIN Achive
   ansible.builtin.unarchive:
-     src: "/tmp/MakeMKV/{{ MakeMKV_BIN }}.tar.gz"
+     src: "/tmp/MakeMKV/makemkv-bin-{{ MakeMKV_Ver }}.tar.gz"
      dest: "/tmp/MakeMKV"
   when: makemkvexist.stat.exists == False
   tags:
@@ -69,7 +69,7 @@
 # Uncompress OSS Files
 - name: Uncompress OSS Achive
   ansible.builtin.unarchive:
-     src: "/tmp/MakeMKV/{{ MakeMKV_OSS }}.tar.gz"
+     src: "/tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }}.tar.gz"
      dest: "/tmp/MakeMKV"
   when: makemkvexist.stat.exists == False
   tags:
@@ -80,7 +80,7 @@
 # Compile MakeMKV OSS
 - name: Configure
   ansible.builtin.shell:
-    cmd: cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && ./configure
+    cmd: cd /tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }} && ./configure
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
@@ -91,7 +91,7 @@
 # Take a look There : https://forum.makemkv.com/forum/viewtopic.php?f=3&p=132993
 - name: Patch OSS libffabi/src/ffabi.c file to prevent compile error
   ansible.builtin.replace:
-     path: /tmp/MakeMKV/{{ MakeMKV_OSS }}/libffabi/src/ffabi.c
+     path: /tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }}/libffabi/src/ffabi.c
      regexp: 'av_mallocz_array'
      replace: 'av_calloc'
      backup: true
@@ -103,7 +103,7 @@
 
 - name: Compile MakeMKV OSS
   ansible.builtin.shell:
-    cmd: cd /tmp/MakeMKV/{{ MakeMKV_OSS }} && echo -e "\nq\nyes" | make
+    cmd: cd /tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }} && echo -e "\nq\nyes" | make
   args:
      executable: /bin/bash
   when: makemkvexist.stat.exists == False
@@ -114,7 +114,7 @@
 
 - name: Make Install
   community.general.make:
-     chdir: "/tmp/MakeMKV/{{ MakeMKV_OSS }}"
+     chdir: "/tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }}"
      target: install
   when: makemkvexist.stat.exists == False
   tags:
@@ -125,7 +125,7 @@
 # Compile MakeMKV BIN
 - name: Create Folder BIN to Compile
   ansible.builtin.file:
-     path: "/tmp/MakeMKV/{{ MakeMKV_BIN }}/tmp"
+     path: "/tmp/MakeMKV/makemkv-bin-{{ MakeMKV_Ver }}/tmp"
      state: directory
      mode: '0775'
   when: makemkvexist.stat.exists == False
@@ -136,7 +136,7 @@
 
 - name: Create File to Compile
   ansible.builtin.file:
-     path: "/tmp/MakeMKV/{{ MakeMKV_BIN }}/tmp/eula_accepted"
+     path: "/tmp/MakeMKV/makemkv-bin-{{ MakeMKV_Ver }}/tmp/eula_accepted"
      state: touch
      mode: '0775'
   when: makemkvexist.stat.exists == False
@@ -147,7 +147,7 @@
 
 - name: Compile MakeMKV BIN
   ansible.builtin.shell:
-    cmd: cd /tmp/MakeMKV/{{ MakeMKV_BIN }} && make
+    cmd: cd /tmp/MakeMKV/makemkv-bin-{{ MakeMKV_Ver }} && make
   args:
      executable: /bin/bash
   when: makemkvexist.stat.exists == False
@@ -158,7 +158,7 @@
 
 - name: Make Install
   community.general.make:
-     chdir: "/tmp/MakeMKV/{{ MakeMKV_BIN }}"
+     chdir: "/tmp/MakeMKV/makemkv-bin-{{ MakeMKV_Ver }}"
      target: install
   when: makemkvexist.stat.exists == False
   tags:
