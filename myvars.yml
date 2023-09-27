@@ -10,8 +10,8 @@
 ansible_python_interpreter: /usr/bin/python3
 
 # MakeMKV version - Need to look at this url https://www.makemkv.com/download/ to get lastest version
-MakeMKV_OSS: makemkv-oss-1.17.4
-MakeMKV_BIN: makemkv-bin-1.17.4
+MakeMKV_OSS: makemkv-oss-1.17.5
+MakeMKV_BIN: makemkv-bin-1.17.5
 
 # Asbru-CM Version - Need to look at this url https://packagecloud.io/asbru-cm/asbru-cm/ select your version and copy/past there the good url
 # Go to the Website above and identify the version for your Linux Distribution and then on right side you have Wget bloc instruction with good URL to put below.
