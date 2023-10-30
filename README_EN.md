@@ -112,7 +112,5 @@ to be installed for the suite.</p>
 face an error because the package is not really present.</p>
 <p>With some modifications you can execute this script on a remote computer like in local, look at Ansible documentation
 and tutorials.</p>
-<p>If you want to test in real maybe it could be interisting to use a virtual machine to
-execute it.</p>
-<p>The execution time of this script depend of your computer's speed and Internet's
-speed to download all differents packages.</p>
+<p>If you want to test for real, it might be worth using it on a virtual machine first, before running it on your home computer.</p>
+<p>The execution time of this script depends of your computer speed and your Internet bandwidth to download all differents packages.</p>

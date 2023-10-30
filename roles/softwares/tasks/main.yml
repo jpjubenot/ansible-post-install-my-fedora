@@ -20,7 +20,6 @@
       - autoconf
       - automake
       - calibre                       # Ebook and numuric book software
-      #- cawbird                      # Twitter tool - It was Twitter client, but now stop working because of Twitter changes API.
       - clamd                         # ClamAV Anti-Virus daemon
       - clamav                        # ClamAV Anti-Virus
       - clamav-update                 # ClamAV Anti-Virus definition updater
