@@ -111,6 +111,6 @@ présents sur le web.</p>
 
 <p>Par ce biais vous êtes assuré que toutes la machines de votre réseau sont finalisées de la même manière.</p>
 
-<p>Je vous conseil dans la mesure du possible de tester sur une machine virtuelle
+<p>Je vous conseille dans la mesure du possible de tester sur une machine virtuelle
 cela vous donnera un aperçu de ce qui se passe.</p>
 <p>Le temps d'exécution du script dépend de la vitesse de la machine ainsi que de la bande passante dont vous disposez pour les différents téléchargements.</p>
