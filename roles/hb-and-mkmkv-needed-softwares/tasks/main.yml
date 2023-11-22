@@ -93,7 +93,7 @@
     - handbk
     - mkmkv
 
-- name: Install Differents Packages in HB and Mkmkv
+- name: Install Differents Packages for HandBrake and MakeMKV
   ansible.builtin.dnf:
     name:
       - bzip2-devel
