@@ -82,7 +82,7 @@ then you need privilegies to execute it.
 
 I suggest to create a folder to download the complete script.
 
-<code>mkdir Depot-Git && cd Depot-Git</code>
+<code>mkdir Git-Repo && cd Git-Repo</code>
 
 <code>git clone https://github.com/jpjubenot/ansible-post-install-my-fedora</code>
 
