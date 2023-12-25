@@ -32,7 +32,7 @@ Mon projet s'articule autour de ces rôles.
 
 <strong>bootstrap:</strong> Configure des options DNF, Installer les dépots : RPMFusion, RPMFusion NON-Free.
 
-<strong>disable-ipv6</strong> Pour désactiver IPv6 sur la machine.
+<strong>disable-ipv6:</strong> Pour désactiver IPv6 sur la machine.
 
 <strong>softwares:</strong> Correspond à toute une liste de paquets que j'aime utiliser sur ma machine.
 
@@ -56,7 +56,7 @@ Mon projet s'articule autour de ces rôles.
 
 <strong>rescue-boot:</strong> Recréer le menu de Rescue-boot de votre Fedora.
 
-<strong>disable-webcam</strong> Désactiver le support de la webcam par défaut quand elle utilise le driver uvcvideo.
+<strong>disable-webcam:</strong> Désactiver le support de la webcam par défaut quand elle utilise le driver uvcvideo.
 
 <strong>virtualbox:</strong> Installer l'outil de virtualisation VirtualBox.
 

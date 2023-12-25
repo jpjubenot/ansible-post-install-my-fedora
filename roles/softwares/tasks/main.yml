@@ -25,6 +25,7 @@
       - clamav-update                 # ClamAV Anti-Virus definition updater
       - dconf-editor                  # Gnome Shell: DConf-Editor
       - dmidecode
+      - dnf5                          # Fedora Package Management Utility
       - dnf-plugin-system-upgrade
       - easytag                       # Audio tagging tool and adding image in MP3 audio file
       - elfutils-libelf-devel
@@ -78,6 +79,7 @@
       - obs-studio                    # Software for video recording and live streaming
       - openssl                       # OpenSSL
       - p7zip                         # Compression Tool
+      - p7zip-plugins                 # Compression Tool Plugins
       - perl
       - perl-LWP-Protocol-https
       # - pycharm-community           # Python IDE
@@ -93,7 +95,7 @@
       - stacer                        # Monitoring and Tweaking graphic tool
       - tar                           # Archiving tool
       - tcptrack                      # Network tool
-      - timeshift                     # Backup software
+      #- timeshift                     # Backup software
       - tmux                          # Terminal Multiplexer
       - vim                           # Text editor
       - virt-manager                  # Qemu and LibVirt Manager - Gnome-Boxes too

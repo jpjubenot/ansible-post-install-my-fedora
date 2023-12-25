@@ -34,7 +34,7 @@ My project works like this :
 
 <strong>disable-ipv6:</strong> Disable IPv6.
 
-<strong>softwares:</strong> A list of my favorites softwares or librairies to install I need ...
+<strong>softwares:</strong> A list of my favorites softwares or libraries to install I need ...
 
 <strong>asbru-cm:</strong> Asbru-CM software installation (note that KeePassXC will be installed too).
 
@@ -42,9 +42,9 @@ My project works like this :
 
 <strong>lynis:</strong> Install Lynis audit security tool.
 
-<strong>vscode</strong> Install Visual-Studio Code.
+<strong>vscode:</strong> Install Visual-Studio Code.
 
-<strong>hb-and-mkmkv-needed-softwares:</strong> Install softwares and librairies needed to compile HandBrake and MakeMKV softwares.
+<strong>hb-and-mkmkv-needed-softwares:</strong> Install softwares and libraries needed to compile HandBrake and MakeMKV softwares.
 
 <strong>handbrake:</strong> Compilation of HanBrake software.
 
@@ -52,13 +52,13 @@ My project works like this :
 
 <strong>libdvdcss:</strong> Permit to read DVD on your computer.
 
-<strong>remove-softwares</strong> Remove unnecessary softwares on my fresh installation.
+<strong>remove-softwares:</strong> Remove unnecessary softwares on my fresh installation.
 
 <strong>rescue-boot:</strong> Recreate your Rescue Boot Menu after many upgrade of your system.
 
 <strong>disable-webcam:</strong> Disable your webcam support by default when your webcam use uvcvideo driver.
 
-<strong>virtualbox</strong> Install VirtualBox virtualization tool.
+<strong>virtualbox:</strong> Install VirtualBox virtualization tool.
 
 
 Important files:
@@ -69,7 +69,7 @@ Important files:
 <p><strong>!! Pay attention:</strong> Modify this file before to execute the Playbook !!</p>
 
 
-<strong>Requirement:</strong>
+<strong>Requirements:</strong>
 It is necessary to install ansible packages.
 
 <code>sudo dnf install ansible</code>
