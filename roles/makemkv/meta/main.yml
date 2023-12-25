@@ -14,7 +14,7 @@ galaxy_info:
   # - GPLv3
   # - Apache
   # - CC-BY
-  license: Licensed under CC BY 3.0. All rights reserved.
+  license: Licensed under CC-BY-NC-SA 3.0. All rights reserved.
 
   min_ansible_version: 2.9
 
