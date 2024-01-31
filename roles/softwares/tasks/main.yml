@@ -45,6 +45,7 @@
       - gnome-battery-bench
       - gnome-extensions-app
       - gnome-nettool                 # Gnome Network graphical tool
+      - gnome-themes-extra            # Adding Awaita-Dark theme for old apps
       - gnome-tweak-tool              # Tweak Gnome Shell
       - gnome-sudoku                  # Sudoku game
       - gparted                       # Disks and partitions manager
@@ -71,6 +72,7 @@
       - lsb-core-noarch
       - lzop                          # Compression Tool
       - mediawriter
+      - minicom                       # Tool to communicate to external devices over RS-232
       - mkvtoolnix                    # MKV Codec Tools
       - nano                          # Text editor
       - nautilus-dropbox              # Dropbox in Nautilus -- Legacy package
