@@ -88,6 +88,7 @@
       - python-dnf
       - python3-ansible-lint          # Ansible-lint
       - python3-dnf-plugin-snapper    # Snapper Features
+      - rkhunter                      # RootKit Hunter - Security software
       - rpi-imager                    # Raspberry card/disk imager
       - rubygem-rexml
       - sassc                         # CSS pre-processor language
