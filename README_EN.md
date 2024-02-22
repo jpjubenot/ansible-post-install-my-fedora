@@ -88,8 +88,6 @@ I suggest to create a folder to download the complete script.
 
 <code>cd ansible-post-install-my-fedora</code>
 
-<strong>If you just want to simulate it without modify your system:</strong> <code>sudo ansible-playbook myFedora.yml --check</code>
-
 <strong>If you just want to apply:</strong> <code>sudo ansible-playbook myFedora.yml</code>
 
 <strong>Good to know.</strong>
@@ -106,7 +104,9 @@ I suggest to create a folder to download the complete script.
 <p>To execute tasks using tags:</p>
 <p><code>sudo ansible-playbook myFedora.yml --tags ipv6,fastdnf</code></p>
 
-<p>During the test, you could face errors at this point because some features really need
+<strong>If you just want to simulate it without modify your system:</strong> <code>sudo ansible-playbook myFedora.yml --check</code>
+
+<p>During this test, you could face errors at this point because some features really need
 to be installed for the suite.</p>
 <p>A test of install will work but if this software is needed in a part of the job, you will
 face an error because the package is not really present.</p>
