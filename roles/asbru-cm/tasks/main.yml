@@ -14,7 +14,7 @@
     - asbru
 
 - name: Download Asbru-CM
-  ansible.builtin.command: "wget -O /tmp/asbru-cm.rpm --content-disposition {{ Asbru_Url_Version }}"
+  ansible.builtin.command: "wget -O /tmp/asbru-cm.rpm {{ Asbru_Url_Version }}"
   when: asbru.stat.exists == False
   tags:
     - asbru
