@@ -14,7 +14,12 @@
     - asbru
 
 - name: Download Asbru-CM
-  ansible.builtin.command: "wget -O /tmp/asbru-cm.rpm {{ Asbru_Url_Version }}"
+  ansible.builtin.shell: 
+     cmd: "wget -O /tmp/asbru-cm.rpm {{ Asbru_Url_Version }}"
+  args:
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   when: asbru.stat.exists == False
   tags:
     - asbru

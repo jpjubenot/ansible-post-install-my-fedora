@@ -8,7 +8,12 @@
 #
 # Clean DNF
 - name: Clean DNF before install Google-Chrome
-  ansible.builtin.command: dnf clean all
+  ansible.builtin.shell: 
+    cmd: dnf clean all
+  args:
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   tags:
     - chrome
 

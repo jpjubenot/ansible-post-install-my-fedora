@@ -44,8 +44,12 @@
 
 # Deploy new grub setting
 - name: Run grub2-mkconfig to update /boot/grub2/grub.cfg
-  ansible.builtin.command:
+  ansible.builtin.shell:
     cmd: grub2-mkconfig
+  args:
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   tags:
     - ipv6
     - basicinst

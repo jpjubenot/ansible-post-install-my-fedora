@@ -35,6 +35,10 @@
 - name: Downloading HandBrake from github...
   ansible.builtin.shell:
     cmd: cd /tmp/Handbrake-Build/ && git clone https://github.com/HandBrake/HandBrake.git
+  args:
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   when: handbrakeexist.stat.exists == False
   tags:
     - mixhbmk
@@ -45,6 +49,10 @@
 - name: Configure   Make   Make Install
   ansible.builtin.shell:
     cmd: cd /tmp/Handbrake-Build/HandBrake && ./configure --launch-jobs=$(nproc) --launch
+  args:
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   when: handbrakeexist.stat.exists == False
   tags:
     - mixhbmk

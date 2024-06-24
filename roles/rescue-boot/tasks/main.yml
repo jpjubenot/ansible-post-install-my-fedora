@@ -41,5 +41,9 @@
 - name: Recreate Rescue Mode Menu
   ansible.builtin.shell:
     cmd: /usr/lib/kernel/install.d/51-dracut-rescue.install add $(uname -r) "" /lib/modules/$(uname -r)/vmlinuz
+  args:
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   tags:
     - rescuemode

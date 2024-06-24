@@ -81,6 +81,10 @@
 - name: Configure
   ansible.builtin.shell:
     cmd: cd /tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }} && ./configure
+  args:
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
@@ -105,7 +109,9 @@
   ansible.builtin.shell:
     cmd: cd /tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }} && echo -e "\nq\nyes" | make
   args:
-     executable: /bin/bash
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
@@ -149,7 +155,9 @@
   ansible.builtin.shell:
     cmd: cd /tmp/MakeMKV/makemkv-bin-{{ MakeMKV_Ver }} && make
   args:
-     executable: /bin/bash
+    executable: /bin/bash
+  environment:
+    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
