@@ -84,7 +84,7 @@
   args:
     executable: /bin/bash
   environment:
-    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
+    PATH: "{{ ansible_env.PATH }}:/usr/bin:/usr/sbin:/bin:/sbin"
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
@@ -111,7 +111,7 @@
   args:
     executable: /bin/bash
   environment:
-    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
+    PATH: "{{ ansible_env.PATH }}:/usr/bin:/usr/sbin:/bin:/sbin"
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
@@ -157,7 +157,7 @@
   args:
     executable: /bin/bash
   environment:
-    PATH: "/usr/bin:/usr/sbin:/bin:/sbin:{{ ansible_env.PATH }}"
+    PATH: "{{ ansible_env.PATH }}:/usr/bin:/usr/sbin:/bin:/sbin"
   when: makemkvexist.stat.exists == False
   tags:
     - mkmkv
