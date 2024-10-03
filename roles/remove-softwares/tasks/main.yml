@@ -21,7 +21,7 @@
 - name: Remove some unnecessary softwares
   ansible.builtin.dnf:
     name:
-       - keepassxc                     # This Keepass software comes with Asbru-CM installation, but I never use it.
+       - keepassxc                     # Remove keepassxc software if present.
     state: absent       
   tags:
     - rm-softwares

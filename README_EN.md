@@ -17,7 +17,6 @@ My project works like this :
 - <strong>bootstrap</strong>
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
-- <strong>asbru-cm</strong>
 - <strong>google-chrome</strong>
 - <strong>lynis</strong>
 - <strong>vscode</strong>
@@ -35,8 +34,6 @@ My project works like this :
 <strong>disable-ipv6:</strong> Disable IPv6.
 
 <strong>softwares:</strong> A list of my favorites softwares or libraries to install I need ...
-
-<strong>asbru-cm:</strong> Asbru-CM software installation (note that KeePassXC will be installed too).
 
 <strong>google-chrome:</strong> Install Google-Chrome.
 

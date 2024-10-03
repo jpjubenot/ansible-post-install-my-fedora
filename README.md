@@ -17,7 +17,6 @@ Mon projet s'articule autour de ces rôles.
 - <strong>bootstrap</strong>
 - <strong>disable-ipv6</strong>
 - <strong>softwares</strong>
-- <strong>asbru-cm</strong>
 - <strong>google-chrome</strong>
 - <strong>lynis</strong>
 - <strong>vscode</strong>
@@ -35,8 +34,6 @@ Mon projet s'articule autour de ces rôles.
 <strong>disable-ipv6:</strong> Pour désactiver IPv6 sur la machine.
 
 <strong>softwares:</strong> Correspond à toute une liste de paquets que j'aime utiliser sur ma machine.
-
-<strong>asbru-cm:</strong> Installation du logiciel Asbru-CM (notez que KeePassXC sera aussi installé).
 
 <strong>google-chrome:</strong> Installer Google-Chrome.
 
