@@ -47,7 +47,7 @@
       - glib2
       - glib2-devel
       - glibc-devel
-      - gnome-battery-bench
+      # - gnome-battery-bench         # Gnome tool for Laptop
       - gnome-extensions-app
       - gnome-nettool                 # Gnome Network graphical tool
       - gnome-themes-extra            # Adding Awaita-Dark theme for old apps
