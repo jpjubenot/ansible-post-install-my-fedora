@@ -83,7 +83,6 @@
       - mkvtoolnix                    # MKV Codec Tools
       - nano                          # Text editor
       - nautilus-dropbox              # Dropbox in Nautilus -- Legacy package
-      - neofetch
       - nethogs                       # Network tool
       - obs-studio                    # Software for video recording and live streaming
       - openssl                       # OpenSSL
