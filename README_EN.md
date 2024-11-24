@@ -45,7 +45,7 @@ My project works like this :
 
 <strong>handbrake:</strong> Compilation of HanBrake software.
 
-<strong>makemkv:</strong> Compilation of MakeMKV software.
+<strong>makemkv:</strong> Compiling MakeMKV software. <em>Make sure to install the latest version by editing the myvars.yml file</em>.
 
 <strong>libdvdcss:</strong> Permit to read DVD on your computer.
 
@@ -63,7 +63,7 @@ Important files:
 <strong>myFedora.yml:</strong> This is the playbook which describe the jobs to execute and in which order.
 
 <strong>myvars.yml:</strong> Define some variables like softwares versions.
-<p><strong>!! Pay attention:</strong> Modify this file before to execute the Playbook !!</p>
+<p><strong>!! Pay attention:</strong> Edit this file before to execute the Playbook !!</p>
 
 
 <strong>Requirements:</strong>

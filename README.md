@@ -62,7 +62,7 @@ Fichiers Importants:
 <strong>myFedora.yml:</strong> Le Playbook principal, il permet ici d'inclure le fichier de variables, indique dans quel ordre jouer les rôles et quel machine sera impactée ou sur quels groupes d'ordinateurs seront joués les rôles.
 
 <strong>myvars.yml:</strong> consiste en quelques variables à modifier en cas de besoin version de la Fedora et version des archives de MakeMKV.
-<p><strong> ATTENTION:</strong>  A bien modifier ce fichier avant l'exécution du script</p>
+<p><strong> ATTENTION:</strong> Pour MakeMKV <em>assurez-vous d'installer la dernière version</em>, en modifiant le fichier myvars.yml, avant l'exécution du script.</p>
 
 
 <strong>Pré-requis:</strong>
