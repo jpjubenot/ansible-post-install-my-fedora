@@ -6,7 +6,7 @@ Téléchargement, extraction, compilation et installation de Makemkv depuis les 
 Download, extract, compile and install Makemkv from source package.
 
 [FR]
-<strong>Pour mettre à jour MakeMKV</strong> par exemple de la versions 1.17.5 to 1.17.8
+<strong>Pour mettre à jour MakeMKV</strong> par exemple de la version 1.17.5 to 1.17.8
 1- Editer le fichier myvars.yml
 MakeMKV_Ver: 1.17.5
 en
