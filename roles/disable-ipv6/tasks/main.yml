@@ -6,21 +6,55 @@
 #
 # Role Disable IPv6
 #
-# Disable IPv6 - 3 lines to disable it
-- name: Disable IPv6 -a
-  ansible.builtin.blockinfile:
-    path: /etc/sysctl.conf
-    block: |
-        net.ipv6.conf.all.disable_ipv6 = 1
-        net.ipv6.conf.default.disable_ipv6 = 1
-        net.ipv6.conf.lo.disable_ipv6 = 1
+
+# Not needed anymore with recent Fedora Version ###############
+#
+# Disable IPv6 - 3 lines to disable it 
+#- name: Disable IPv6
+#  ansible.builtin.blockinfile:
+#    path: /etc/sysctl.conf
+#    block: |
+#        net.ipv6.conf.all.disable_ipv6 = 1
+#        net.ipv6.conf.default.disable_ipv6 = 1
+#        net.ipv6.conf.lo.disable_ipv6 = 1
+#  tags:
+#    - ipv6
+#    - basicinst
+# Not needed anymore with recent Fedora Version ###############
+
+# Remove previous syntaxe to disable IPv6 from /etc/sysctl.conf
+# Modify sysctl.conf
+- name: Remove previous syntax to disable IPv6 from /etc/sysctl.conf (first line)
+  ansible.builtin.lineinfile:
+     path: /etc/sysctl.conf
+     state: absent
+     regexp: 'net.ipv6.conf.all.disable_ipv6 = 1'
+     backup: true
   tags:
     - ipv6
     - basicinst
 
-# Disable ::1 ipv6 localhost in /etc/hosts
+- name: Remove previous syntax to disable IPv6 from /etc/sysctl.conf (second line)
+  ansible.builtin.lineinfile:
+     path: /etc/sysctl.conf
+     state: absent
+     regexp: 'net.ipv6.conf.default.disable_ipv6 = 1'
+  tags:
+    - ipv6
+    - basicinst
+
+- name: Remove previous syntax to disable IPv6 from /etc/sysctl.conf (last line)
+  ansible.builtin.lineinfile:
+     path: /etc/sysctl.conf
+     state: absent
+     regexp: 'net.ipv6.conf.lo.disable_ipv6 = 1'
+  tags:
+    - ipv6
+    - basicinst
+
+# Disable ::1 ipv6 localhost from /etc/hosts
 # Lines to comment in hosts file
-- name: Disable ::1 ipv6 localhost on /etc/hosts
+- name: Disable IPv6 localhost from /etc/hosts
   ansible.builtin.replace:
      path: /etc/hosts
      regexp: '^::1'
@@ -30,9 +64,9 @@
     - ipv6
     - basicinst
 
-# Disable ipv6 in /etc/default/grub
+# Disable ipv6 from /etc/default/grub
 # Modify grub
-- name: Disable ipv6 in /etc/default/grub
+- name: Disable IPv6 from Grub
   ansible.builtin.replace:
      path: /etc/default/grub
      regexp: 'rhgb quiet'
