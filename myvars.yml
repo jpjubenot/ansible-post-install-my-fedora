@@ -10,4 +10,4 @@
 ansible_python_interpreter: /usr/bin/python3
 
 # MakeMKV version - Need to look at this url https://www.makemkv.com/download/ to get lastest version
-MakeMKV_Ver: 1.17.8
+MakeMKV_Ver: 1.17.9
