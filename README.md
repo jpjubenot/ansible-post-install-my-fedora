@@ -78,7 +78,7 @@ Il vous faut installer les paquets ansible.
 
 <code>mkdir Git-Repo && cd Git-Repo</code>
 
-<code>git clone https://github.com/jpjubenot/ansible-post-install-my-fedora</code>
+<code>git clone --depth=1 https://github.com/jpjubenot/ansible-post-install-my-fedora</code>
 
 <code>cd ansible-post-install-my-fedora</code>
 
