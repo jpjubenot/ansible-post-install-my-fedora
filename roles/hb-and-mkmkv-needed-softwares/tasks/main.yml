@@ -64,7 +64,7 @@
 # Install Softwares Needed to Compile Handbrake and MakeMKV
 - name: Install Group Packages Development Tools
   ansible.builtin.dnf:
-    name: '@Development Tools'
+    name: '@development-tools'
     state: present
   tags:
     - mixhbmk
@@ -73,7 +73,7 @@
 
 - name: Install Group Packages Development Libraries
   ansible.builtin.dnf:
-    name: '@Development Libraries'
+    name: '@c-development'
     state: present
   tags:
     - mixhbmk
@@ -82,7 +82,7 @@
 
 - name: Install Group Packages X Software Development
   ansible.builtin.dnf:
-    name: '@X Software Development'
+    name: '@x-software-development'
     state: present
   tags:
     - mixhbmk
@@ -91,7 +91,7 @@
 
 - name: Install Group Packages GNOME Software Development
   ansible.builtin.dnf:
-    name: '@GNOME Software Development'
+    name: '@gnome-software-development'
     state: present
   tags:
     - mixhbmk
