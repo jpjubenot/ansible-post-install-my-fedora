@@ -23,6 +23,7 @@ My project works like this :
 - <strong>hb-and-mkmkv-needed-softwares</strong>
 - <strong>handbrake</strong>
 - <strong>makemkv</strong>
+- <strong>podman</strong>
 - <strong>libdvdcss</strong>
 - <strong>remove-softwares</strong>
 - <strong>rescue-boot</strong>
