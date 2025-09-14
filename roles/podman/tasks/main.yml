@@ -1,0 +1,147 @@
+---
+#
+# Copyright (c) 2017 Jacques-Philippe JUBENOT
+# license: Licensed under CC-BY-NC-SA 3.0. All rights reserved.
+#
+#
+# Role Podman Rootless
+#
+# Install Podman Softwares
+- name: Install Podman Softwares
+  ansible.builtin.dnf:
+    name:
+      - slirp4netns
+      - fuse-overlayfs
+      - crun 
+      - podman
+      - shadow-utils
+    state: present
+    allowerasing: true
+  tags:
+    - podman
+
+# Add Create users namespace
+- name: Test users namespace file exist
+  ansible.builtin.stat:
+    path: /etc/sysctl.d/userns.conf
+  register: usernsfile
+  tags:
+    - podman
+
+# Set Max User namespaces
+- sysctl:
+    name: user.max_user_namespaces
+    value: '28633'
+    sysctl_file: /etc/sysctl.d/userns.conf
+    reload: yes
+  when: usernsfile.stat.exists == False
+  tags:
+    - podman
+
+# Add Create resource dir
+- name: Test resource directory exist
+  ansible.builtin.stat:
+    path: /etc/systemd/system/user@.service.d
+  register: resourcedir
+  tags:
+    - podman
+
+- name: Systemd resources folder
+  ansible.builtin.file: 
+    path: /etc/systemd/system/user@.service.d
+    state: directory
+    mode: '0755'
+    owner: root
+    group: root
+  when: resourcedir.stat.exists == False
+  tags:
+    - podman
+
+- name: Create users namespace file
+  ansible.builtin.file: 
+    path: /etc/systemd/system/user@.service.d/delegate.conf
+    state: touch
+    mode: '0644'
+    owner: root
+    group: root
+  when: resourcedir.stat.exists == False
+  tags:
+    - podman
+
+- name: Modify available resources file
+  ansible.builtin.lineinfile:
+    path: /etc/systemd/system/user@.service.d/delegate.conf
+    line: '{{ item }}'
+  with_items:
+    - "[Service]"
+    - 'Delegate=cpu cpuset io memory pids'
+  when: resourcedir.stat.exists == False
+  tags:
+    - podman
+
+# UID and GID file
+# Test UID and GID file
+- name: Test UID file
+  ansible.builtin.stat:
+    path: /etc/subuid
+  register: subuidfile
+  tags:
+    - podman
+
+- name: Create UID file
+  ansible.builtin.file: 
+    path: /etc/subuid
+    state: touch
+    mode: '0644'
+    owner: root
+    group: root
+  when: subuidfile.stat.exists == False
+  tags:
+    - podman
+
+- name: Modify UID file
+  ansible.builtin.lineinfile:
+    path: /etc/subuid
+    line: '{{ item }}'
+  with_items:
+    - "# Podman UID file"
+    - '#username:200000:65536'
+    - '#username:207000:65536'
+    - '#username:214000:65536'
+    - '#username:221000:65536'
+  when: subuidfile.stat.exists == False
+  tags:
+    - podman
+
+# Test UID and GID file
+- name: Test GID file
+  ansible.builtin.stat:
+    path: /etc/subgid
+  register: subgidfile
+  tags:
+    - podman
+
+- name: Create GID file
+  ansible.builtin.file: 
+    path: /etc/subgid
+    state: touch
+    mode: '0644'
+    owner: root
+    group: root
+  when: subgidfile.stat.exists == False
+  tags:
+    - podman
+
+- name: Modify GID file
+  ansible.builtin.lineinfile:
+    path: /etc/subgid
+    line: '{{ item }}'
+  with_items:
+    - "# Podman GID file"
+    - '#username:200000:65536'
+    - '#username:207000:65536'
+    - '#username:214000:65536'
+    - '#username:221000:65536'
+  when: subgidfile.stat.exists == False
+  tags:
+    - podman

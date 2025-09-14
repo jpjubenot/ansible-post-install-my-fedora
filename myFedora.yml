@@ -17,6 +17,7 @@
     - hb-and-mkmkv-needed-softwares
     - handbrake
     - makemkv
+    - podman
     # - libdvdcss
     # - remove-softwares
     # - rescue-boot
