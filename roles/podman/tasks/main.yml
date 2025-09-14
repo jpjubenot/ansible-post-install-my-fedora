@@ -106,9 +106,9 @@
   with_items:
     - "# Podman UID file"
     - '#username:200000:65536'
-    - '#username:207000:65536'
-    - '#username:214000:65536'
-    - '#username:221000:65536'
+    - '#username:270000:65536'
+    - '#username:340000:65536'
+    - '#username:410000:65536'
   when: subuidfile.stat.exists == False
   tags:
     - podman
@@ -139,9 +139,9 @@
   with_items:
     - "# Podman GID file"
     - '#username:200000:65536'
-    - '#username:207000:65536'
-    - '#username:214000:65536'
-    - '#username:221000:65536'
+    - '#username:270000:65536'
+    - '#username:340000:65536'
+    - '#username:410000:65536'
   when: subgidfile.stat.exists == False
   tags:
     - podman
