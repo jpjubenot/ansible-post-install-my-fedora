@@ -47,6 +47,8 @@ Mon projet s'articule autour de ces rôles.
 
 <strong>makemkv:</strong> Compilation du logiciel MakeMKV.
 
+<strong>podman:</strong> Podman Rootless.
+
 <strong>libdvdcss:</strong> Permettre de lire des DVD sur votre ordinateur.
 
 <strong>remove-softwares</strong> Supprimer des logiciels inutiles à mon usage.

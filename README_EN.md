@@ -47,6 +47,8 @@ My project works like this :
 
 <strong>makemkv:</strong> Compiling MakeMKV software. <em>Make sure to install the latest version by editing the myvars.yml file</em>.
 
+<strong>podman:</strong> Podman Rootless.
+
 <strong>libdvdcss:</strong> Permit to read DVD on your computer.
 
 <strong>remove-softwares:</strong> Remove unnecessary softwares on my fresh installation.
