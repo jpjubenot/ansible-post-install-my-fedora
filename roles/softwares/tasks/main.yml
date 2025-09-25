@@ -79,6 +79,7 @@
       - lsb-core-noarch
       - lzop                          # Compression Tool
       - mediawriter
+      - mercurial                     # Required by Oh-My-Bash tools
       - minicom                       # Tool to communicate to external devices over RS-232
       - mkvtoolnix                    # MKV Codec Tools
       - nano                          # Text editor
