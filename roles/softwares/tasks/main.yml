@@ -76,7 +76,7 @@
       - libsass                       # Library for sassc CSS pre-processor language
       - libselinux-python3
       - libX11-devel
-      - lsb-core-noarch
+      #- lsb-core-noarch
       - lzop                          # Compression Tool
       - mediawriter
       - mercurial                     # Required by Oh-My-Bash tools
@@ -99,10 +99,9 @@
       - rpi-imager                    # Raspberry card/disk imager
       - rubygem-rexml
       - sassc                         # CSS pre-processor language
-      - secrets                       # Password manager like Keepass
+      #- secrets                       # Password manager like Keepass
       - shotwell                      # Pictures manager tool
       - snapper                       # Snapper Features
-      - stacer                        # Monitoring and Tweaking graphic tool
       - tar                           # Archiving tool
       - tcptrack                      # Network tool
       - tmux                          # Terminal Multiplexer
