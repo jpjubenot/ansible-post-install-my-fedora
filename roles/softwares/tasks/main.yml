@@ -68,6 +68,7 @@
       - iftop                         # Network tool - View bandwidth
       - inxi                          # Hardware components informations
       - iperf3                        # Network tool - Bandwidth test
+      #- keepassxc                    # Password Manager
       - kernel-devel
       - kernel-headers
       - lame                          # MP3 Encoder tool
@@ -99,7 +100,6 @@
       - rpi-imager                    # Raspberry card/disk imager
       - rubygem-rexml
       - sassc                         # CSS pre-processor language
-      #- secrets                       # Password manager like Keepass
       - shotwell                      # Pictures manager tool
       - snapper                       # Snapper Features
       - tar                           # Archiving tool

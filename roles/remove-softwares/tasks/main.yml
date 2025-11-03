@@ -21,7 +21,7 @@
 - name: Remove some unnecessary softwares
   ansible.builtin.dnf:
     name:
-       - keepassxc                     # Remove keepassxc software if present.
+       - gstreamer1-plugins-good-qt6                     # Conflict with gstreamer1-plugins-good.
     state: absent       
   tags:
     - rm-softwares
