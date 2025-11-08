@@ -9,7 +9,6 @@ Download, extract, compile and install Handbrake from source package.
 <strong>### [FR]</strong>
 <strong>Pour mettre à jour HandBrake</strong>
 
-
 1- Renommer le binaire HandBrakeCLI
 
 <strong>sudo mv /usr/bin/HandBrakeCLI /usr/bin/HandBrakeCLI_old</strong>
