@@ -11,9 +11,11 @@ Download, extract, compile and install Handbrake from source package.
 
 
 1- Renommer le binaire HandBrakeCLI
+
 <strong>sudo mv /usr/bin/HandBrakeCLI /usr/bin/HandBrakeCLI_old</strong>
 
 2- Rejouer le script ansible comme ceci.
+
 <strong>sudo ansible-playbook myFedora.yml -t onlyhandbk</strong>
 
 
@@ -21,7 +23,9 @@ Download, extract, compile and install Handbrake from source package.
 <strong>To Upgrade HandBrake</strong>
 
 1- Rename the binary HandBrakeCLI
+
 <strong>sudo mv /usr/bin/HandBrakeCLI /usr/bin/HandBrakeCLI_old</strong>
 
 2- Replay the ansible script like this.
+
 <strong>sudo ansible-playbook myFedora.yml -t onlyhandbk</strong>
