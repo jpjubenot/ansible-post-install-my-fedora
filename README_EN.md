@@ -114,3 +114,11 @@ face an error because the package is not really present.</p>
 and tutorials.</p>
 <p>If you want to test for real, it might be worth using it on a virtual machine first, before running it on your personal computer.</p>
 <p>The execution time of this script depends of your computer speed and your Internet bandwidth to download all differents packages.</p>
+
+<strong>Tricks</strong>
+
+<strong>Update MakeMKV</strong>
+<p>Look at there: roles/makemkv/README.md</p>
+
+<strong>Update HandBrake</strong>
+<p>Look at there: roles/makemkv/README.md</p>

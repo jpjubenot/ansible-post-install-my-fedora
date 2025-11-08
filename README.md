@@ -114,3 +114,11 @@ présents sur le web.</p>
 <p>Je vous conseille dans la mesure du possible de tester sur une machine virtuelle
 cela vous donnera un aperçu de ce qui se passe.</p>
 <p>Le temps d'exécution du script dépend de la vitesse de la machine ainsi que de la bande passante dont vous disposez pour les différents téléchargements.</p>
+
+<strong>Astuces</strong>
+
+<strong>Mise à jour de MakeMKV</strong>
+<p>Jetez un oeil ici : roles/makemkv/README.md</p>
+
+<strong>Mise à jour de HandBrake</strong>
+<p>Jetez un oeil ici : roles/makemkv/README.md</p>
