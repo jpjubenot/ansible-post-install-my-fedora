@@ -8,7 +8,16 @@
 #
 # MakeMKV Compilation
 # https://linuxconfig.org/how-to-install-makemkv-on-fedora-linux
-#
+
+# Force Compiling MakeMKV
+- name: Force Compiling MakeMKV
+  ansible.builtin.file:
+    path: /usr/bin/makemkv
+    state: absent
+  when: forcecompile is defined
+  tags: 
+    - onlymkmkv
+
 # Check MakeMKV exist
 - name: Verify if MakeMKV exist
   ansible.builtin.stat:

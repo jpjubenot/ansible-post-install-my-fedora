@@ -9,6 +9,15 @@
 # Handbrake Compilation
 # https://handbrake.fr/docs/en/latest/developer/build-linux.html
 
+# Force Compiling Handbrake
+- name: Force Compiling Handbrake
+  ansible.builtin.file:
+    path: /usr/bin/HandBrakeCLI
+    state: absent
+  when: forcecompile is defined
+  tags: 
+    - onlyhandbk
+
 # Check Handbrake exist
 - name: Verify if Handbrake exist
   ansible.builtin.stat:
