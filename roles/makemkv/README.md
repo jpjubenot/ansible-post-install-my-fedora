@@ -16,6 +16,8 @@ Download, extract, compile and install Makemkv from source package.
 
 2- Rejouer le script ansible comme ceci.
 
+<p>Attention le précédent binaire sera supprimé !</p>
+
 <strong>sudo ansible-playbook myFedora.yml -e forcecompile -t onlymkmkv</strong>
 
 
@@ -29,5 +31,7 @@ Download, extract, compile and install Makemkv from source package.
 <p>MakeMKV_Ver: <strong>1.17.8</strong></p>
 
 2- Replay the ansible script like this.
+
+<p>Take care it will delete the previous binary !</p>
 
 <strong>sudo ansible-playbook myFedora.yml -e forcecompile -t onlymkmkv</strong>

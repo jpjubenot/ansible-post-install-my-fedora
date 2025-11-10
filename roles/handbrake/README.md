@@ -12,6 +12,8 @@ Download, extract, compile and install Handbrake from source package.
 
 - Rejouer le script ansible comme ceci.
 
+<p>Attention le précédent binaire sera supprimé !</p>
+
 <strong>sudo ansible-playbook myFedora.yml -e forcecompile -t onlyhandbk</strong>
 
 
@@ -20,5 +22,7 @@ Download, extract, compile and install Handbrake from source package.
 <strong>To upgrade or recompile HandBrake</strong>
 
 - Replay the ansible script like this.
+
+<p>Take care it will delete the previous binary !</p>
 
 <strong>sudo ansible-playbook myFedora.yml -e forcecompile -t onlyhandbk</strong>
