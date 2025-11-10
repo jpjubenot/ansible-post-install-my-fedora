@@ -7,6 +7,7 @@ Download, extract, compile and install Handbrake from source package.
 
 
 <strong>### [FR]</strong>
+
 <strong>Pour mettre à jour ou recompiler HandBrake</strong>
 
 - Rejouer le script ansible comme ceci.
@@ -15,6 +16,7 @@ Download, extract, compile and install Handbrake from source package.
 
 
 <strong>### [EN]</strong>
+
 <strong>To upgrade or recompile HandBrake</strong>
 
 - Replay the ansible script like this.
