@@ -87,6 +87,7 @@
       - nautilus-dropbox              # Dropbox in Nautilus -- Legacy package
       - nethogs                       # Network tool
       - nmon                          # Monitoring tools
+      - nvtop                         # Monitoring GPU usage
       - obs-studio                    # Software for video recording and live streaming
       - openssl                       # OpenSSL
       - p7zip                         # Compression Tool

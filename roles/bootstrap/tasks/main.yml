@@ -61,3 +61,11 @@
   tags:
     - fastdnf
     - basicinst
+
+# MOTD Update
+- name: Update MOTD file
+  ansible.builtin.shell: ( figlet -w 120 $HOSTNAME && lsb_release -a | grep -v Description && echo '' ) | tee /etc/motd
+  args:
+    executable: /bin/bash
+  tags:
+    - motd
