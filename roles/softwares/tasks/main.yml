@@ -21,7 +21,7 @@
 - name: Install Different Packages
   ansible.builtin.dnf:
     name:
-      # - 0ad                         # Game like Microsoft Age of Empire -- Great gaming software
+      #- 0ad                         # Game like Microsoft Age of Empire -- Great gaming software
       - autoconf
       - automake
       - calibre                       # Ebook and numuric book software
@@ -40,7 +40,8 @@
       - evolution                     # Email software
       - filezilla                     # Ftp software
       - foo2qpdl                      # print on Samsung Laser printers
-      - gcc                           # Compiliation software
+      - fuse-libs                     # Useful for appimage file software
+      - gcc                           # Compilation software
       - gimp
       - git
       - gitg
@@ -48,7 +49,7 @@
       - glib2
       - glib2-devel
       - glibc-devel
-      # - gnome-battery-bench         # Gnome tool for Laptop
+      #- gnome-battery-bench         # Gnome tool for Laptop
       - gnome-extensions-app
       - gnome-nettool                 # Gnome Network graphical tool
       - gnome-themes-extra            # Adding Awaita-Dark theme for old apps
@@ -94,7 +95,7 @@
       - p7zip-plugins                 # Compression Tool Plugins
       - perl
       - perl-LWP-Protocol-https
-      # - pycharm-community           # Python IDE
+      #- pycharm-community           # Python IDE
       - python-dnf
       - python3-ansible-lint          # Ansible-lint
       - python3-dnf-plugin-snapper    # Snapper Features
