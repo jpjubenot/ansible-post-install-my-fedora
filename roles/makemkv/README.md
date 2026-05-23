@@ -18,7 +18,7 @@ Download, extract, compile and install Makemkv from source package.
 
 <p>Attention le précédent binaire sera supprimé !</p>
 
-<strong>sudo ansible-playbook myFedora.yml -e forcecompile -t onlymkmkv</strong>
+<strong>sudo ansible-playbook myFedora.yml -e forcecompile=true -t onlymkmkv</strong>
 
 
 <strong>### [EN]</strong>
@@ -34,4 +34,4 @@ Download, extract, compile and install Makemkv from source package.
 
 <p>Take care it will delete the previous binary !</p>
 
-<strong>sudo ansible-playbook myFedora.yml -e forcecompile -t onlymkmkv</strong>
+<strong>sudo ansible-playbook myFedora.yml -e forcecompile=true -t onlymkmkv</strong>
