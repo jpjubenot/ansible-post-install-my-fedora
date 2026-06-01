@@ -12,7 +12,7 @@
 # Force Compiling Handbrake
 - name: Force Compiling Handbrake
   ansible.builtin.file:
-    path: /usr/bin/HandBrakeCLI
+    path: /usr/local/bin/HandBrakeCLI
     state: absent
   when: forcecompile is defined
   tags: 
