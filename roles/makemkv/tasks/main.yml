@@ -86,6 +86,35 @@
     - mixhbmk
     - onlymkmkv
 
+# Download and apply FFmpeg v9+ patch
+# Take a look there : https://gitlab.com/-/snippets/6027652
+- name: Download FFmpeg v9 compatibility patch
+  ansible.builtin.get_url:
+    url: "https://gitlab.com/-/snippets/6027652/raw/main/ffmpeg9-avcodec-fix.patch"
+    dest: "/tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }}/ffmpeg9.patch"
+    mode: '0644'
+  when: 
+    - makemkvexist.stat.exists == False
+    - ansible_distribution_major_version | int >= 45
+  tags:
+    - mkmkv
+    - mixhbmk
+    - onlymkmkv
+
+- name: Apply FFmpeg v9 compatibility patch
+  ansible.posix.patch:
+    src: "/tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }}/ffmpeg9.patch"
+    basedir: "/tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }}"
+    strip: 1
+    remote_src: true
+  when: 
+    - makemkvexist.stat.exists == False
+    - ansible_distribution_major_version | int >= 45
+  tags:
+    - mkmkv
+    - mixhbmk
+    - onlymkmkv
+
 # Compile MakeMKV OSS
 - name: Configure
   ansible.builtin.shell:
@@ -101,14 +130,16 @@
     - onlymkmkv
 
 # Patch OSS libffabi/src/ffabi.c file to prevent compile error
-# Take a look There : https://forum.makemkv.com/forum/viewtopic.php?f=3&p=132993
+# Take a look there : https://forum.makemkv.com/forum/viewtopic.php?f=3&p=132993
 - name: Patch OSS libffabi/src/ffabi.c file to prevent compile error
   ansible.builtin.replace:
      path: /tmp/MakeMKV/makemkv-oss-{{ MakeMKV_Ver }}/libffabi/src/ffabi.c
      regexp: 'av_mallocz_array'
      replace: 'av_calloc'
      backup: true
-  when: makemkvexist.stat.exists == False
+  when:
+    - makemkvexist.stat.exists == False
+    - ansible_distribution_major_version | int < 45
   tags:
     - mkmkv
     - mixhbmk
