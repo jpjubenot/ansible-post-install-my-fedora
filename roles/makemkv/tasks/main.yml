@@ -43,7 +43,8 @@
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV OSS
   get_url:
-     url: http://www.makemkv.com/download/makemkv-oss-{{ MakeMKV_Ver }}.tar.gz
+     #url: http://www.makemkv.com/download/old/makemkv-oss-{{ MakeMKV_Ver }}.tar.gz # For Old Versions
+     url: http://www.makemkv.com/download/makemkv-oss-{{ MakeMKV_Ver }}.tar.gz 
      dest: "/tmp/MakeMKV"
      mode: '0644'
   when: makemkvexist.stat.exists == False
@@ -55,6 +56,7 @@
 # Download lastest version on www.makemkv.com
 - name: Downloading MakeMKV BIN
   get_url:
+     #url: http://www.makemkv.com/download/old/makemkv-bin-{{ MakeMKV_Ver }}.tar.gz # For Old Versions
      url: http://www.makemkv.com/download/makemkv-bin-{{ MakeMKV_Ver }}.tar.gz
      dest: "/tmp/MakeMKV"
      mode: '0644'
